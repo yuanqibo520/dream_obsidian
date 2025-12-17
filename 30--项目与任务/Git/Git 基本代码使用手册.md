@@ -47,25 +47,22 @@ git commit -m" "
 touch
 git status 查看文件状态
 git push -u origin main       # 首次推送（假设主分支叫 main）
+git add <file>
 
 要求git不追踪
-touch /[FILE-NAME].gitingore
-vi . gitingore
+touch <file>.gitignore
+vi . gitingore/直接用记事本编写
 *.[后缀]
-如果文件已经被追踪了，先得取消追踪 git rm --cached <file>
 !/important.log 不忽略 important.log（即使前面有 *.log）
-*.txt 忽略文件后缀为.txt的文件
+ git rm --cached <文件名>如果文件已经被追踪了，先得取消追踪 
+vi.编写页面下
 esc退出插入模式，：wq保存并退出
 
 查看提交历史
 git log 
 git log --oneline
 
-git reset --hand [COMMIT ID]
-
-git add <file>
-==git flog==
-
+git reset --hand [COMMIT ID]回溯到上一个版本
 touch ~/.basrc 
 
 修改或创建->add->暂存区->commit->本地数据库
@@ -73,13 +70,12 @@ touch ~/.basrc
 
 git remote add origin <url>   # 关联远程仓库
 
-git push                      # 后续推送
 git pull                      # 拉取并合并远程更改
-
+## 分支
 git branch               # 列出本地分支
 git branch <name>        # 创建新分支
 git checkout <branch>    # 切换分支
-git switch <branch>      #（新命令）切换分支
+git switch <branch>      #（新命令）切换并建立（若本身不存在）分支
 git merge <branch>       # 合并指定分支到当前分支
  
 
