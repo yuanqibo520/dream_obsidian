@@ -43,8 +43,10 @@ git add .
 git comfig --global user.name" "
 git comfig --global user.email" "
 git clone <ur1>
+git commit -m" "
 touch
 git status 查看文件状态
+git push -u origin main       # 首次推送（假设主分支叫 main）
 
 要求git不追踪
 touch /[FILE-NAME].gitingore
@@ -62,15 +64,15 @@ git log --oneline
 git reset --hand [COMMIT ID]
 
 git add <file>
-git flog
-git commit -m" "
+==git flog==
+
 touch ~/.basrc 
 
 修改或创建->add->暂存区->commit->本地数据库
 鼠标选中即为复制，鼠标中键粘贴
 
 git remote add origin <url>   # 关联远程仓库
-git push -u origin main       # 首次推送（假设主分支叫 main）
+
 git push                      # 后续推送
 git pull                      # 拉取并合并远程更改
 
