@@ -62,7 +62,7 @@ esc退出插入模式，：wq保存并退出
 git log 
 git log --oneline
 
-git reset --hand [COMMIT ID]回溯到上一个版本
+git reset --hard [COMMIT ID]回溯到上一个版本
 touch ~/.basrc 
 
 修改或创建->add->暂存区->commit->本地数据库
@@ -75,8 +75,13 @@ git pull                      # 拉取并合并远程更改
 git branch               # 列出本地分支
 git branch <name>        # 创建新分支
 git checkout <branch>    # 切换分支
-git switch <branch>      #（新命令）切换并建立（若本身不存在）分支
-git merge <branch>       # 合并指定分支到当前分支
+git switch (-b)  <branch>      #（新命令）切换并建立（若本身不存在）分支
+git branch -d <name>
+git branch -D <name> 强制删除，不做任何检查
+git merge  <branch>       # 合并指定分支到当前分支
+esc退出插入模式，：wq保存并退出
+两个文件都被改变了同一行，合并时会产生冲突，需要我们手动修改决策，然后重新提交一遍
+master（稳定根）develop（开发躯干）feature（功能叶）hotfix（dbug剪）
  
 
 
