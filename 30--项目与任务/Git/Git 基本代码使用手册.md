@@ -4,6 +4,37 @@ tags:
 created: 2025-12-17
 status: in_progress
 ---
+---
+## 核心要点
+
+- 仓库（Repository）
+	→ 存放项目文件 + 完整历史记录的目录。本地一个，远程（如 GitHub/gitee）一个。
+- 提交（Commit）
+	→ 一次“快照”（snapshot），记录文件在某个时间点的状态。不是差异，而是完整副本
+- 分支（Branch）
+	→ 本质是指向某次提交的“指针”。默认主分支现在多为 main（旧为 master）。
+- 远程（Remote）
+	→ 远程仓库地址（如 GitHub），通常命名为 origin。
+- 工作流三区模型
+	- 工作区（Working Directory）：你编辑的文件
+	- 暂存区（Staging Area / Index）：用 git add 选中的待提交变更
+	- 仓库（Repository）：用 git commit 保存的历史快照
+==总结==：修改文件 → 暂存（add）→ 提交（commit）→ 同步（push/pull）
+
+---
+## 应用场景
+
+- 协作共享知识库
+- 版本回溯
+- 自动备份笔记
+
+---
+
+## 关联概念
+- [[ ]]
+
+---
+
 git bash 为命令窗口
 git gui 为图形应用工具
 初始化本地代码库
@@ -50,13 +81,7 @@ git switch <branch>      #（新命令）切换分支
 git merge <branch>       # 合并指定分支到当前分支
  
 
-# Git 基本代码使用手册
 
-## 核心要点
-- 
 
-## 应用场景
-- 
 
-## 关联概念
-- [[ ]]
+
