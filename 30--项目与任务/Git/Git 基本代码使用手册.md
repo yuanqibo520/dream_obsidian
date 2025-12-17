@@ -1,8 +1,7 @@
 ---
 tags:
   - git
-created:
-  "{ date:YYYY-MM-DD }":
+created: 2025-12-17
 status: in_progress
 ---
 git bash 为命令窗口
