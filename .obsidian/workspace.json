@@ -11,6 +11,16 @@
             "id": "fcc8156a6067d150",
             "type": "leaf",
             "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
+          },
+          {
+            "id": "ec925624e60a4b3d",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
                 "file": "30--项目与任务/Git/Git 基本代码使用手册.md",
@@ -21,7 +31,8 @@
               "title": "Git 基本代码使用手册"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -180,7 +191,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,16 +207,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d91c081f41ba5893",
+  "active": "ec925624e60a4b3d",
   "lastOpenFiles": [
-    "40--资源库/Node.md",
     "30--项目与任务/Git/Git 基本代码使用手册.md",
+    "30--项目与任务/智能体/markdown基本格式.md",
+    "30--项目与任务/智能体/coze使用手册.md",
+    "30--项目与任务/智能体/基于大模型生成优质的prompt（e人）.md",
+    "30--项目与任务/01-Office办公软件/Microsoft Word练习题.md",
     "30--项目与任务/01-Office办公软件/Microsoft Word 使用指南.md",
     "20--知识模块/学习方法/傻白学习法.md",
-    "30--项目与任务/智能体/coze使用手册.md",
-    "20--知识模块/C语言/基本语言代码.md",
-    "30--项目与任务/01-Office办公软件/Microsoft Word练习题.md",
+    "2025-12-17.md",
     "10--日常记录（日记-灵感-碎片）/感想.md",
+    "40--资源库/Node.md",
+    "20--知识模块/C语言/基本语言代码.md",
     "20--知识模块/摄影摄像.md",
     "20--知识模块/Python/基本语言代码.md",
     "20--知识模块/C语言",
@@ -215,8 +230,6 @@
     "20--知识模块/旅游攻略.md",
     "20--知识模块/校园生活.md",
     "20--知识模块/学习方法.md",
-    "30--项目与任务/智能体/基于大模型生成优质的prompt（e人）.md",
-    "30--项目与任务/智能体/markdown基本格式.md",
     "Obsidian 基本使用手册.md",
     "未命名.base",
     "未命名 1.base",

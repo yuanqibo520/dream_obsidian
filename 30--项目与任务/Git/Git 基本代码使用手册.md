@@ -19,14 +19,13 @@ status: in_progress
 	- 工作区（Working Directory）：你编辑的文件
 	- 暂存区（Staging Area / Index）：用 git add 选中的待提交变更
 	- 仓库（Repository）：用 git commit 保存的历史快照
-==总结==：修改文件 → 暂存（add）→ 提交（commit）→ 同步（push/pull）
+==总结==：修改文件 → 暂存（add）→ 提交（commit）→ 同步（push/pull）->本地数据库
 
 ---
 ## 应用场景
-
-- 协作共享知识库
-- 版本回溯
-- 自动备份笔记
+> 协作共享知识库
+> 版本回溯
+> 自动备份笔记
 
 ---
 
@@ -34,30 +33,31 @@ status: in_progress
 - [[ ]]
 
 ---
-修改或创建->add->暂存区->commit->本地数据库
-鼠标选中即为复制，鼠标中键粘贴
+
+基本操作：鼠标选中即为复制，鼠标中键粘贴
 git bash 为命令窗口
 git gui 为图形应用工具
 初始化本地代码库
 git init 
 git add .
+git add <file>
 git comfig --global user.name" "
 git comfig --global user.email" "
 git clone <ur1>
 git commit -m" "
 touch
-git status 查看文件状态
-git push -u origin main       # 首次推送（假设主分支叫 main）
-git add <file>
+git status 查看当前的文件状态（工作区和）
+git push -u origin main       # 首次推送main/master
+
 
 要求git不追踪
 touch <file>.gitignore
-vi . gitingore/直接用记事本编写
-*.[后缀]
+vi . gitingore（直接用记事本编写）
+*.[后缀] 忽略全部带后缀的文件
 !/important.log 不忽略 important.log（即使前面有 *.log）
  git rm --cached <文件名>如果文件已经被追踪了，先得取消追踪 
 vi.编写页面下
-esc退出插入模式，：wq保存并退出
+esc退出插入模式，：wq保存并退出（w为保存，q为退出）
 
 查看提交历史
 git log 
