@@ -21,71 +21,36 @@ status: in_progress
 	- 仓库（Repository）：用 git commit 保存的历史快照
 ==总结==：修改文件 → 暂存（add）→ 提交（commit）→ 同步（push/pull）->本地数据库
 
----
-## 应用场景
-> 协作共享知识库
-> 版本回溯
-> 自动备份笔记
+# Git 基础操作速查
+
+## 基本约定
+- **复制**：鼠标选中即复制  
+- **粘贴**：鼠标中键粘贴  
+- **Git Bash**：命令行窗口  
+- **Git GUI**：图形化工具（可选）
 
 ---
+## 初始化与配置
 
-## 关联概念
-- [[ ]]
+```bash
+# 初始化本地仓库
+git init
 
----
+# 全局配置（只需一次）
+git config --global user.name "你的名字"
+git config --global user.email "你的邮箱"
 
-基本操作：鼠标选中即为复制，鼠标中键粘贴
-git bash 为命令窗口
-git gui 为图形应用工具
-初始化本地代码库
-git init 
-git add .
-git add <file>
-git comfig --global user.name" "
-git comfig --global user.email" "
-git clone <ur1>
-git commit -m" "
-touch
-git status 查看当前的文件状态（工作区和）
-git push -u origin main       # 首次推送main/master
+# 克隆远程仓库
+git clone <仓库URL> [<本地目录名>]
+# 添加文件到暂存区
+git add .                 # 添加所有更改
+git add <文件名>          # 添加指定文件
 
+# 创建空文件（Linux/macOS）
+touch <文件名>
 
-要求git不追踪
-touch <file>.gitignore
-vi . gitingore（直接用记事本编写）
-*.[后缀] 忽略全部带后缀的文件
-!/important.log 不忽略 important.log（即使前面有 *.log）
- git rm --cached <文件名>如果文件已经被追踪了，先得取消追踪 
-vi.编写页面下
-esc退出插入模式，：wq保存并退出（w为保存，q为退出）
+# 提交更改
+git commit -m "提交说明"
 
-查看提交历史
-git log 
-git log --oneline
-
-git reset --hard [COMMIT ID]回溯到上一个版本
-touch ~/.basrc 
-
-
-
-git remote add origin <url>   # 关联远程仓库
-git remote 
-
-git pull                      # 拉取并合并远程更改
-## 分支
-git branch               # 列出本地分支
-git branch <name>        # 创建新分支
-git checkout <branch>    # 切换分支
-git switch (-b)  <branch>      #（新命令）切换并建立（若本身不存在）分支
-git branch -d <name>
-git branch -D <name> 强制删除，不做任何检查
-git merge  <branch>       # 合并指定分支到当前分支
-esc退出插入模式，：wq保存并退出
-两个文件都被改变了同一行，合并时会产生冲突，需要我们手动修改决策，然后重新提交一遍
-master（稳定根）develop（开发躯干）feature（功能叶）hotfix（dbug剪）
- 
-
-
-
-
-
+# 查看状态（工作区 vs 暂存区）
+git status
