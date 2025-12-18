@@ -4,26 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "ab9facb06b612119",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "ec925624e60a4b3d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "30--项目与任务/Git/Git 基本代码使用手册.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Git 基本代码使用手册"
-            }
-          }
-        ]
-      },
-      {
         "id": "d63181f49e29da39",
         "type": "tabs",
         "children": [
@@ -33,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10--日常记录（日记-灵感-碎片）/感想.md",
+                "file": "01-学习对象基本信息模板.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "感想"
+              "title": "01-学习对象基本信息模板"
+            }
+          },
+          {
+            "id": "5706e966d50c4290",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01-学习对象基本信息模板.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "01-学习对象基本信息模板"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -216,30 +211,31 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ec925624e60a4b3d",
+  "active": "5706e966d50c4290",
   "lastOpenFiles": [
+    "02-学习过程模板.md",
+    "01-学习对象基本信息模板.md",
+    "学习方法.md",
+    "20--知识模块/迭代至完美.md",
+    "20--知识模块/C语言/基本语言代码.md",
+    "2025-12-17.md",
+    "20--知识模块/Python/基本语言代码.md",
+    "20--知识模块/旅游攻略.md",
     "10--日常记录（日记-灵感-碎片）/感想.md",
-    "30--项目与任务/Git/Git 基本代码使用手册.md",
     "00--index（临时知识库）/杂记.md",
-    "30--项目与任务/智能体/markdown基本格式.md",
-    "30--项目与任务/智能体/coze使用手册.md",
-    "30--项目与任务/智能体/基于大模型生成优质的prompt（e人）.md",
     "30--项目与任务/01-Office办公软件/Microsoft Word练习题.md",
+    "30--项目与任务/智能体/基于大模型生成优质的prompt（e人）.md",
+    "30--项目与任务/智能体/coze使用手册.md",
+    "30--项目与任务/Git/markdown基本格式.md",
+    "30--项目与任务/Git/Git 基本代码使用手册.md",
     "30--项目与任务/01-Office办公软件/Microsoft Word 使用指南.md",
     "20--知识模块/学习方法/傻白学习法.md",
-    "2025-12-17.md",
     "40--资源库/Node.md",
-    "20--知识模块/C语言/基本语言代码.md",
-    "20--知识模块/摄影摄像.md",
-    "20--知识模块/Python/基本语言代码.md",
     "20--知识模块/C语言",
     "40--资源库/temolates/任务项目模板.md.md",
     "40--资源库/temolates/知识卡片模板.md.md",
     "Invalid date.md",
     "20--知识模块/Python",
-    "20--知识模块/旅游攻略.md",
-    "20--知识模块/校园生活.md",
-    "20--知识模块/学习方法.md",
     "Obsidian 基本使用手册.md",
     "未命名.base",
     "未命名 1.base",
@@ -251,7 +247,6 @@
     "未命名.canvas",
     "未命名 1.canvas",
     "ae1cb95b927788b9efbdcef1efc3f51c.png",
-    "5 DA D.md",
     "40--资源库/temolates",
     "肌酸服用指南",
     "40--资源库/外部链接",
