@@ -34,7 +34,8 @@ status: in_progress
 - [[ ]]
 
 ---
-
+修改或创建->add->暂存区->commit->本地数据库
+鼠标选中即为复制，鼠标中键粘贴
 git bash 为命令窗口
 git gui 为图形应用工具
 初始化本地代码库
@@ -65,10 +66,10 @@ git log --oneline
 git reset --hard [COMMIT ID]回溯到上一个版本
 touch ~/.basrc 
 
-修改或创建->add->暂存区->commit->本地数据库
-鼠标选中即为复制，鼠标中键粘贴
+
 
 git remote add origin <url>   # 关联远程仓库
+git remote 
 
 git pull                      # 拉取并合并远程更改
 ## 分支
