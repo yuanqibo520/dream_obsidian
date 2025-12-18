@@ -180,8 +180,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -196,7 +195,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fcc8156a6067d150",
+  "active": "d91c081f41ba5893",
   "lastOpenFiles": [
     "40--资源库/Node.md",
     "30--项目与任务/Git/Git 基本代码使用手册.md",
