@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "coze1.md",
+                "file": "30--项目与任务/智能体/coze学习2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "coze1"
+              "title": "coze学习2"
             }
           }
         ]
@@ -196,16 +196,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0c3e7fc512fd2145",
+  "active": "d91c081f41ba5893",
   "lastOpenFiles": [
+    "30--项目与任务/智能体/未命名.md",
+    "2025-12-18.md",
+    "30--项目与任务/智能体/coze学习2.md",
+    "30--项目与任务/智能体/coze使用手册.md",
+    "Obsidian 基本使用手册.md",
+    "30--项目与任务/智能体/基于大模型生成优质的prompt（e人）.md",
     "30--项目与任务/Git/Git 基本代码使用手册.md",
     "30--项目与任务/Git/markdown基本格式.md",
-    "coze1.md",
     "未命名 1.md",
     "00--index（临时知识库）/coze2.md",
     "00--index（临时知识库）/杂记.md",
-    "30--项目与任务/智能体/基于大模型生成优质的prompt（e人）.md",
-    "30--项目与任务/智能体/coze使用手册.md",
     "40--资源库/temolates/视频输出笔记模板.md.md",
     "10--日常记录（日记-灵感-碎片）/感想.md",
     "30--项目与任务/01-Office办公软件/Microsoft Word 使用指南.md",
@@ -221,9 +224,6 @@
     "40--资源库/外部链接.md",
     "20--知识模块/迭代至完美.md",
     "20--知识模块/C语言/基本语言代码.md",
-    "2025-12-17.md",
-    "20--知识模块/Python/基本语言代码.md",
-    "20--知识模块/旅游攻略.md",
     "20--知识模块/C语言",
     "20--知识模块/Python",
     "未命名.base",
