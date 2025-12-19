@@ -10,7 +10,7 @@ status: in_progress
 大模型 gtp4-128k 
 输出平台 微信 豆包 微信公众号
 国内版本
-大模型 云雀
+大模型 豆包/kimi/deepseak（快下架）
 输出平台
 - Discord
 - Telegram
