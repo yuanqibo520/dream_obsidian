@@ -8,20 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0c3e7fc512fd2145",
-            "type": "leaf",
-            "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: workspace.json"
-            }
-          },
-          {
             "id": "f33e3ed2fde1fbca",
             "type": "leaf",
             "state": {
@@ -208,19 +194,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0c3e7fc512fd2145",
+  "active": "f33e3ed2fde1fbca",
   "lastOpenFiles": [
-    "30--项目与任务/Git/Git 基本代码使用手册.md",
-    "30--项目与任务/智能体/coze智能体学习.md",
     "30--项目与任务/智能体/coze使用手册.md",
+    "30--项目与任务/智能体/coze智能体学习.md",
+    "Obsidian 基本使用手册.md",
+    "Coze智能体.md",
+    "40--资源库/外部链接.md",
+    "40--资源库/图片.md",
+    "30--项目与任务/智能体/02-coze智能体.md",
+    "30--项目与任务/Git/Git 基本代码使用手册.md",
     "40--资源库/temolates/02-学习过程模板.md.md",
     "00--index（临时知识库）/coze2.md",
-    "30--项目与任务/智能体/02-coze智能体.md",
     "30--项目与任务/智能体/基于大模型生成优质的prompt（e人）.md",
     "40--资源库/temolates/01-学习对象基本信息模板.md.md",
-    "Coze智能体.md",
     "30--项目与任务/智能体/未命名.md",
-    "Obsidian 基本使用手册.md",
     "2025-12-18.md",
     "30--项目与任务/Git/markdown基本格式.md",
     "未命名 1.md",
@@ -234,8 +222,6 @@
     "学习方法.md",
     "40--资源库/temolates/01-学习对象基本信息模板.md 1.md",
     "01-学习对象基本信息模板.md.md",
-    "40--资源库/图片.md",
-    "40--资源库/外部链接.md",
     "20--知识模块/C语言",
     "20--知识模块/Python",
     "未命名.base",
