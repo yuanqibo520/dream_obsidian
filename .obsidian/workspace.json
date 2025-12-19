@@ -60,12 +60,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30--项目与任务/智能体/coze使用手册.md",
+                "file": "Single+.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "coze使用手册"
+              "title": "Single+"
             }
           },
           {
@@ -82,8 +82,7 @@
               "title": "Chatflow模式"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -247,12 +246,12 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "32de19123ec1f56e",
+  "active": "f0c3e105d04b10ad",
   "lastOpenFiles": [
-    "Single+.md",
     "30--项目与任务/智能体/coze使用手册.md",
-    "30--项目与任务/智能体/coze智能体学习.md",
     "30--项目与任务/智能体/Chatflow模式.md",
+    "Single+.md",
+    "30--项目与任务/智能体/coze智能体学习.md",
     "30--项目与任务/智能体/02-coze智能体.md",
     "30--项目与任务/智能体/基于大模型生成优质的prompt（e人）.md",
     "20--知识模块/迭代至完美.md",
