@@ -4,21 +4,68 @@
     "type": "split",
     "children": [
       {
-        "id": "fa3bb6cad1b1e3d9",
+        "id": "c20abb3a9bf1f026",
+        "type": "split",
+        "children": [
+          {
+            "id": "99c95cd0b4396ed3",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "6e0681ef32298fec",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "30--项目与任务/智能体/coze智能体学习.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "coze智能体学习"
+                }
+              }
+            ]
+          },
+          {
+            "id": "b9182b8891bb0aab",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "c2b3b778853393a3",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "30--项目与任务/智能体/coze使用手册.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "coze使用手册"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal"
+      },
+      {
+        "id": "08b961e68756800a",
         "type": "tabs",
         "children": [
           {
-            "id": "f33e3ed2fde1fbca",
+            "id": "f0c3e105d04b10ad",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40--资源库/外部链接.md",
+                "file": "Chatflow.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "外部链接"
+              "title": "Chatflow"
             }
           }
         ]
@@ -53,7 +100,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:待分类",
+                "query": " ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -164,64 +211,55 @@
               "icon": "lucide-list",
               "title": "办公软件 的大纲"
             }
-          },
-          {
-            "id": "c051fe6d573acf66",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "bases:创建新数据库": false,
-      "workspaces:管理工作区布局": false,
-      "obsidian-git:Open Git source control": false
+      "workspaces:管理工作区布局": false
     }
   },
-  "active": "f33e3ed2fde1fbca",
+  "active": "6e0681ef32298fec",
   "lastOpenFiles": [
-    "40--资源库/图片.md",
-    "30--项目与任务/智能体/02-coze智能体.md",
+    "Chatflow.md",
     "30--项目与任务/智能体/coze使用手册.md",
+    "30--项目与任务/智能体/基于大模型生成优质的prompt（e人）.md",
     "30--项目与任务/智能体/coze智能体学习.md",
+    "30--项目与任务/智能体/02-coze智能体.md",
+    "20--知识模块/迭代至完美.md",
+    "animation.gif.md",
     "Obsidian 基本使用手册.md",
-    "Coze智能体.md",
+    "00--index（临时知识库）/杂记.md",
+    "10--日常记录（日记-灵感-碎片）/感想.md",
+    "20--知识模块/旅游攻略.md",
     "40--资源库/外部链接.md",
+    "40--资源库/图片.md",
+    "Coze智能体.md",
     "30--项目与任务/Git/Git 基本代码使用手册.md",
     "40--资源库/temolates/02-学习过程模板.md.md",
     "00--index（临时知识库）/coze2.md",
-    "30--项目与任务/智能体/基于大模型生成优质的prompt（e人）.md",
     "40--资源库/temolates/01-学习对象基本信息模板.md.md",
     "30--项目与任务/智能体/未命名.md",
     "2025-12-18.md",
     "30--项目与任务/Git/markdown基本格式.md",
     "未命名 1.md",
-    "00--index（临时知识库）/杂记.md",
     "40--资源库/temolates/视频输出笔记模板.md.md",
-    "10--日常记录（日记-灵感-碎片）/感想.md",
     "30--项目与任务/01-Office办公软件/Microsoft Word 使用指南.md",
     "30--项目与任务/01-Office办公软件/Microsoft Word练习题.md",
     "40--资源库/Node.md",
-    "40--资源库/temolates/任务项目模板.md.md",
-    "学习方法.md",
-    "40--资源库/temolates/01-学习对象基本信息模板.md 1.md",
-    "01-学习对象基本信息模板.md.md",
     "20--知识模块/C语言",
     "20--知识模块/Python",
     "未命名.base",

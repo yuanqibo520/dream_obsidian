@@ -11,7 +11,16 @@ status: in_progress
 输出平台 微信 豆包 微信公众号
 国内版本
 大模型 云雀
-输出平台 Disecord Telegram Slack Web
+输出平台
+- Discord
+- Telegram
+- Facebook Messenger
+- Line
+- Slack
+- Instagram
+- WhatsApp
+- 飞书（Lark）和飞书多维表格（Lark Base）
+- Cici
 (Attention : 
 - GPT-4 Turbe模型实力最强
 - 开发者工具链成熟（Function Calling、RAG、多模态）
