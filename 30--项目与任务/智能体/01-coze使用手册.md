@@ -6,21 +6,12 @@ status: in_progress
 ---
 ---
 # 对比国内外版本差异
-国外版本
-大模型 gtp4-128k 
-输出平台 微信 豆包 微信公众号
-国内版本
-大模型 豆包/kimi/deepseak（快下架）
-输出平台
-- Discord
-- Telegram
-- Facebook Messenger
-- Line
-- Slack
-- Instagram
-- WhatsApp
-- 飞书（Lark）和飞书多维表格（Lark Base）
-- Cici
+
+| 版本  | 语言模型                 | 输出平台                                                                   |
+| --- | -------------------- | ---------------------------------------------------------------------- |
+| 国内版 | 豆包/kimi/Deepseek     | 微信 豆包 微信公众号                                                            |
+| 国外  | Gpt-4o/Gemini 2.5Pro | Discord/Telegram/Facebook/MessengerLine/Slack/InstagramWhatsApp飞书）Cici |
+
 (Attention : 
 - GPT-4 Turbe模型实力最强
 - 开发者工具链成熟（Function Calling、RAG、多模态）
