@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 257.5
+    "width": 257.5,
+    "collapsed": true
   },
   "right": {
     "id": "da904b476b80b254",
@@ -175,7 +176,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -187,17 +187,19 @@
   },
   "active": "d8cf42958226eb57",
   "lastOpenFiles": [
-    "40--资源库/外部链接.md",
+    "未来方向.md",
     "Obsidian 基本使用手册.md",
+    "30--项目与任务/Git/Git 基本代码使用手册.md",
+    "30--项目与任务/Git/markdown基本格式.md",
+    "40--资源库/袁博好帅.md",
+    "40--资源库/外部链接.md",
     "40--资源库/temolates/01-学习对象基本信息模板.md.md",
     "40--资源库/temolates/02-学习过程模板.md.md",
     "40--资源库/temolates/任务项目模板.md.md",
     "40--资源库/temolates/视频输出笔记模板.md.md",
-    "30--项目与任务/Git/Git 基本代码使用手册.md",
     "30--项目与任务/智能体/01-coze使用手册.md",
     "30--项目与任务/Coze智能体.md",
     "30--项目与任务/智能体/02-Chatflow模式-基本用法.md",
-    "30--项目与任务/Git/markdown基本格式.md",
     "30--项目与任务/智能体/Chatflow模式-进阶用法.md",
     "30--项目与任务/智能体/袁琦博陪伴助手.md",
     "30--项目与任务/智能体/Prompt.md",
@@ -209,10 +211,8 @@
     "00--index（临时知识库）/杂记.md",
     "10--日常记录（日记-灵感-碎片）/感想.md",
     "20--知识模块/旅游攻略.md",
-    "40--资源库/图片.md",
     "00--index（临时知识库）/coze2.md",
     "30--项目与任务/智能体/未命名.md",
-    "2025-12-18.md",
     "20--知识模块/C语言",
     "20--知识模块/Python",
     "未命名.base",

@@ -36,14 +36,19 @@ deadline: 2025-12-18
 ```bash
 
 # 初始化本地仓库
-git init
+git init [project-name]
 
 # 全局配置（只需一次）
+git config --global --list
+git config --system --list
 git config --global user.name "你的名字"
 git config --global user.email "你的邮箱"
 
 # 克隆远程仓库
 git clone <仓库URL> [<本地目录名>]
+
+#清楚页面已有信息
+clear
 
 # 添加文件到暂存区
 git add .                 # 添加所有更改
@@ -64,18 +69,26 @@ touch .gitignore
 # 常用规则示例（用记事本/VS Code 编辑）：
 # *.log        → 忽略所有 .log 文件
 # !important.log → 但不忽略 important.log
+# build/  →忽略build/目录下的所有文件
 ```
 
 
 ```bash
+
 # 关联远程仓库（首次）
 git remote add origin <仓库URL>
+
+# 提交时显示所有diff信息
+git commit -v
 
 # 查看远程仓库
 git remote -v
 
+# 停止追踪指定文件，但该文件会保留在工作区
+git rm --cashed [file]
+
 # 首次推送（主分支通常为 main）
-git push -u origin main
+git push -u origin main 
 
 # 查看完整提交历史
 git log
@@ -88,17 +101,23 @@ git reset --hard <COMMIT_ID>
 
 # 查看分支
 git branch
+git branch -r
+git branch -a
 
 # 创建分支
 git branch <分支名>
 
 # 切换分支
 git checkout <分支名>
+
+# 创建一个分支，与指定的远程分支建立追踪关系
+git branch --track [name] [remote_branch]
+
 # 或（新命令）
 git switch <分支名>
 
 # 创建并切换分支
-git switch -c <分支名>   # 等价于 git checkout -b
+git switch -b <分支名>   # 等价于 git checkout -b
 
 # 删除分支
 git branch -d <分支名>   # 安全删除（已合并）
@@ -109,11 +128,35 @@ git merge <被合并的分支名>
 
 # 拉取并合并远程更改（fetch+merge）
 git pull 
+
 # 拉取文件到本地 
 git fetch
 冲突原因 本地代码和远程仓库代码都被修改，需要手动修改
 ```
 
+```bash
+# 本地仓库绑定远程仓库（SSH）
+
+1.查找密钥
+ssh-keygen -t rsa -C [邮箱]
+ssh-keygen -t ed25519 -C "your_email@example.com"
+（ed25519 是一种非对称加密算法的名称，相比老式rsa，更短更快更安全）
+
+2.设置
+：+ enter
+y/n：y
+enter
+（使用默认路径和空密码即可）
+
+3.细节操作
+Your public key has been saved in （Windows 路径通常是 C:\Users\<用户名>\.ssh\id_ed25519.pub）
+找到并复制复制公钥内容
+cat ~/.ssh/id_ed25519.pub
+在SSH中创建自己的密钥
+git push --set-upstream origin master 推送master分支到远端并绑定分支
+第一次链接通过主机验证 yes
+
+```
 
 ---
 ## 常用工作流模式
