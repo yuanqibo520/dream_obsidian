@@ -137,7 +137,7 @@ git fetch
 ```bash
 # 本地仓库绑定远程仓库（SSH）
 
-1.查找密钥
+1.创建密钥
 ssh-keygen -t rsa -C [邮箱]
 ssh-keygen -t ed25519 -C "your_email@example.com"
 （ed25519 是一种非对称加密算法的名称，相比老式rsa，更短更快更安全）
