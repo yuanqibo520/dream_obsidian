@@ -150,12 +150,14 @@ enter
 
 3.细节操作
 Your public key has been saved in （Windows 路径通常是 C:\Users\<用户名>\.ssh\id_ed25519.pub）
+记住创建的密码
 找到并复制复制公钥内容
 cat ~/.ssh/id_ed25519.pub
 在SSH中创建自己的密钥
 git push --set-upstream origin master 推送master分支到远端并绑定分支
 第一次链接通过主机验证 yes
 
+123
 ```
 
 ---
