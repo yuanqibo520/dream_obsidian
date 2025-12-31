@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e1bae537deb7cb1b",
+        "id": "ada8fdbc475a1236",
         "type": "tabs",
         "children": [
           {
-            "id": "c2b3b778853393a3",
+            "id": "de0a2f869547d364",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30--项目与任务/智能体/02-Chatflow模式-基本用法.md",
+                "file": "20--知识模块/C语言/基本语言代码.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02-Chatflow模式-基本用法"
+              "title": "基本语言代码"
             }
           }
         ]
@@ -184,46 +184,47 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "c2b3b778853393a3",
+  "active": "de0a2f869547d364",
   "lastOpenFiles": [
-    "30--项目与任务/智能体/01-coze使用手册.md",
-    "30--项目与任务/智能体/02-coze智能体.md",
-    "30--项目与任务/智能体/02-coze智能体学习.md",
-    "30--项目与任务/智能体/02-Single+Agent（Model-setting）.md",
-    "30--项目与任务/智能体/03-导入知识库.md",
-    "30--项目与任务/智能体/03-Plugins-知识卡片.md",
-    "30--项目与任务/智能体/02-Chatflow模式-基本用法.md",
-    "Pasted image 20251221172819.png",
-    "1.md",
-    "未来方向.md",
-    "Obsidian 基本使用手册.md",
-    "30--项目与任务/智能体/Chatflow模式-进阶用法.md",
-    "30--项目与任务/智能体/袁琦博陪伴助手.md",
-    "30--项目与任务/智能体/03-Prompt.md",
-    "20--知识模块/C语言/基本语言代码.md",
-    "30--项目与任务/Git/Git 基本代码使用手册.md",
-    "yes.pub",
-    "yes",
-    "30--项目与任务/Git/markdown基本格式.md",
-    "40--资源库/袁博好帅.md",
-    "40--资源库/外部链接.md",
+    "30--项目与任务/网站部署/01-部署英语四六级网站.md",
     "40--资源库/temolates/01-学习对象基本信息模板.md.md",
     "40--资源库/temolates/02-学习过程模板.md.md",
-    "40--资源库/temolates/任务项目模板.md.md",
-    "40--资源库/temolates/视频输出笔记模板.md.md",
-    "30--项目与任务/Coze智能体.md",
-    "20--知识模块/迭代至完美.md",
-    "animation.gif.md",
+    "Obsidian 基本使用手册.md",
+    "智能体疑问.md",
+    "30--项目与任务/Git/Git 基本代码使用手册.md",
+    "未命名.md",
+    "未来方向.md",
+    "1.md",
+    "30--项目与任务/智能体/Chatflow/04-Chatflow模式-进阶用法.md",
+    "30--项目与任务/智能体/03-Single+Agent（Skill）.md",
+    "30--项目与任务/智能体/05-袁琦博陪伴助手.md",
+    "30--项目与任务/智能体/05-Prompt.md",
+    "30--项目与任务/智能体/Single+Agent/02-Single+Agent（Model-setting）.md",
+    "30--项目与任务/智能体/03-Single+Agent（Memory+Chat experience）.md",
+    "20--知识模块/C语言/基本语言代码.md",
+    "10--日常记录（日记-灵感-碎片）/感想.md",
+    "00--index（临时知识库）/杂记.md",
+    "30--项目与任务/Git/markdown基本格式.md",
+    "30--项目与任务/智能体/Single+Agent/03-Single+Agent（Knowledge）.md",
+    "30--项目与任务/智能体/Chatflow/01-Chatflow模式-基本用法.md",
+    "30--项目与任务/智能体/Single+Agent",
+    "Single+Agent.md",
+    "30--项目与任务/智能体/Chatflow",
+    "Chatflow.md",
+    "30--项目与任务/智能体/01-coze使用手册.md",
+    "30--项目与任务/智能体/03-智能体.md",
+    "30--项目与任务/智能体/02-coze智能体学习.md",
+    "未命名 1.base",
+    "未命名.base",
+    "30--项目与任务/网站部署",
+    "Pasted image 20251221172819.png",
+    "yes.pub",
+    "yes",
     "20--知识模块/C语言",
     "20--知识模块/Python",
-    "未命名.base",
-    "未命名 1.base",
     "未命名 2.base",
     "未命名.canvas",
     "未命名 1.canvas",
-    "ae1cb95b927788b9efbdcef1efc3f51c.png",
-    "40--资源库/temolates",
-    "肌酸服用指南",
-    "40--资源库/外部链接"
+    "ae1cb95b927788b9efbdcef1efc3f51c.png"
   ]
 }
