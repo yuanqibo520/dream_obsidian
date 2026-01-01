@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20--知识模块/C语言/基本语言代码.md",
+                "file": "30--项目与任务/Git/Git 基本代码使用手册.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "基本语言代码"
+              "title": "Git 基本代码使用手册"
             }
           }
         ]
@@ -186,6 +186,7 @@
   },
   "active": "de0a2f869547d364",
   "lastOpenFiles": [
+    "20--知识模块/C语言/基本语言代码.md",
     "30--项目与任务/网站部署/01-部署英语四六级网站.md",
     "40--资源库/temolates/01-学习对象基本信息模板.md.md",
     "40--资源库/temolates/02-学习过程模板.md.md",
@@ -201,7 +202,6 @@
     "30--项目与任务/智能体/05-Prompt.md",
     "30--项目与任务/智能体/Single+Agent/02-Single+Agent（Model-setting）.md",
     "30--项目与任务/智能体/03-Single+Agent（Memory+Chat experience）.md",
-    "20--知识模块/C语言/基本语言代码.md",
     "10--日常记录（日记-灵感-碎片）/感想.md",
     "00--index（临时知识库）/杂记.md",
     "30--项目与任务/Git/markdown基本格式.md",
