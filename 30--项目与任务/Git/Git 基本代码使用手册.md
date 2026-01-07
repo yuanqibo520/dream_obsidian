@@ -129,6 +129,15 @@ git merge <被合并的分支名>
 # 拉取并合并远程更改（fetch+merge）
 git pull 
 
+# 拉取远程最新消息
+git fetch origin
+
+# 把本地的 `master` 分支推送到远程分支feature-yuanqibo
+git push origin master:feature-yuanqibo
+
+# 强制推送（慎用！会覆盖远程分支）
+git push --force origin main:feature-yuanqibo
+
 # 拉取文件到本地 
 git fetch
 冲突原因 本地代码和远程仓库代码都被修改，需要手动修改
