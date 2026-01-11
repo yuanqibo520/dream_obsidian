@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"29cc4fe8f755c8c3","type":"text","text":"","x":-360,"y":-840,"width":600,"height":240,"color":"6"},
+		{"id":"33962a7683eaf602","type":"text","text":"数据元素","x":-120,"y":-740,"width":120,"height":105},
+		{"id":"43d743c69c24d5d9","type":"text","text":"数据项","x":-120,"y":-690,"width":120,"height":55},
+		{"id":"85e385a3bad16cf0","type":"text","text":"数据元素","x":-300,"y":-742,"width":120,"height":105},
+		{"id":"b35f252c4aa1cb02","type":"text","text":"数据项","x":-300,"y":-692,"width":120,"height":55},
+		{"id":"f39b1858466ae694","type":"text","text":"数据元素","x":60,"y":-742,"width":120,"height":105},
+		{"id":"f6ddd70927bbd379","type":"text","text":"数据项","x":60,"y":-693,"width":120,"height":55},
+		{"id":"7b4ef928fdd94c88","type":"file","file":"20--知识模块/408/数据结构-DAY1.md","x":380,"y":-1080,"width":420,"height":884}
+	],
+	"edges":[]
+}
