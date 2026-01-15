@@ -4,21 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "ad851249f846a586",
+        "id": "06fa4865903f5a42",
         "type": "tabs",
         "children": [
           {
-            "id": "447dec5635c2d5d8",
+            "id": "0e4e437d007b1c19",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20--知识模块/408/04-栈.md",
+                "file": "20--知识模块/C语言/基本语言代码.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04-栈"
+              "title": "基本语言代码"
+            }
+          },
+          {
+            "id": "5206b61df6563f9d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "20--知识模块/个人简历.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "个人简历"
             }
           }
         ]
@@ -94,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Obsidian 基本使用手册.md",
+                "file": "20--知识模块/C语言/基本语言代码.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Obsidian 基本使用手册 的反向链接列表"
+              "title": "基本语言代码 的反向链接列表"
             }
           },
           {
@@ -165,8 +179,7 @@
               "title": "办公软件 的大纲"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -184,24 +197,24 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "447dec5635c2d5d8",
+  "active": "0e4e437d007b1c19",
   "lastOpenFiles": [
-    "20--知识模块/408/03-静态链表.md",
-    "20--知识模块/408/数据结构-DAY5.md",
-    "20--知识模块/408/数据结构-DAY6.md",
+    "20--知识模块/C语言/sizeof VS strlen.md",
     "20--知识模块/C语言/基本语言代码.md",
+    "20--知识模块/个人简历.md",
+    "20--知识模块/C语言/外部头文件接口.md",
+    "20--知识模块/408/数据结构-DAY6.md",
     "20--知识模块/408/05-队列.md",
     "20--知识模块/408/04-栈.md",
+    "20--知识模块/408/03-静态链表.md",
+    "20--知识模块/408/数据结构-DAY5.md",
     "20--知识模块/408/数据结构-DAY4.md",
     "20--知识模块/Linux开发.md",
     "20--知识模块/未来方向.md",
     "20--知识模块/C语言/C语言项目/功能全面的计算器.md",
-    "20--知识模块/C语言/sizeof VS strlen.md",
-    "20--知识模块/C语言/外部头文件接口.md",
     "20--知识模块/计算机专业大学四年学习路线规划-2026.md",
     "40--资源库/图片/f8a5619771295753b9d1d0375bc5569f.jpg",
     "40--资源库/图片/a976ae52cd56ec8d40182202a535740a.jpg",
-    "20--知识模块/个人简历.md",
     "20--知识模块/Python/基本语言代码.md",
     "20--知识模块/408/0-408之间的关系.md",
     "20--知识模块/408/数据结构-DAY3.md",

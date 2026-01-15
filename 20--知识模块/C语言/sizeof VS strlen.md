@@ -27,8 +27,6 @@ int main()
 	printf("%d\n",sizeof(*(a[0]+1)));//4
 	printf("%d\n",sizeof(*a[0]+1));//16第二行的地址
 	printf("%d\n",sizeof(a[3]));//16
-	printf("%d\n",);
-	printf("%d\n",);
 	int a[5][5]={};
 	int (*p) [4];
 	p=a;
@@ -36,3 +34,4 @@ int main()
 	return 0;
 }
 ```
+![[f8a5619771295753b9d1d0375bc5569f.jpg]]
