@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "10b5836266e2c5a2",
+        "id": "0007b746be6d5325",
         "type": "tabs",
         "children": [
           {
-            "id": "1cf5e80ef719b6c7",
+            "id": "4636cf30a61c4010",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:待分类",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Obsidian 基本使用手册.md",
+                "file": "20--知识模块/C语言/基本语言代码.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Obsidian 基本使用手册 的反向链接列表"
+              "title": "基本语言代码 的反向链接列表"
             }
           },
           {
@@ -165,8 +165,7 @@
               "title": "办公软件 的大纲"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -175,61 +174,63 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:新建数据库": false,
+      "daily-notes:打开/创建今天的日记": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "bases:创建新数据库": false,
-      "workspaces:管理工作区布局": false
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "1cf5e80ef719b6c7",
+  "active": "4636cf30a61c4010",
   "lastOpenFiles": [
-    "20--知识模块/C语言/C语言项目/功能全面的计算器.md",
-    "未命名.md",
-    "未命名.canvas",
+    "20--知识模块/408/数据结构-DAY6.md",
+    "20--知识模块/408/07-中缀表达式求值.md",
+    "20--知识模块/C语言/01-字符串.md",
     "20--知识模块/C语言/基本语言代码.md",
-    "20--知识模块/C语言/C语言项目/C语言巩固项目目录.md",
-    "20--知识模块/个人简历.md",
-    "20--知识模块/计算机专业大学四年学习路线规划-2026.md",
-    "20--知识模块/未来方向.md",
+    "40--资源库/图片/39298875ecd0c8d72a1c2636f858a2c0.jpg",
+    "20--知识模块/校园生活/唱歌.md",
+    "20--知识模块/软实力/领导力.md",
+    "20--知识模块/408/数据结构-DAY7.md",
     "20--知识模块/Linux开发.md",
-    "20--知识模块/Python/基本语言代码.md",
-    "20--知识模块/C语言/数据结构基础.md",
+    "10--日常记录（日记-灵感-碎片）/ideal.md",
+    "未命名",
+    "20--知识模块/软实力",
+    "20--知识模块/408/数据结构-DAY5.md",
+    "20--知识模块/408/04-栈.md",
+    "20--知识模块/408/06-括号匹配.md",
+    "20--知识模块/408/05-队列.md",
+    "30--项目与任务/02-Git/markdown基本格式.md",
+    "20--知识模块/校园生活/把脉.md",
+    "20--知识模块/穿搭日用/穿搭.md",
+    "20--知识模块/穿搭日用/日用.md",
+    "00--index（临时知识库）/杂记.md",
+    "03-作业讲解.md",
+    "20--知识模块/C语言/02-sizeof VS strlen.md",
+    "20--知识模块/未来方向.md",
+    "20--知识模块/计算机专业大学四年学习路线规划-2026.md",
     "20--知识模块/C语言/外部头文件接口.md",
-    "20--知识模块/408/链表.md",
-    "20--知识模块/408/数据结构-DAY2.md",
-    "20--知识模块/408/数据结构-DAY3.md",
-    "20--知识模块/408/顺序表.md",
-    "20--知识模块/408/数据结构-DAY1.md",
-    "20--知识模块/408/408之间的关系.md",
-    "30--项目与任务/编程工具/Git/Git 基本代码使用手册.md",
-    "30--项目与任务/编程工具/Git/markdown基本格式.md",
-    "20--知识模块/数学类/高数上下.md",
-    "logo.svg.md",
-    "20--知识模块/校园生活/COLLEGE-LIFE.md",
-    "20--知识模块/校园生活/游戏本.md",
-    "20--知识模块/校园生活/饮料配方.md",
-    "20--知识模块/校园生活/商业游戏.md",
+    "20--知识模块/个人简历.md",
+    "20--知识模块/408/03-静态链表.md",
+    "40--资源库/图片/f8a5619771295753b9d1d0375bc5569f.jpg",
+    "40--资源库/图片/a976ae52cd56ec8d40182202a535740a.jpg",
+    "30--项目与任务/智能体/Single+Agent",
+    "30--项目与任务/智能体/Chatflow",
+    "30--项目与任务/01-Office办公软件",
+    "未命名.canvas",
+    "40--资源库/图片/b4ad8f4fa401884aa3b15af8936d89c8.jpg",
+    "30--项目与任务/编程工具/vscode",
+    "30--项目与任务/02-Git",
+    "30--项目与任务/编程工具",
+    "30--项目与任务/智能体",
+    "30--项目与任务",
+    "Pasted image 20251221172819.png",
     "40--资源库/图片/725be5592a83dd3de4d1b99f6ec3b3f2.jpg",
     "ebbeac74aa63c5745dde77e67032e612.jpg",
     "ebbeac74aa63c5745dde77e67032e612 1.jpg",
-    "20--知识模块/C语言/C语言项目",
-    "30--项目与任务/编程工具/vscode",
-    "30--项目与任务/编程工具",
-    "20--知识模块/数学类",
     "40--资源库/图片/9cb75e73405a13cd0af54f7bd9b87663.jpg",
     "40--资源库/图片/6fd5cbf89cf0c87d2b82c78e83967db5.jpg",
-    "20--知识模块/408",
-    "未命名.base",
-    "40--资源库/图片/5461361e82783e55b52af6fc813c02fd.jpg",
-    "Pasted image 20251221172819.png",
-    "30--项目与任务/智能体/Single+Agent",
-    "30--项目与任务/智能体/Chatflow",
-    "未命名 1.base",
-    "30--项目与任务/网站部署",
-    "未命名 1.canvas",
-    "ae1cb95b927788b9efbdcef1efc3f51c.png"
+    "未命名 1.canvas"
   ]
 }
