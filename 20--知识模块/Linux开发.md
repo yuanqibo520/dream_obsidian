@@ -27,6 +27,12 @@ Terminal终端 右键 open in Terminal
 	- sudo apt update 只检查不更新
 	- sudo apt upgrade 检查并跟新
 	- sudo apt install 下载并安装远程/本地软件
+		- gedit-基本文本编辑器
+		- audacity-录制和编辑音频文件
+		- blender-制作3D动画和可视化效果
+		- gimp 编辑照片
+		- nautilus-Linux文件资源管理器
+		- vlc-视频播放器
 	- sudo apt 删除软件并移除配置文件
 		- sudo apt install ./code
 怎么安装app？
