@@ -71,8 +71,7 @@ touch .gitignore
 # !important.log → 但不忽略 important.log
 # build/  →忽略build/目录下的所有文件
 ```
-
-
+---
 ```bash
 
 # 关联远程仓库（首次）
