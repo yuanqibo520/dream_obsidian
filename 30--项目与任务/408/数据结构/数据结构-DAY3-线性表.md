@@ -22,6 +22,7 @@ data: 2026-01-11
 	- 数据域+指针域
 	- 带头结点的链表更方便？
 	- LinkList== * LinkNode，前者表示单链表，后者表示结点
+	- [[01-链表]]
 ```C
 	// struct LNode *p= (struct LNode *)malloc(sizeof(struct LNode ));
 	//sizeof Elemtype Alias;
@@ -29,7 +30,7 @@ data: 2026-01-11
 	// sizeof struct LNode* LinkList
 ```
 
-承上[[数据结构-DAY2]]
+承上[[数据结构-DAY2-绪论]]
 
 
 

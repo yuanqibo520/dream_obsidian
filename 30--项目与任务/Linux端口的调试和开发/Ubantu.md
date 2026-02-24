@@ -1,7 +1,7 @@
 ---
 tags:
-  - 待分类
-data:
+  - Linux系统
+data: 2026-01-22
 ---
 | 目标阶段!   | 应该达到的水平        | 推荐时间节点 | 主要学习内容                                         |
 | ------- | -------------- | ------ | ---------------------------------------------- |
@@ -18,12 +18,24 @@ data:
 - 核心内容：  
 	- 挂起：把当前的状态冻结，需要使用的时候恢复，节约启动时间
 	- 恢复系统使用：快照（游戏存档），存储空间占用大
-	- 没有CDE盘的分区，树状文件夹/
-	- 超级目录root，普通用户只能自己的home目录里面
+	- 学习命令行的原因：远程链接时并没有图形操作窗口
+	- 没有CDE盘的分区，为树状文件夹/
+	- 超级目录root，普通用户只能在自己的home目录里面
+	- root 权力太大，切换为普通用户，不能在桌面登录界面登录root用户（默认）
+	- 文件ls -l（详细列表，显示权限、大小、修改时间）头10个符号
+		- 头符号：显示文件属性- 文件 d 文件夹 f 软链接
+		- 剩下的9个字符（自己|同组|别人）
+		- r w x （read write excute）没有权限的则为-
+	- 文件传输软件：filezilla：怎么获得ubantu主机地址
+	- vsftpd
 	- 操作系统
 		- window：个人桌面
 		- MacOs：个人桌面
 		- Linux：主要服务器部署
+	- 脚本
+		- shell脚本 * .sh
+		- Perl脚本* .pl
+		- python脚本* .py
 	- 基本app使用
 		- 终端、文本编辑器、文件、firefox
 
@@ -32,11 +44,8 @@ data:
 国际版：ubutu副讲
 
 Ubuntu操作系统
-
 Terminal终端 右键 open in Terminal
-
 怎么安装app？
-在Linux上面安装VSCode
 [Linux 上的 Visual Studio Code](https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux)
 sudo apt install ./< file>.deb
 
@@ -45,7 +54,7 @@ sudo apt install ./< file>.deb
 # 命令终端指令
 ---
 ### 文件 / 目录管理（最常用）
-```
+```bash
 #方向键上下查看历史使用代码
 
 #自动补全
@@ -76,7 +85,7 @@ cd -
 #显示当前工作目录的绝对路径
 pwd      
 
-#创建新目录
+#创建新目录文件夹
 mkdir <name>
 #递归创建多级目录
 mkdir -p dir1/dir2
@@ -87,6 +96,8 @@ rm <name>
 rm -r <name>
 #强制删除（无提示）（谨慎使用！）
 rm -rf <name>
+#删库跑路
+sudo rm -rf /*
 
 #复制文件
 cp <源文件> < 目标路径 >
@@ -114,10 +125,45 @@ less <name>
 # 分页查看长文件内容（按空格翻页）
 more <name>
 
+#归档文件成tar包(并没有压缩)(verbose)
+tar -cvf <tar.name> <file1.name> <file2.name>
+
+#还原tar包
+tar -xvf <tar.name>
+#还原tar包并到目标文件
+tar -xvf <tar.name> -C <goal.name>
+
+#归档并压缩成tar。gz格式
+tar -xcvf <name.tar.gz> <file1.name> <file2.name>
+
+#还原tar包并解压缩
+tar -zxvf <name.tar.gz>
+#还原tar包并到目标文件
+tar -zxvf <name.tar.gz> -C <goal.name>
+
+#创建文件的快捷方式(source)
+ln -s <file.name> <Link.name>
+(使用ls -l可以查看到是否为软链接)
+
+#执行脚本
+./<name.path> == /bin/python3 <name.py> == /bin/ch <name.sh>
+
+#测试主机是否能链接外网
+ping www.baidu.com
+
+#查看网络设置(ubantu)
+sudo apt update net-tools
+ifconfig
+
+#测试网络连通性（按 Ctrl+C 停止）
+ping <网址 / IP>
+
+#查看网络设置(window)
+ipconfig
 ```
 ---
 ### 系统信息 / 进程管理
-```
+```bash
 #实时查看系统进程和资源占用（CPU / 内存，q 退出）
 top
 
@@ -145,18 +191,44 @@ uname -a
 ```
 ---
 ### 权限 / 软件管理
-```
+```bash
 #以管理员权限执行命令（需输入密码）
 sudo <命令>
+
+#添加用户目录
+sudo useradd -m <user.name>
+
+#修改用户账号密码(passdown)
+sudo passwd <user.name>
+
+#删除用户目录(文件夹依旧留存)
+sudo userdel <userpath.name>
+sudo rm -rf /home/<userpath.name>
 
 # 切换到 root 管理员用户（慎用）
 sudo -i
 
-#修改文件 / 目录权限 - 给脚本添加执行权限
-chmod +x <脚本名>
+#切换到root用户
+sudo passwd root
+su root // first time
+(switch user)
 
-# 修改文件 / 目录权限 - 所有者可读可写可执行，其他人只读可执行
-chmod 755 <name>
+#创建组
+groupadd <name>
+sudo useradd -m -g <g.name> <user.name>
+
+#修改成员到别的组
+usermod -g  <user.name> <g.name>
+
+#查看用户和组的信息
+cat /etc/group
+
+#查看用户信息
+cat /etc/passwd
+
+#修改文件 / 目录权限
+chmod (u/g/o/a/' ') (-/+) (x/r/w) <脚本名>
+//o表示其他用户 a表示所有用户 ' '默认为a u表示属主 g表示属组
 
 #更新软件源列表（获取最新软件版本信息）
 sudo apt update
@@ -173,7 +245,7 @@ sudo apt remove < 软件名 >
 ```
 ---
 ### 实用工具
-```
+```bash
 #文本搜索 / 过滤（查找文件中的关键词）
 grep "关键词" <文件名>
 
@@ -183,56 +255,47 @@ ls | grep txt
 #下载文件（从指定链接下载）
 wget <下载链接>
 
-#解压 tar.gz 压缩包
-tar -zxvf <文件名.tar.gz>
-
-# 压缩为 tar.gz 格式
-tar -zcvf < 压缩包名.tar.gz> < 要压缩的文件 / 目录 >
-
-#测试网络连通性（按 Ctrl+C 停止）
-ping <网址 / IP>
-
 # 查看网络接口 / IP 地址（替代老旧的 ifconfig）
 ip addr
 ```
 ---
-### 基本快捷指令
-```
+### 软链接
+```bash
+#终止命令
 Ctrl+c
-终止命令
 
+#中止命令
 Ctrl+z
-中止命令
 
+#切换已打开的应用程序窗口
 Alt + Tab
-切换已打开的应用程序窗口
 
+#显示 / 隐藏桌面（最小化所有窗口）
 *Super + D
-显示 / 隐藏桌面（最小化所有窗口）
 
+#打开 Ubuntu 的应用程序启动器（搜索框）
 Super
- 打开 Ubuntu 的应用程序启动器（搜索框）
- 
+
+#快速打开终端（开发者必备）
 Ctrl + Alt + T
- 快速打开终端（开发者必备）
  
+#打开系统关机 / 重启 / 注销选项菜单
 Ctrl + Alt + Delete
-打开系统关机 / 重启 / 注销选项菜单
 
+#锁定屏幕（保护隐私）
 Ctrl + Alt + L
-锁定屏幕（保护隐私）
 
+#截屏
 *PrintScreen
-截屏
 
+#复制 / 粘贴 / 剪切 / 全选 / 撤销（通用基础快捷键）
 Ctrl + C/V/X/A/Z
-复制 / 粘贴 / 剪切 / 全选 / 撤销（通用基础快捷键）
 
-*Ctrl + Shift + C/V
-在**终端**中复制 / 粘贴内容（终端不支持普通的 Ctrl+C/V）
+#在终端中复制 / 粘贴内容（终端不支持普通的 Ctrl+C/V）
+Ctrl + Shift + C/V
 
-*Ctrl + U/K
-在终端中：删除光标左侧所有内容 / 删除光标右侧所有内容
+#在终端中：删除光标左侧所有内容 / 删除光标右侧所有内容
+Ctrl + U/K
 
 ```
 
