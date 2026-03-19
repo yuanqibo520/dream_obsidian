@@ -43,6 +43,8 @@ int Index_KMP(SString S,SString T,int next[] )
 int main()
 {
 	int next [] = { 0 };
+	//手动设计next数组内容，发生失配时j自动跳转至上比较区
+	//设计哨站0位置
 	test();
 	int size = Index_KMP(S,T,next);
 	printf("%d",size);

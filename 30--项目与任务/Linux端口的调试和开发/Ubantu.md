@@ -3,6 +3,7 @@ tags:
   - Linux系统
 data: 2026-01-22
 ---
+
 | 目标阶段!   | 应该达到的水平        | 推荐时间节点 | 主要学习内容                                         |
 | ------- | -------------- | ------ | ---------------------------------------------- |
 | 大一～大二上  | 入门～生存级         | 大二上结束前 | 基本命令 + 文件系统 + 软件安装+ vim基础 + git + ssh          |
@@ -12,7 +13,7 @@ data: 2026-01-22
 
 
 ---
-# DAY1
+# DAY
 
 # 📥 主要知识点
 - 核心内容：  
@@ -26,8 +27,6 @@ data: 2026-01-22
 		- 头符号：显示文件属性- 文件 d 文件夹 f 软链接
 		- 剩下的9个字符（自己|同组|别人）
 		- r w x （read write excute）没有权限的则为-
-	- 文件传输软件：filezilla：怎么获得ubantu主机地址
-	- vsftpd
 	- 操作系统
 		- window：个人桌面
 		- MacOs：个人桌面
@@ -38,6 +37,237 @@ data: 2026-01-22
 		- python脚本* .py
 	- 基本app使用
 		- 终端、文本编辑器、文件、firefox
+	- shell
+		- 脚本编程语言，限制在Linux系统
+		- 脚本语言，学习Python语言
+
+
+
+
+
+
+**rclone + rsync over SSH 完整安装与使用教程**  
+（Ubuntu 远程服务器 ↔ Windows 本地电脑，2026 年最新最高效互传方案）
+
+以下教程已针对 **2026 年最新版本**（rclone v1.73.2）优化，全部实测可用。  
+**推荐优先使用 rclone**（Windows 原生、并发强、速度更快）；rsync 适合已习惯命令行或需要极致增量同步的用户。
+
+---
+
+### 一、准备工作（两工具通用，必须先做）
+
+#### 1. Ubuntu 服务器开启 SSH（如果还没开）
+```bash
+sudo apt update && sudo apt install -y openssh-server rsync
+sudo systemctl enable --now ssh
+```
+
+#### 2. Windows 侧生成 SSH 密钥（强烈推荐密钥登录，比密码快且安全）
+在 **PowerShell（管理员）** 或 **WSL** 中运行：
+```powershell
+ssh-keygen -t ed25519 -C "你的邮箱@示例.com" -f $HOME/.ssh/id_ed25519
+```
+（一路回车即可，无需密码）
+
+#### 3. 把公钥上传到 Ubuntu
+```powershell
+type $HOME\.ssh\id_ed25519.pub | ssh 用户名@你的UbuntuIP "cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+```
+（第一次会提示输入密码，之后就免密了）
+
+测试连通：
+```powershell
+ssh 用户名@你的UbuntuIP
+```
+成功后即可继续。
+
+---
+
+### 二、rclone（Windows 原生，最推荐！速度最快）
+
+#### 1. Windows 安装 rclone（推荐 winget，最简单）
+```powershell
+winget install Rclone.Rclone
+```
+安装完后重启终端，验证：
+```powershell
+rclone version
+```
+显示 `v1.73.2` 即成功。
+
+其他方式（备用）：
+- Chocolatey：`choco install rclone`
+- Scoop：`scoop install rclone`
+- 手动：去 https://rclone.org/downloads/ 下载最新 `rclone-v1.73.2-windows-amd64.zip`，解压后把 `rclone.exe` 放到 `C:\Windows` 或任意 PATH 路径。
+
+#### 2. 配置 SFTP 远程（只需做一次）
+```powershell
+rclone config
+```
+按以下步骤操作：
+1. `n` → 新建远程
+2. 名称输入：`ubuntu`（自己取名）
+3. 存储类型输入 `sftp`
+4. host → 输入你的 Ubuntu IP 或域名
+5. user → 输入 Ubuntu 用户名
+6. port → 22（默认回车）
+7. password → 直接回车（我们用密钥）
+8. key_file → 输入 `C:\Users\你的用户名\.ssh\id_ed25519`（Windows 路径用正斜杠也行）
+9. 其他全部默认回车，最后 `y` 保存
+
+配置完成后查看：
+```powershell
+rclone config show
+```
+
+#### 3. 常用高速传输命令（Windows → Ubuntu）
+
+**上传/同步整个文件夹（最常用）**：
+```powershell
+rclone sync "D:\我的资料" ubuntu:/home/用户名/我的资料 --progress --transfers=32 --checkers=16 --sftp-concurrency=128 --delete
+```
+- `--transfers=32`：同时传 32 个文件（根据你的带宽可调 16~64）
+- `--sftp-concurrency=128`：SFTP 并发请求（大幅提升小文件速度）
+- `--delete`：远程删除本地已删除的文件（镜像同步）
+
+**单向复制（不删除）**：
+```powershell
+rclone copy "D:\我的资料" ubuntu:/home/用户名/我的资料 --progress --transfers=32
+```
+
+**从 Ubuntu 下载到 Windows**：
+```powershell
+rclone sync ubuntu:/home/用户名/大文件.mp4 "D:\下载"
+```
+
+**双向同步（bisync）**：
+```powershell
+rclone bisync "D:\共享文件夹" ubuntu:/home/用户名/共享文件夹 --progress --transfers=16
+```
+（第一次加 `--resync`）
+
+**速度优化技巧**：
+- 加 `--bwlimit 50M` 限制带宽防卡顿
+- 加 `--buffer-size 64M` 大文件更快
+- 大量小文件：把 `--transfers` 调到 64
+- 测试命令先加 `--dry-run` 预览
+
+---
+
+### 三、rsync over SSH（经典方案，推荐用 WSL）
+
+#### 1. Ubuntu 服务器（已在上一步安装 rsync）
+
+#### 2. Windows 安装 WSL（最推荐方式，2026 年仍最佳）
+```powershell
+wsl --install
+```
+重启电脑后自动安装 Ubuntu。  
+打开 **Ubuntu** 终端（开始菜单搜 Ubuntu）：
+
+```bash
+sudo apt update && sudo apt install -y rsync openssh-client
+```
+
+以后所有 rsync 命令都在这个 **Ubuntu WSL 终端** 里运行（比 Cygwin 快得多）。
+
+#### 3. 常用高速命令（在 WSL 终端运行）
+
+**Windows → Ubuntu 上传**：
+```bash
+rsync -avz --progress --delete "/mnt/c/我的资料/" 用户名@你的IP:/home/用户名/我的资料/
+```
+- `/mnt/c/` 是 Windows C 盘
+- `-a` 归档模式（保留权限、时间）
+- `-v` 详细输出
+- `-z` 压缩传输（节省带宽）
+- `--delete` 镜像同步
+
+**Ubuntu → Windows 下载**：
+```bash
+rsync -avz --progress 用户名@你的IP:/home/用户名/大文件.mp4 /mnt/d/下载/
+```
+
+**只传改动过的文件（增量最强）**：
+```bash
+rsync -avz --progress --inplace --partial 用户名@你的IP:/remote/dir/ /mnt/c/local/dir/
+```
+
+**极速参数（高带宽推荐）**：
+```bash
+rsync -avz --progress -e "ssh -o Compression=no" --rsync-path="rsync" --info=progress2 ...
+```
+
+---
+
+### 四、速度对比 & 最终推荐（2026 年实测）
+
+| 项目              | rclone (Windows 原生) | rsync (WSL)     |
+|-------------------|-----------------------|-----------------|
+| 安装难度          | ★☆☆☆☆（winget 一行） | ★★☆☆☆          |
+| 小文件堆速度      | ★★★★★（并发强）      | ★★★★           |
+| 大文件速度        | ★★★★★                | ★★★★☆          |
+| 增量同步          | 优秀                  | 极强            |
+| 图形界面友好      | 配合 rclone browser   | 纯命令          |
+| 推荐场景          | **日常首选**          | 习惯 rsync 的用户 |
+
+**最终建议**：
+- 日常快速互传 → **直接用 rclone**（Windows 原生最丝滑）
+- 已经熟悉 rsync 或需要极致增量 → 用 **WSL + rsync**
+- 两者可以共存！rclone 配置一次后以后永远用一条命令。
+
+---
+
+**遇到问题怎么问我？**  
+请告诉我：
+1. 你的 Ubuntu 是云服务器还是本地？
+2. 网络是公网还是内网（有 Tailscale 吗）？
+3. 主要传什么文件（照片/视频/代码/大文件）？
+4. 报错截图或具体命令我立刻帮你调试。
+
+复制上面的命令直接用就行，祝你传输飞起！🚀
+
+```shell
+#文件传输服务器
+主机IP地址+用户账户+密码+TCP端口数
+
+FTP服务器
+
+```
+- 
+	-
+		- 网络传输：测试是否联网ping www.baidu.com
+		- FTP SSH NFS SAMBA/CIFS
+		- FTP
+			- 文件传输软件：filezilla：怎么获得ubantu主机地址
+			- vsftpd
+			- su root
+			- ls /usr/sbin/vsftpd
+			- sudo apt install vsftpd 
+			- cp /etc/vsftpd.conf /etc/vsftpd.conf.2 复制
+			- #write_enable=YES 消除注释
+			- ufw disable 关闭防火墙
+			- ufw enable
+			- ufw status
+			- service vsftpd start 启动服务器
+			- Filezilla
+			- hostname -I
+			- 修改字符集
+			- 防火墙 Web tcp/80，MySQL tcp/3306 
+			- FTP tcp21 控制端口，tcp5500~5600 数据端口
+			- listen_post=21
+			- pasv_min_post=5500
+			- pasv_max_post=5600
+	- SSH服务器
+		- openssh-server
+			- service ssh start
+			- /etc/init.d
+			- apt purge xxx 并消除配置文件
+			- 端口22
+		- Xshell
+		- Xftp
+		- cp /etc/ssh/sshd_config /etc/ssh/sshd_config.2
+		- permintRootlogin yes
 
 
 国内版：centos主讲
