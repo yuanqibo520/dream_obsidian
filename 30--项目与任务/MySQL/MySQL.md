@@ -13,3 +13,5 @@ data: 2026-03-26
 8.事物处理
 9.事物隔离级别
 [MySQL函数 - Dotcpp编程](https://www.dotcpp.com/course/mysql-function/)
+[比特就业课](https://www.bitejiuyeke.com/path?key=mysql)
+[LintCode 炼码 - 更高效的学习体验！](https://www.lintcode.com/course/14/learn/?chapterId=79&sectionId=530)

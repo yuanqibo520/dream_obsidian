@@ -4,24 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "22428ffe3fc8cf66",
+        "id": "dab5c203186de33f",
         "type": "tabs",
         "children": [
           {
-            "id": "b1419f7a6f1b6639",
+            "id": "c8766403e88800a8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30--项目与任务/06-C++/DAY03-C++.md",
+                "file": "30--项目与任务/编程工具/未命名.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DAY03-C++"
+              "title": "未命名"
+            }
+          },
+          {
+            "id": "ea4cc23774f5c0a6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "30--项目与任务/06-C++/DAY08-C++.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "DAY08-C++"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -68,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 243.5,
+    "collapsed": true
   },
   "right": {
     "id": "da904b476b80b254",
@@ -116,13 +132,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "30--项目与任务/Linux端口的调试和开发/Ubantu.md",
+                "file": "30--项目与任务/06-C++/DAY08-C++.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Ubantu 的大纲"
+              "title": "DAY08-C++ 的大纲"
             }
           },
           {
@@ -167,55 +183,54 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "b1419f7a6f1b6639",
+  "active": "ea4cc23774f5c0a6",
   "lastOpenFiles": [
-    "30--项目与任务/06-C++/DAY01-C++.md",
-    "30--项目与任务/06-C++/DAY03-C++.md",
-    "30--项目与任务/06-C++/DAY02-C++.md",
-    "30--项目与任务/07-程序设计与算法/LeetCode/01-两数之和.md",
-    "30--项目与任务/计算机专业大学四年学习路线规划-2026.md",
-    "30--项目与任务/个人简历.md",
-    "30--项目与任务/MySQL/MySQL.md",
-    "30--项目与任务/05-Linux端口的调试和开发/03-Ubantu基本操作.md",
-    "30--项目与任务/05-Linux端口的调试和开发/01-Ubuntu 24.04 LTSVirtualBox 7.x 版本.md",
-    "30--项目与任务/05-Linux端口的调试和开发/02-Rclone文件传输app安装.md",
-    "30--项目与任务/05-Linux端口的调试和开发/00-Ubantu.md",
-    "30--项目与任务/05-Linux端口的调试和开发/Linux.md",
-    "30--项目与任务/06-C++/基本语言知识.md",
-    "30--项目与任务/408/408真题试卷.md",
-    "30--项目与任务/408/0-计算机网络.md",
-    "30--项目与任务/07-程序设计与算法/蓝桥杯/00-学习清单.md",
-    "30--项目与任务/03-C语言/02-sizeof strlen.md",
-    "30--项目与任务/03-C语言/00-C语言基本语言知识.md",
-    "30--项目与任务/03-C语言/01-字符串.md",
-    "30--项目与任务/07-程序设计与算法/蓝桥杯/06-.md",
-    "30--项目与任务/07-程序设计与算法/蓝桥杯/07-.md",
-    "30--项目与任务/07-程序设计与算法/蓝桥杯/08-.md",
-    "30--项目与任务/07-程序设计与算法/蓝桥杯/09-.md",
-    "30--项目与任务/07-程序设计与算法/蓝桥杯/04-哨站.md",
-    "30--项目与任务/07-程序设计与算法/蓝桥杯/05-.md",
-    "30--项目与任务/07-程序设计与算法/蓝桥杯/02-天平砝码称重.md",
-    "30--项目与任务/07-程序设计与算法/蓝桥杯",
+    "40--资源库/画布/菱形继承.canvas",
+    "40--资源库/画布",
+    "30--项目与任务/06-C++/DAY08-C++.md",
+    "30--项目与任务/06-C++/DAY04-C++.md",
+    "30--项目与任务/06-C++/DAY05-C++.md",
+    "30--项目与任务/06-C++/DAY06-C++.md",
+    "30--项目与任务/06-C++/DAY07-C++.md",
+    "30--项目与任务/编程工具/未命名.md",
+    "有话不说/now/apps/api/dist/app.js",
+    "有话不说/now/apps/api/dist/routes/v1/index.js",
+    "有话不说/now/apps/api/dist/routes/v1",
+    "有话不说/now/apps/api/dist/routes",
+    "有话不说/now/apps/api/dist/modules/health/health.handlers.js",
+    "有话不说/now/apps/api/dist/modules/health",
+    "有话不说/now/apps/api/dist/modules",
+    "有话不说/now/apps/api/dist/lib/db/pool.js",
+    "有话不说/now/apps/api/dist/lib/db/health-check.js",
+    "有话不说/now/apps/api/docs/MODULES.md",
+    "有话不说/now/docs/STRUCTURE.md",
+    "有话不说/now/node_modules/eslint-plugin-import/CHANGELOG.md",
+    "有话不说/now/node_modules/esquery/README.md",
+    "有话不说/now/node_modules/concurrently/docs/cli/terminating.md",
+    "有话不说/now/node_modules/concurrently/docs/cli/success.md",
+    "有话不说/now/node_modules/concurrently/docs/cli/shortcuts.md",
+    "有话不说/now/node_modules/concurrently/docs/cli/restarting.md",
+    "有话不说/now/node_modules/concurrently/docs/cli/prefixing.md",
+    "有话不说/now/node_modules/concurrently/docs/cli/passthrough-arguments.md",
+    "有话不说/now/node_modules/concurrently/docs/cli/output-control.md",
+    "有话不说/now/node_modules/concurrently/docs/cli/input-handling.md",
+    "有话不说/now/node_modules/concurrently/docs/cli/configuration.md",
+    "有话不说/now/node_modules/concurrently/docs/README.md",
+    "有话不说/now/node_modules/concurrently/docs/demo.gif",
+    "有话不说/now/node_modules/concurrently/README.md",
+    "有话不说/now/node_modules/dotenv/SECURITY.md",
+    "有话不说/now/node_modules/dotenv/README.md",
+    "有话不说/now/node_modules/dotenv/README-es.md",
+    "有话不说/now/node_modules/dotenv/CHANGELOG.md",
+    "有话不说/WebJump/node_modules/date-fns/docs/logotype.svg",
+    "有话不说/WebJump/node_modules/date-fns/docs/logo.svg",
+    "有话不说/WebJump/assets/platform.svg",
+    "有话不说/WebJump/assets/player.svg",
     "40--资源库/图片/Pasted image 20260404210351.png",
     "40--资源库/图片/Pasted image 20260404210257.png",
     "40--资源库/图片/Pasted image 20260404210225.png",
     "40--资源库/图片/Pasted image 20260404210020.png",
     "40--资源库/图片/Pasted image 20260404205852.png",
-    "30--项目与任务/07-程序设计与算法/LeetCode",
-    "Pasted image 20260331185159.png",
-    "40--资源库/图片/Pasted image 20260329225813.png",
-    "40--资源库/图片/Pasted image 20260329180213.png",
-    "Pasted image 20260328094351.png",
-    "40--资源库/图片/Pasted image 20260328094447.png",
-    "40--资源库/二进制文件/沈航2026届计算机专业-胡婷简历-20260306(2).pdf",
-    "40--资源库/二进制文件/（双非本科）C++简历.pdf",
-    "Palmy.zip",
-    "未命名.canvas",
-    "30--项目与任务/Docker",
-    "30--项目与任务/MySQL",
-    "30--项目与任务/08-备战CCF",
-    "30--项目与任务/06-C++",
-    "毛泽东传名著珍藏版(插图本) (罗斯·特里尔 (Ross Terrill)) (z-library.sk, 1lib.sk, z-lib.sk).epub",
     "未命名 1.canvas"
   ]
 }

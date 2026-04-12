@@ -1,0 +1,19 @@
+{
+  "name": "english-vocab-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n web,api -c cyan,magenta \"npm run dev -w web\" \"npm run dev -w api\"",
+    "build": "npm run build -w web && npm run build -w api",
+    "lint": "npm run lint -w web --if-present"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
