@@ -1,0 +1,14 @@
+{
+	"nodes":[
+		{"id":"a90727ae8ea7210e","x":-140,"y":320,"width":250,"height":50,"type":"text","text":"羊驼"},
+		{"id":"a0083de7beae90e0","x":-140,"y":-420,"width":250,"height":60,"type":"text","text":"动物"},
+		{"id":"d14ce4f3d7d8233d","x":-580,"y":-5,"width":250,"height":60,"type":"text","text":"羊"},
+		{"id":"47017e6bd3418533","x":260,"y":-5,"width":250,"height":50,"type":"text","text":"骆驼"}
+	],
+	"edges":[
+		{"id":"c9f512636c87f273","fromNode":"47017e6bd3418533","fromSide":"top","toNode":"a0083de7beae90e0","toSide":"right"},
+		{"id":"e70cd8809e2a8b91","fromNode":"d14ce4f3d7d8233d","fromSide":"top","toNode":"a0083de7beae90e0","toSide":"left"},
+		{"id":"0114c4d809497ef6","fromNode":"d14ce4f3d7d8233d","fromSide":"bottom","toNode":"a90727ae8ea7210e","toSide":"left"},
+		{"id":"29c61b757cdc8c8a","fromNode":"a90727ae8ea7210e","fromSide":"right","toNode":"47017e6bd3418533","toSide":"bottom"}
+	]
+}

@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: now-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: vocab
+      POSTGRES_PASSWORD: vocab_dev
+      POSTGRES_DB: vocab_app
+    volumes:
+      - now_pg_data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+
+volumes:
+  now_pg_data:

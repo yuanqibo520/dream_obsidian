@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.18);
+  --glass-border: rgba(255, 255, 255, 0.35);
+  --glass-blur: 22px;
+  --accent-violet: #6d28d9;
+  --accent-from: #f472b6;
+  --accent-to: #7c3aed;
+  --shadow-float: 0 12px 40px rgba(67, 56, 202, 0.18);
+  --text-primary: rgba(30, 20, 60, 0.9);
+  --text-muted: rgba(30, 20, 60, 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --glass-blur: 8px;
+  }
+}
+
+body {
+  color: var(--text-primary);
+}
+
+.glass-panel {
+  position: relative;
+  border-radius: 22px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  box-shadow:
+    0 8px 32px rgba(76, 53, 130, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+}
+
+.page-atmosphere {
+  min-height: 100dvh;
+  background: linear-gradient(165deg, #e8e4ff 0%, #d4e4ff 45%, #c9cef5 100%);
+  position: relative;
+  overflow-x: clip;
+}
+
+.page-atmosphere::before,
+.page-atmosphere::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.page-atmosphere::before {
+  width: 280px;
+  height: 280px;
+  background: #c4b5fd;
+  top: -80px;
+  right: -40px;
+}
+
+.page-atmosphere::after {
+  width: 320px;
+  height: 320px;
+  background: #93c5fd;
+  bottom: 10%;
+  left: -100px;
+}

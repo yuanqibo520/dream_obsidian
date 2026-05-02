@@ -4,20 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "9d7e7ea170d7b3cb",
+        "id": "dab5c203186de33f",
         "type": "tabs",
         "children": [
           {
-            "id": "a6f473102ca0db08",
+            "id": "c8766403e88800a8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "30--项目与任务/编程工具/未命名.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "未命名"
+            }
+          },
+          {
+            "id": "ea4cc23774f5c0a6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "30--项目与任务/06-C++/DAY08-C++.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "DAY08-C++"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -49,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:数据结构",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -59,22 +78,13 @@
               "icon": "lucide-search",
               "title": "搜索"
             }
-          },
-          {
-            "id": "d6439019c2346ebe",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "书签"
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 227.5
+    "width": 243.5,
+    "collapsed": true
   },
   "right": {
     "id": "da904b476b80b254",
@@ -117,22 +127,32 @@
             }
           },
           {
-            "id": "e02cb3b546eb43e1",
+            "id": "b8981d968ea3e89a",
             "type": "leaf",
             "state": {
-              "type": "tag",
+              "type": "outline",
               "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true,
+                "file": "30--项目与任务/06-C++/DAY08-C++.md",
+                "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
-              "icon": "lucide-tags",
-              "title": "标签"
+              "icon": "lucide-list",
+              "title": "DAY08-C++ 的大纲"
             }
           },
           {
-            "id": "05bf99a531e5dede",
+            "id": "e15edb62a330e8b8",
+            "type": "leaf",
+            "state": {
+              "type": "footnotes",
+              "state": {},
+              "icon": "lucide-file-signature",
+              "title": "脚注"
+            }
+          },
+          {
+            "id": "6fbf888cdfd2b17b",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -144,24 +164,9 @@
               "icon": "lucide-archive",
               "title": "添加笔记属性"
             }
-          },
-          {
-            "id": "b8981d968ea3e89a",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "30--项目与任务/Linux端口的调试和开发/Ubantu.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Ubantu 的大纲"
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -171,7 +176,6 @@
   "left-ribbon": {
     "hiddenItems": {
       "bases:新建数据库": false,
-      "daily-notes:打开/创建今天的日记": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -179,54 +183,54 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "a6f473102ca0db08",
+  "active": "ea4cc23774f5c0a6",
   "lastOpenFiles": [
-    "30--项目与任务/程序设计与算法/01-摄像头.md",
-    "40--资源库/图片/Pasted image 20260319200014.png",
-    "30--项目与任务/408/数据结构/01-链表.md",
-    "30--项目与任务/个人简历.md",
-    "30--项目与任务/计算机专业大学四年学习路线规划-2026.md",
-    "30--项目与任务/程序设计与算法",
-    "30--项目与任务/Linux端口的调试和开发/Ubantu.md",
-    "20--知识模块/软实力/领导力.md",
-    "20--知识模块/软实力/高情商夸人.md",
-    "20--知识模块/旅游攻略/旅游.md",
-    "20--知识模块/旅游攻略/快速落地陌生城市.md",
-    "30--项目与任务/C语言项目/00-C语言巩固项目目录.md",
-    "30--项目与任务/C语言项目/02-通讯录（增删改+查文件持久化）.md",
-    "30--项目与任务/C语言项目/01-功能全面的计算器.md",
-    "30--项目与任务/04-智能体/01-coze使用手册.md",
-    "30--项目与任务/数学类/高数上下.md",
-    "30--项目与任务/数学类/离散数学.md",
-    "30--项目与任务/数学类/统计学.md",
-    "30--项目与任务/数学类/线性代数.md",
-    "30--项目与任务/01-Office办公软件/Microsoft Word 使用指南.md",
-    "30--项目与任务/01-Office办公软件/Microsoft Word练习题.md",
-    "30--项目与任务/408/数据结构/数据结构-DAY6-栈和队列.md",
-    "30--项目与任务/408/数据结构/数据结构-DAY4-线性表.md",
-    "30--项目与任务/408/数据结构/数据结构-DAY8-栈和队列.md",
-    "30--项目与任务/408/数据结构/数据结构-DAY11-二叉树的存储结构.md",
-    "30--项目与任务/408/数据结构/数据结构-DAY12-线索二叉树-二叉树的遍历.md",
-    "30--项目与任务/408/数据结构/数据结构-DAY13-哈夫曼树.md",
-    "未命名 1.canvas",
-    "未命名.canvas",
-    "40--资源库/图片/a976ae52cd56ec8d40182202a535740a.jpg",
-    "40--资源库/图片/f8a5619771295753b9d1d0375bc5569f.jpg",
-    "40--资源库/图片/Pasted image 20260127042557.png",
-    "40--资源库/图片/Pasted image 20260127043509.png",
-    "40--资源库/图片/Pasted image 20260127043610.png",
-    "40--资源库/图片/Pasted image 20260127043546.png",
-    "40--资源库/二进制文件/离散数学知识点汇总.pdf",
-    "40--资源库/二进制文件/高数I（1）期末总复习-下.pdf",
-    "40--资源库/二进制文件/高数I（1）期末总复习-中.pdf",
-    "40--资源库/二进制文件/高数I（1）期末总复习-上.pdf",
-    "40--资源库/二进制文件/高数上知识点.pdf",
-    "40--资源库/二进制文件",
-    "40--资源库/二进制文件/线性代数考前复习.pdf",
-    "40--资源库/图片/9a839e61e8b26e1dabb74c31049b2496.png",
-    "d897b5fb-2ce8-4ac1-8220-2ba7e72f4c1a.png",
-    "40--资源库/图片/bd4e9aebd3526f997b47c837b9bfdf33.png",
-    "40--资源库/笔记模板/2024.12四级真题第一套.pdf",
-    "30--项目与任务/408/数据结构/Projectc/Projectc.vcxproj.filters"
+    "40--资源库/画布/菱形继承.canvas",
+    "40--资源库/画布",
+    "30--项目与任务/06-C++/DAY08-C++.md",
+    "30--项目与任务/06-C++/DAY04-C++.md",
+    "30--项目与任务/06-C++/DAY05-C++.md",
+    "30--项目与任务/06-C++/DAY06-C++.md",
+    "30--项目与任务/06-C++/DAY07-C++.md",
+    "30--项目与任务/编程工具/未命名.md",
+    "有话不说/now/apps/api/dist/app.js",
+    "有话不说/now/apps/api/dist/routes/v1/index.js",
+    "有话不说/now/apps/api/dist/routes/v1",
+    "有话不说/now/apps/api/dist/routes",
+    "有话不说/now/apps/api/dist/modules/health/health.handlers.js",
+    "有话不说/now/apps/api/dist/modules/health",
+    "有话不说/now/apps/api/dist/modules",
+    "有话不说/now/apps/api/dist/lib/db/pool.js",
+    "有话不说/now/apps/api/dist/lib/db/health-check.js",
+    "有话不说/now/apps/api/docs/MODULES.md",
+    "有话不说/now/docs/STRUCTURE.md",
+    "有话不说/now/node_modules/eslint-plugin-import/CHANGELOG.md",
+    "有话不说/now/node_modules/esquery/README.md",
+    "有话不说/now/node_modules/concurrently/docs/cli/terminating.md",
+    "有话不说/now/node_modules/concurrently/docs/cli/success.md",
+    "有话不说/now/node_modules/concurrently/docs/cli/shortcuts.md",
+    "有话不说/now/node_modules/concurrently/docs/cli/restarting.md",
+    "有话不说/now/node_modules/concurrently/docs/cli/prefixing.md",
+    "有话不说/now/node_modules/concurrently/docs/cli/passthrough-arguments.md",
+    "有话不说/now/node_modules/concurrently/docs/cli/output-control.md",
+    "有话不说/now/node_modules/concurrently/docs/cli/input-handling.md",
+    "有话不说/now/node_modules/concurrently/docs/cli/configuration.md",
+    "有话不说/now/node_modules/concurrently/docs/README.md",
+    "有话不说/now/node_modules/concurrently/docs/demo.gif",
+    "有话不说/now/node_modules/concurrently/README.md",
+    "有话不说/now/node_modules/dotenv/SECURITY.md",
+    "有话不说/now/node_modules/dotenv/README.md",
+    "有话不说/now/node_modules/dotenv/README-es.md",
+    "有话不说/now/node_modules/dotenv/CHANGELOG.md",
+    "有话不说/WebJump/node_modules/date-fns/docs/logotype.svg",
+    "有话不说/WebJump/node_modules/date-fns/docs/logo.svg",
+    "有话不说/WebJump/assets/platform.svg",
+    "有话不说/WebJump/assets/player.svg",
+    "40--资源库/图片/Pasted image 20260404210351.png",
+    "40--资源库/图片/Pasted image 20260404210257.png",
+    "40--资源库/图片/Pasted image 20260404210225.png",
+    "40--资源库/图片/Pasted image 20260404210020.png",
+    "40--资源库/图片/Pasted image 20260404205852.png",
+    "未命名 1.canvas"
   ]
 }

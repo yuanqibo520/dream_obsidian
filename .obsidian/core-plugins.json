@@ -6,17 +6,17 @@
   "backlink": true,
   "canvas": true,
   "outgoing-link": true,
-  "tag-pane": true,
-  "footnotes": false,
+  "tag-pane": false,
+  "footnotes": true,
   "properties": true,
   "page-preview": true,
-  "daily-notes": true,
+  "daily-notes": false,
   "templates": true,
   "note-composer": true,
   "command-palette": true,
   "slash-command": false,
   "editor-status": true,
-  "bookmarks": true,
+  "bookmarks": false,
   "markdown-importer": false,
   "zk-prefixer": false,
   "random-note": false,
@@ -29,5 +29,5 @@
   "publish": false,
   "sync": true,
   "bases": true,
-  "webviewer": false
+  "webviewer": true
 }
