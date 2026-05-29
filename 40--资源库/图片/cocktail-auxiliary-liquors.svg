@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8f3ea"/>
+      <stop offset="1" stop-color="#e8eef0"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.72"/>
+      <stop offset="0.5" stop-color="#dfe9ee" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.72"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#28323a" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .title{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;font-size:48px;font-weight:700;fill:#243238}
+      .sub{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;font-size:22px;fill:#64727a}
+      .label{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;font-size:25px;font-weight:700;fill:#263238}
+      .note{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;font-size:17px;fill:#607078}
+      .card{fill:#fffdf8;stroke:#dfd3bd;stroke-width:2}
+      .bottle{fill:url(#glass);stroke:#6f8790;stroke-width:3}
+      .cap{fill:#d7c7a8;stroke:#8b795e;stroke-width:2}
+      .tag{fill:#ffffff;stroke:#d8cbb5;stroke-width:2}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text class="title" x="70" y="78">辅助酒与调味酒采购图</text>
+  <text class="sub" x="70" y="115">覆盖：玛格丽特、长岛冰茶、B-52、尼格罗尼、干马天尼、曼哈顿等配方</text>
+
+  <g filter="url(#shadow)">
+    <rect class="card" x="50" y="150" width="1500" height="665" rx="28"/>
+  </g>
+
+  <g transform="translate(110 210)">
+    <rect class="tag" x="-18" y="430" width="190" height="54" rx="14"/>
+    <path class="bottle" d="M55 70 H110 V140 L135 210 V410 Q95 435 30 410 V210 L55 140 Z"/>
+    <rect class="cap" x="55" y="38" width="55" height="36" rx="8"/>
+    <rect x="38" y="245" width="88" height="92" rx="12" fill="#f6a13a" stroke="#b86a20" stroke-width="3"/>
+    <text class="label" x="2" y="466">君度/橙皮酒</text>
+    <text class="note" x="0" y="510">橙香利口酒</text>
+  </g>
+
+  <g transform="translate(295 210)">
+    <rect class="tag" x="-8" y="430" width="170" height="54" rx="14"/>
+    <path class="bottle" d="M58 55 H108 V130 L132 205 V410 Q92 432 34 410 V205 L58 130 Z"/>
+    <rect class="cap" x="58" y="24" width="50" height="34" rx="8"/>
+    <rect x="42" y="245" width="80" height="94" rx="12" fill="#3f271f" stroke="#221411" stroke-width="3"/>
+    <text class="label" x="7" y="466">咖啡利口酒</text>
+    <text class="note" x="14" y="510">B-52 底层</text>
+  </g>
+
+  <g transform="translate(475 210)">
+    <rect class="tag" x="2" y="430" width="135" height="54" rx="14"/>
+    <path class="bottle" d="M48 72 H110 V148 L133 220 V410 Q88 432 28 410 V220 L48 148 Z"/>
+    <rect class="cap" x="50" y="38" width="58" height="36" rx="8"/>
+    <rect x="39" y="250" width="84" height="92" rx="14" fill="#ead2b1" stroke="#ad8157" stroke-width="3"/>
+    <text class="label" x="24" y="466">百利甜</text>
+    <text class="note" x="6" y="510">奶油甜酒</text>
+  </g>
+
+  <g transform="translate(645 210)">
+    <rect class="tag" x="2" y="430" width="135" height="54" rx="14"/>
+    <path class="bottle" d="M58 50 H104 V138 L128 208 V410 Q88 432 32 410 V208 L58 138 Z"/>
+    <rect class="cap" x="58" y="20" width="46" height="34" rx="7"/>
+    <rect x="42" y="245" width="78" height="96" rx="12" fill="#c9342f" stroke="#8f241e" stroke-width="3"/>
+    <text class="label" x="30" y="466">金巴利</text>
+    <text class="note" x="4" y="510">苦甜核心</text>
+  </g>
+
+  <g transform="translate(815 210)">
+    <rect class="tag" x="-8" y="430" width="170" height="54" rx="14"/>
+    <path class="bottle" d="M50 66 H112 V150 L136 220 V410 Q92 435 28 410 V220 L50 150 Z"/>
+    <rect class="cap" x="50" y="34" width="62" height="36" rx="8"/>
+    <rect x="38" y="250" width="88" height="90" rx="12" fill="#a5382f" stroke="#6e231f" stroke-width="3"/>
+    <text class="label" x="16" y="466">甜味美思</text>
+    <text class="note" x="0" y="510">尼格罗尼用</text>
+  </g>
+
+  <g transform="translate(995 210)">
+    <rect class="tag" x="-8" y="430" width="170" height="54" rx="14"/>
+    <path class="bottle" d="M50 66 H112 V150 L136 220 V410 Q92 435 28 410 V220 L50 150 Z"/>
+    <rect class="cap" x="50" y="34" width="62" height="36" rx="8"/>
+    <rect x="38" y="250" width="88" height="90" rx="12" fill="#f0e5bb" stroke="#bba86e" stroke-width="3"/>
+    <text class="label" x="16" y="466">干味美思</text>
+    <text class="note" x="-2" y="510">干马天尼用</text>
+  </g>
+
+  <g transform="translate(1175 210)">
+    <rect class="tag" x="-8" y="430" width="170" height="54" rx="14"/>
+    <path class="bottle" d="M50 66 H112 V150 L136 220 V410 Q92 435 28 410 V220 L50 150 Z"/>
+    <rect class="cap" x="50" y="34" width="62" height="36" rx="8"/>
+    <rect x="38" y="250" width="88" height="90" rx="12" fill="#7f2d35" stroke="#531b24" stroke-width="3"/>
+    <text class="label" x="16" y="466">红味美思</text>
+    <text class="note" x="6" y="510">曼哈顿用</text>
+  </g>
+
+  <g transform="translate(1365 245)">
+    <rect class="tag" x="-8" y="395" width="120" height="54" rx="14"/>
+    <path class="bottle" d="M35 45 H78 V105 L95 165 V370 Q62 388 18 370 V165 L35 105 Z"/>
+    <rect class="cap" x="35" y="18" width="43" height="30" rx="7"/>
+    <rect x="28" y="222" width="58" height="78" rx="10" fill="#2f3a3d" stroke="#1d2527" stroke-width="3"/>
+    <text class="label" x="22" y="431">苦精</text>
+    <text class="note" x="-18" y="475">每次几滴</text>
+  </g>
+
+  <text class="sub" x="70" y="858">提示：这张图只做记忆和采购核对，具体品牌可按预算替换。</text>
+</svg>

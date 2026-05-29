@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6f1e8"/>
+      <stop offset="1" stop-color="#dce8ed"/>
+    </linearGradient>
+    <linearGradient id="drink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8d079" stop-opacity="0.82"/>
+      <stop offset="1" stop-color="#d99031" stop-opacity="0.92"/>
+    </linearGradient>
+    <style>
+      .text{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;fill:#263238}
+      .label{font-size:28px;font-weight:700}
+      .small{font-size:19px;fill:#607078}
+    </style>
+  </defs>
+  <rect width="900" height="620" rx="28" fill="url(#bg)"/>
+  <text x="60" y="70" class="text label">威士忌嗨棒 Whisky Highball</text>
+  <text x="60" y="105" class="text small">威士忌 45 ml + 苏打水 100-150 ml + 冰块</text>
+  <g transform="translate(330 120)">
+    <path d="M80 0 H300 L270 430 Q190 470 110 430 Z" fill="#eef9ff" stroke="#87a8b6" stroke-width="7" opacity="0.78"/>
+    <path d="M108 160 H272 L252 410 Q190 442 128 410 Z" fill="url(#drink)" stroke="#c27a2a" stroke-width="2"/>
+    <g fill="#eaf7ff" stroke="#9db9c6" stroke-width="4" opacity="0.9">
+      <rect x="126" y="185" width="58" height="58" rx="10" transform="rotate(-12 155 214)"/>
+      <rect x="196" y="192" width="58" height="58" rx="10" transform="rotate(10 225 221)"/>
+      <rect x="151" y="260" width="62" height="62" rx="10" transform="rotate(7 182 291)"/>
+      <rect x="216" y="285" width="52" height="52" rx="9" transform="rotate(-9 242 311)"/>
+    </g>
+    <path d="M240 135 C285 70 328 56 350 78 C318 97 286 118 262 160" fill="#f3d887" stroke="#c6a04a" stroke-width="5"/>
+    <circle cx="248" cy="350" r="5" fill="#fff7d0" opacity="0.8"/>
+    <circle cx="220" cy="300" r="4" fill="#fff7d0" opacity="0.8"/>
+    <circle cx="158" cy="360" r="4" fill="#fff7d0" opacity="0.8"/>
+  </g>
+  <g transform="translate(70 190)">
+    <rect x="0" y="0" width="210" height="70" rx="16" fill="#ffffff" opacity="0.72"/>
+    <text x="22" y="42" class="text small">1. 高球杯加满冰</text>
+    <rect x="0" y="90" width="210" height="70" rx="16" fill="#ffffff" opacity="0.72"/>
+    <text x="22" y="132" class="text small">2. 倒入威士忌</text>
+    <rect x="0" y="180" width="210" height="70" rx="16" fill="#ffffff" opacity="0.72"/>
+    <text x="22" y="222" class="text small">3. 补入苏打水</text>
+    <rect x="0" y="270" width="210" height="70" rx="16" fill="#ffffff" opacity="0.72"/>
+    <text x="22" y="312" class="text small">4. 轻提拉搅拌</text>
+  </g>
+  <text x="60" y="565" class="text small">关键：杯冷、冰足、苏打水气足，不要剧烈搅拌。</text>
+</svg>
