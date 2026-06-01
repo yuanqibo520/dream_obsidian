@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30--项目与任务/C++学习全套/01-认识C++.md",
+                "file": "30--项目与任务/02-Git/Git 基本代码使用手册.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01-认识C++"
+              "title": "Git 基本代码使用手册"
             }
           }
         ]
@@ -186,6 +186,8 @@
   },
   "active": "80a6a61eeee4e37d",
   "lastOpenFiles": [
+    "30--项目与任务/02-Git/markdown基本格式.md",
+    "30--项目与任务/C++学习全套/01-认识C++.md",
     "30--项目与任务/C++学习全套/03-程序结构.md",
     "30--项目与任务/C++学习全套/04-变量与基本类型.md",
     "30--项目与任务/C++学习全套/05-运算符与表达式.md",
@@ -212,11 +214,9 @@
     "00--index（临时知识库）/成年人的孤独.md",
     "00--index（临时知识库）/发自内心的意愿.md",
     "00--index（临时知识库）/宠物经济发展方案.md",
-    "20--知识模块/实习人脉.md",
     "yonex_label_crop.jpg",
     "yonex_label_crop2.jpg",
     "yonex_label_zoom.jpg",
-    "20--知识模块/健康养生/02-健身.md",
     "40--资源库/图片/9e3c8ce7cce2993a534b637b1e1f5bfe.png",
     "40--资源库/图片/0abada30-777b-4ca7-8780-444c468d36bf.png",
     "30--项目与任务/vibe coding开发",
