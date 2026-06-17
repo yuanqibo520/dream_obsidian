@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>校园资讯 - SauLink</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-dim": "#d0dbed",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-variant": "#d9e3f6",
+                        "inverse-surface": "#27313f",
+                        "on-primary-container": "#fffbff",
+                        "on-background": "#121c2a",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#c0c1ff",
+                        "on-secondary-fixed": "#002114",
+                        "background": "#f8f9ff",
+                        "secondary-fixed-dim": "#45dfa4",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-surface-variant": "#464554",
+                        "tertiary-fixed": "#ffdf9f",
+                        "on-secondary-fixed-variant": "#005137",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#006c4b",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#d9e3f6",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#4648d4",
+                        "primary-fixed": "#e1e0ff",
+                        "secondary-fixed": "#68fcbf",
+                        "surface-container": "#e6eeff",
+                        "surface": "#f8f9ff",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "surface-tint": "#494bd6",
+                        "on-tertiary-fixed-variant": "#5c4300",
+                        "outline-variant": "#c7c4d7",
+                        "tertiary": "#765700",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#261a00",
+                        "outline": "#767586",
+                        "on-surface": "#121c2a",
+                        "primary-container": "#6063ee",
+                        "secondary-container": "#64f9bc",
+                        "tertiary-fixed-dim": "#f9bd22",
+                        "surface-container-high": "#dee9fc",
+                        "surface-bright": "#f8f9ff",
+                        "surface-container-low": "#eff4ff",
+                        "tertiary-container": "#956e00",
+                        "on-secondary-container": "#00714e",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "on-primary-fixed": "#07006c"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "xl": "32px",
+                        "md": "16px",
+                        "xs": "8px",
+                        "margin-desktop": "40px",
+                        "sm": "12px",
+                        "gutter": "16px",
+                        "base": "4px",
+                        "margin-mobile": "20px",
+                        "lg": "24px"
+                    },
+                    fontFamily: {
+                        "display": ["Geist"],
+                        "headline-lg": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "label-sm": ["Geist"],
+                        "headline-md": ["Geist"],
+                        "label-md": ["Geist"]
+                    },
+                    fontSize: {
+                        "display": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "14px", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "16px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .bg-mesh {
+            background-color: #f8f9ff;
+            background-image: 
+                radial-gradient(at 10% 20%, hsla(239, 83%, 67%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(158, 65%, 52%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, hsla(239, 83%, 67%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 100%, hsla(158, 65%, 52%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(239, 83%, 67%, 0.15) 0px, transparent 50%);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .ambient-shadow {
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.08);
+        }
+        .ambient-shadow-hover:hover {
+            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.12);
+            transform: translateY(-2px);
+        }
+        .card-border {
+            border: 1px solid #E5E7EB;
+        }
+    </style>
+</head>
+<body class="bg-mesh text-on-surface font-body-md text-body-md antialiased min-h-screen flex selection:bg-primary/20 selection:text-primary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 glass-panel shadow-sm flex justify-between items-center h-16 px-margin-desktop">
+<!-- Logo & Search -->
+<div class="flex items-center gap-xl">
+<div class="font-display text-headline-md font-extrabold text-[#6366F1] tracking-tight">SauLink</div>
+<div class="hidden md:flex relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant group-focus-within:text-[#6366F1] transition-colors">search</span>
+<input class="pl-10 pr-4 py-2 w-64 bg-white/50 backdrop-blur-sm border border-outline-variant/30 rounded-full text-body-sm font-body-sm focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition-all shadow-sm" placeholder="搜索资讯..." type="text"/>
+</div>
+</div>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full text-on-surface-variant hover:bg-[#6366F1]/5 hover:text-[#6366F1] transition-colors duration-200 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">notifications</span>
+</button>
+<button class="p-2 rounded-full text-on-surface-variant hover:bg-[#6366F1]/5 hover:text-[#6366F1] transition-colors duration-200 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">mail</span>
+</button>
+<button class="p-2 rounded-full text-on-surface-variant hover:bg-[#6366F1]/5 hover:text-[#6366F1] transition-colors duration-200 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">account_circle</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="hidden md:flex fixed left-0 top-16 h-[calc(100vh-64px)] w-64 glass-panel border-r border-outline-variant/30 shadow-[0_8px_32px_rgba(99,102,241,0.05)] flex-col p-md gap-base z-40" style="height: calc(-64px + 100vh);">
+<!-- Header -->
+<div class="flex items-center gap-sm p-sm mb-xs rounded-xl hover:bg-white/50 transition-colors cursor-pointer">
+<img alt="User Profile Avatar" class="w-10 h-10 rounded-full object-cover border border-outline-variant/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArA57FNXl1O4FTOGCZyb4GmTbD2phLs1fOox9GWyDdNFKrGcq9F4tQS-b1MkyHmbkwIqySfoVs_UuXETdE-8wDPZi39Yg5ZpfyfV4UrPjqH445NOifY5u8da8EyOEmHZExFkryf_BeldP2GwxR7oFwDcI3PzCyvzI0qT6FlfjSDgUVKBez1UeiKlXVjerVCskN79ls15KVjEI1Ok38AXGBkBF7ag3n-gxO0TpAM5FqF6axZkzdM9smKocgHwKSfDuvqbCl4ar78l3H"/>
+<div>
+<div class="font-display text-label-md text-on-surface font-semibold">学生中心</div>
+<div class="font-body-sm text-body-sm text-outline">活跃社区</div>
+</div>
+</div>
+<!-- CTA -->
+<button class="w-full mb-sm py-2.5 bg-[#6366F1] hover:bg-[#4F46E5] text-white font-label-md text-label-md rounded-xl shadow-[0_4px_12px_rgba(99,102,241,0.25)] hover:shadow-[0_6px_16px_rgba(99,102,241,0.4)] transition-all duration-300 transform hover:-translate-y-[1px] flex items-center justify-center gap-2"><span class="material-symbols-outlined text-[18px]">add</span>发布内容</button>
+<!-- Main Nav Tabs -->
+<div class="flex flex-col gap-1 flex-1">
+<a class="flex items-center gap-sm px-sm py-2.5 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined group-hover:scale-110 transition-transform">home</span>首页</a>
+<!-- ACTIVE TAB: 校园资讯 -->
+<a class="flex items-center gap-sm px-sm py-2.5 bg-[#6366F1]/10 text-[#6366F1] font-bold rounded-lg font-display text-body-md relative overflow-hidden" href="#"><span class="material-symbols-outlined transition-transform" style="font-variation-settings: 'FILL' 1;">info</span>校园资讯</a>
+<a class="flex items-center gap-sm px-sm py-2.5 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined group-hover:scale-110 transition-transform">search_check</span>失物招领</a>
+<a class="flex items-center gap-sm px-sm py-2.5 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined group-hover:scale-110 transition-transform">shopping_bag</span>二手交易</a>
+<a class="flex items-center gap-sm px-sm py-2.5 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined group-hover:scale-110 transition-transform">school</span>学习互助</a>
+</div>
+<!-- Footer Tabs -->
+<div class="flex flex-col gap-1 pt-md border-t border-outline-variant/30 mt-auto">
+<a class="flex items-center gap-sm px-sm py-2 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined text-[20px] group-hover:rotate-45 transition-transform">settings</span>设置</a>
+<a class="flex items-center gap-sm px-sm py-2 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">help_outline</span>帮助</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 mt-16 md:ml-64 p-margin-mobile md:p-margin-desktop flex flex-col xl:flex-row gap-xl max-w-[1440px] mx-auto w-full">
+<!-- Left Feed Column -->
+<div class="flex-1 min-w-0">
+<div class="max-w-3xl mx-auto flex flex-col gap-lg pb-10">
+<!-- Page Header & Filters -->
+<div class="flex flex-col gap-lg">
+<div class="flex flex-col md:flex-row md:items-baseline gap-xs md:gap-4">
+<h1 class="font-headline-lg text-on-surface">校园资讯</h1>
+<p class="font-body-sm text-outline">掌握最新校园动态、讲座活动信息。</p>
+</div>
+<div class="flex gap-sm bg-white/50 backdrop-blur-sm p-1 rounded-full border border-outline-variant/30 shadow-sm overflow-x-auto no-scrollbar w-fit">
+<button class="px-md py-xs rounded-full font-label-md bg-white text-[#6366F1] shadow-sm transition-all whitespace-nowrap">全部资讯</button>
+<button class="px-md py-xs rounded-full font-label-md text-on-surface-variant hover:bg-white/50 transition-all whitespace-nowrap">校园新闻</button>
+<button class="px-md py-xs rounded-full font-label-md text-on-surface-variant hover:bg-white/50 transition-all whitespace-nowrap">学术讲座</button>
+<button class="px-md py-xs rounded-full font-label-md text-on-surface-variant hover:bg-white/50 transition-all whitespace-nowrap">社团活动</button>
+</div>
+</div>
+<!-- Feed Posts -->
+<div class="flex flex-col gap-md">
+<!-- Post Card 1: Featured News -->
+<article class="bg-white/90 backdrop-blur-md rounded-xl overflow-hidden ambient-shadow border border-white/40 flex flex-col md:flex-row cursor-pointer ambient-shadow-hover transition-all duration-300">
+<div class="md:w-2/5 h-48 md:h-auto relative overflow-hidden shrink-0">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="A modern university library exterior during golden hour, featuring striking contemporary architecture with vast glass facades reflecting the warm sunlight. The building is surrounded by vibrant green lawns and young trees. The scene is bright, optimistic, and utilizes a color palette of warm golds, crisp whites, and clear sky blues, perfectly embodying a high-energy, modern light-mode educational aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKeEygxoCjA21aO_2qcl4b2Nj2PWFf8YUoOBjTBVicJfQQiucfcJ3FHDG7gZOn99IXdBkJaobZOgeHT4kBZoDzE0xfz3-fkBaQXcR1BGP6OfYzJrcI4xEDFG-dkUqtS7O2ocorHIAkfz3_bOt6OdtmBZZIlZV0evTahxpIr4OyjfUO6X41qHHSfgiKukGrBD2udpnNf-tWyfsR6f0_YAYFBYNSOJpUWR07MYsDigTXN2tyLfiGYHvV_ldlI9RFRzKo0x-yQ8mwe7QN"/>
+<div class="absolute top-sm left-sm bg-[#006c4b] text-white px-xs py-base rounded text-label-sm font-label-sm shadow-sm">置顶</div>
+</div>
+<div class="p-md flex flex-col justify-between flex-1">
+<div>
+<div class="flex gap-2 mb-3">
+<span class="bg-[#6366F1]/15 text-[#6366F1] font-label-sm px-3 py-1 rounded-full">校园新闻</span>
+</div>
+<h2 class="font-headline-md text-on-surface mb-2 line-clamp-2">全新智能图书馆主楼正式投入使用</h2>
+<p class="font-body-sm text-on-surface-variant mb-4 line-clamp-3">历经两年的建设，集成了最新AI检索系统和全景玻璃幕墙的东区新图书馆终于向全体师生开放。新馆新增了超过2000个自习座位及多个研讨空间...</p>
+</div>
+<div class="flex items-center gap-lg border-t border-outline-variant/30 pt-3 text-on-surface-variant font-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">visibility</span> 1.2k 阅读</span>
+<span class="ml-auto text-[#6366F1]">活跃社区</span>
+</div>
+</div>
+</article>
+<!-- Post Card 2: Lecture -->
+<article class="bg-white/90 backdrop-blur-md rounded-xl p-md ambient-shadow border border-white/40 cursor-pointer ambient-shadow-hover transition-all duration-300">
+<div class="flex flex-col md:flex-row gap-4">
+<div class="w-full md:w-1/3 h-32 relative overflow-hidden rounded-lg shrink-0">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="A brightly lit, modern university auditorium filled with students listening attentively. The focus is on a sleek digital presentation screen displaying colorful, abstract generative art. The lighting is soft and cool-toned, creating a clean, professional yet energetic atmosphere. The visual style utilizes high-key whites, subtle lavender shadows, and bright cyan accents, aligning with a pristine, modern interface aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIUnR2E0l2_VXDy5MDckcHiHpnD6bI0u3_fFa6NEsJy8HJiHm5sFgc-WuZZrKcvMT3gZynEOBBdLx8qcQUQBxCsIm_VBIBAcZenfoKinwUgvysu0pIjOu3cpo3o2dSgnPvUDFx3WMa-SNPaZbPBCEzEyAouQDx5lDe0UNQr3G8v48-5Go3OmiWLd8LuCVvOAn_NmmXt1Xzv_IbvjsX3tGbW4Pn3ZKcF6aZQnZA4tb2uSGVmWllgFzdbwWHuH0EgCKt5BsFUa_AYBDG"/>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex gap-2 mb-2">
+<span class="bg-[#34D399]/20 text-[#006c4b] font-label-sm px-3 py-1 rounded-full">学术讲座</span>
+</div>
+<h2 class="font-headline-md text-base text-on-surface mb-2 line-clamp-2">人工智能与未来设计的美学碰撞</h2>
+<p class="font-body-sm text-on-surface-variant mb-3 flex-1">特邀嘉宾：李明德 教授（设计学院）</p>
+<div class="flex items-center justify-between text-on-surface-variant text-label-sm mt-auto">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">calendar_today</span> 10月24日 14:00</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> 艺术中心报告厅</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Post Card 3: Club Activity -->
+<article class="bg-white/90 backdrop-blur-md rounded-xl p-md ambient-shadow border border-white/40 cursor-pointer ambient-shadow-hover transition-all duration-300">
+<div class="flex flex-col md:flex-row gap-4">
+<div class="w-full md:w-1/3 h-32 relative overflow-hidden rounded-lg shrink-0">
+<div class="absolute inset-0 bg-gradient-to-br from-[#ffdf9f] to-[#6063ee] opacity-40 mix-blend-multiply z-10"></div>
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 z-0 relative" data-alt="A lively outdoor campus music festival during a sunny afternoon. A student band is performing on a minimalist stage decorated with pastel-colored geometric shapes. The crowd is energetic, enjoying the vibrant atmosphere. The scene is infused with a bright, cheerful macaroon color palette—mint greens, soft lavenders, and sunny yellows—emphasizing a youthful, socially connected, and highly energetic UI brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtIjd4dyxYKq9HgkPwOlo-rftXSfx-mF3RihXv72GbJu2K_k8hK4URq9KRHHTeL9Q3uF9Cqv2BDKPiQp2pQyS9f2J8lLtCeF5Qbraa5hoA4avWG18Kg0L6jhH3Tcl7JlKOdcMRiy7fhvbqjM_kAuM3iesRfel3bz4a8gXGdNCjhxMBkI5uMebLPct6JXeC6gXq7tv5BSiRiwGjLHykTesugJMv3NCPB7DeDH_ylHGdDqUU5rBr09i84thZIdrp-_UMXM0oqZEhx16H"/>
+<div class="absolute inset-0 z-20 flex items-center justify-center p-2 text-center">
+<h3 class="font-headline-md text-sm text-white drop-shadow-md">星空音乐节</h3>
+</div>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex gap-2 mb-2">
+<span class="bg-[#ffdf9f]/30 text-[#765700] font-label-sm px-3 py-1 rounded-full">社团活动</span>
+</div>
+<h2 class="font-headline-md text-base text-on-surface mb-2 line-clamp-1">星空音乐节乐队招募正式启动</h2>
+<p class="font-body-sm text-on-surface-variant mb-3 flex-1 line-clamp-2">一年一度的秋季星空音乐节即将启动，现面向全校招募独立乐队、个人歌手及乐器演奏者...</p>
+<div class="flex items-center justify-between text-on-surface-variant text-label-sm mt-auto">
+<span class="text-[#6366F1] font-medium hover:underline">查看详情</span>
+<span class="">截止日期: 本周五</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+<!-- Right Column: Auxiliary Area -->
+<aside class="hidden xl:block w-[320px] flex-shrink-0">
+<div class="sticky top-[104px] flex flex-col gap-lg pb-10">
+<!-- Campus Calendar Widget -->
+<div class="glass-panel rounded-xl p-md ambient-shadow">
+<div class="flex items-center justify-between mb-4 pb-2 border-b border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#6366F1] text-[20px]">calendar_month</span>
+<h3 class="font-headline-md text-body-lg font-bold text-on-surface">校园日历</h3>
+</div>
+<button class="text-[#6366F1] text-[12px] font-bold hover:underline">完整日历</button>
+</div>
+<div class="flex flex-col gap-3 relative before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-outline-variant/30">
+<!-- Event Item -->
+<div class="flex gap-3 relative z-10">
+<div class="w-6 h-6 rounded-full bg-white flex items-center justify-center border-2 border-white shadow-sm flex-shrink-0 mt-0.5">
+<div class="w-2 h-2 rounded-full bg-[#6366F1]"></div>
+</div>
+<div class="flex-1 pb-2">
+<p class="font-label-sm text-[#6366F1] mb-1">今天 14:00</p>
+<p class="font-body-sm text-on-surface">创新创业大赛宣讲会</p>
+</div>
+</div>
+<!-- Event Item -->
+<div class="flex gap-3 relative z-10">
+<div class="w-6 h-6 rounded-full bg-white flex items-center justify-center border-2 border-white shadow-sm flex-shrink-0 mt-0.5">
+<div class="w-2 h-2 rounded-full bg-[#34D399]"></div>
+</div>
+<div class="flex-1 pb-2">
+<p class="font-label-sm text-outline mb-1">明天 09:00</p>
+<p class="font-body-sm text-on-surface">毕业生双选会 (秋季)</p>
+</div>
+</div>
+<!-- Event Item -->
+<div class="flex gap-3 relative z-10">
+<div class="w-6 h-6 rounded-full bg-white flex items-center justify-center border-2 border-white shadow-sm flex-shrink-0 mt-0.5">
+<div class="w-2 h-2 rounded-full bg-[#f9bd22]"></div>
+</div>
+<div class="flex-1">
+<p class="font-label-sm text-outline mb-1">周五 19:30</p>
+<p class="font-body-sm text-on-surface">话剧社年度大戏首演</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Hot Topics Widget -->
+<div class="glass-panel rounded-xl p-md ambient-shadow mb-4">
+<div class="flex items-center justify-between mb-4 pb-2 border-b border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#6366F1] text-[20px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<h3 class="font-headline-md text-body-lg font-bold text-on-surface">校园热议榜</h3>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<a class="flex items-center gap-3 group" href="#">
+<span class="font-display text-base font-extrabold text-[#6366F1] w-4 text-center">1</span>
+<span class="font-body-sm text-on-surface-variant group-hover:text-[#6366F1] transition-colors truncate">#四级考试倒计时</span>
+</a>
+<a class="flex items-center gap-3 group" href="#">
+<span class="font-display text-base font-extrabold text-[#34D399] w-4 text-center">2</span>
+<span class="font-body-sm text-on-surface-variant group-hover:text-[#6366F1] transition-colors truncate">#食堂新出的烤鱼</span>
+</a>
+<a class="flex items-center gap-3 group" href="#">
+<span class="font-display text-base font-extrabold text-[#f9bd22] w-4 text-center">3</span>
+<span class="font-body-sm text-on-surface-variant group-hover:text-[#6366F1] transition-colors truncate">#秋季校园摄影大赛</span>
+</a>
+<a class="flex items-center gap-3 group" href="#">
+<span class="font-display text-base font-extrabold text-outline/60 w-4 text-center">4</span>
+<span class="font-body-sm text-on-surface-variant group-hover:text-[#6366F1] transition-colors truncate">#二手书交易专区</span>
+</a>
+<a class="flex items-center gap-3 group" href="#">
+<span class="font-display text-base font-extrabold text-outline/60 w-4 text-center">5</span>
+<span class="font-body-sm text-on-surface-variant group-hover:text-[#6366F1] transition-colors truncate">#图书馆占座现象讨论</span>
+</a>
+<a class="flex items-center gap-3 group" href="#">
+<span class="font-display text-base font-extrabold text-outline/60 w-4 text-center">6</span>
+<span class="font-body-sm text-on-surface-variant group-hover:text-[#6366F1] transition-colors truncate">#新生篮球赛</span>
+</a>
+<a class="flex items-center gap-3 group" href="#">
+<span class="font-display text-base font-extrabold text-outline/60 w-4 text-center">7</span>
+<span class="font-body-sm text-on-surface-variant group-hover:text-[#6366F1] transition-colors truncate">#南门外卖推荐</span>
+</a>
+<a class="flex items-center gap-3 group" href="#">
+<span class="font-display text-base font-extrabold text-outline/60 w-4 text-center">8</span>
+<span class="font-body-sm text-on-surface-variant group-hover:text-[#6366F1] transition-colors truncate">#考研自习室申请</span>
+</a>
+<a class="flex items-center gap-3 group" href="#">
+<span class="font-display text-base font-extrabold text-outline/60 w-4 text-center">9</span>
+<span class="font-body-sm text-on-surface-variant group-hover:text-[#6366F1] transition-colors truncate">#周末兼职信息</span>
+</a>
+<a class="flex items-center gap-3 group" href="#">
+<span class="font-display text-base font-extrabold text-outline/60 w-4 text-center">10</span>
+<span class="font-body-sm text-on-surface-variant group-hover:text-[#6366F1] transition-colors truncate">#校园网卡顿问题</span>
+</a>
+</div>
+</div>
+<!-- Quick Action Banner -->
+<div class="rounded-xl p-md bg-gradient-to-br from-[#e1e0ff] to-[#f8f9ff] border border-[#6366F1]/20 ambient-shadow flex flex-col items-start gap-3">
+<div class="bg-[#6366F1] text-white p-2 rounded-lg">
+<span class="material-symbols-outlined text-[20px]">campaign</span>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface mb-1">校园反馈信箱</h4>
+<p class="font-body-sm text-on-surface-variant text-xs">遇到问题？直接向学校后勤或教务处提交你的反馈意见。</p>
+</div>
+<button class="mt-1 text-[#6366F1] font-label-md hover:underline flex items-center gap-1 text-sm">
+                        立即填写 <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</aside>
+</main>
+</body></html>

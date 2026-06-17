@@ -1,0 +1,400 @@
+<!DOCTYPE html><html lang="zh-CN" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>二手交易 - SauLink</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed-dim": "#45dfa4",
+                      "surface-container-highest": "#d9e3f6",
+                      "tertiary-fixed": "#ffdf9f",
+                      "surface-tint": "#494bd6",
+                      "on-tertiary-container": "#fffbff",
+                      "on-primary": "#ffffff",
+                      "secondary-container": "#64f9bc",
+                      "tertiary-container": "#956e00",
+                      "surface-container": "#e6eeff",
+                      "on-secondary-fixed": "#002114",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed-variant": "#2f2ebe",
+                      "on-surface-variant": "#464554",
+                      "surface-dim": "#d0dbed",
+                      "on-secondary-container": "#00714e",
+                      "inverse-primary": "#c0c1ff",
+                      "outline": "#767586",
+                      "on-tertiary-fixed": "#261a00",
+                      "on-secondary-fixed-variant": "#005137",
+                      "surface-container-high": "#dee9fc",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-fixed-dim": "#f9bd22",
+                      "on-tertiary-fixed-variant": "#5c4300",
+                      "background": "#f8f9ff",
+                      "tertiary": "#765700",
+                      "primary": "#4648d4",
+                      "surface-bright": "#f8f9ff",
+                      "secondary": "#006c4b",
+                      "on-error": "#ffffff",
+                      "on-background": "#121c2a",
+                      "primary-fixed-dim": "#c0c1ff",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed": "#07006c",
+                      "on-error-container": "#93000a",
+                      "primary-container": "#6063ee",
+                      "surface": "#f8f9ff",
+                      "secondary-fixed": "#68fcbf",
+                      "on-primary-container": "#fffbff",
+                      "inverse-surface": "#27313f",
+                      "outline-variant": "#c7c4d7",
+                      "on-surface": "#121c2a",
+                      "inverse-on-surface": "#eaf1ff",
+                      "primary-fixed": "#e1e0ff",
+                      "error": "#ba1a1a",
+                      "surface-variant": "#d9e3f6",
+                      "surface-container-low": "#eff4ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "lg": "24px",
+                      "xs": "8px",
+                      "xl": "32px",
+                      "sm": "12px",
+                      "md": "16px",
+                      "base": "4px",
+                      "margin-desktop": "40px",
+                      "margin-mobile": "20px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": ["Geist"],
+                      "body-sm": ["Inter"],
+                      "label-sm": ["Geist"],
+                      "label-md": ["Geist"],
+                      "headline-lg": ["Geist"],
+                      "display": ["Geist"],
+                      "headline-md": ["Geist"],
+                      "body-md": ["Inter"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "500"}],
+                      "label-md": ["14px", {"lineHeight": "16px", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(118, 117, 134, 0.2);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(118, 117, 134, 0.4);
+        }
+        .bg-mesh {
+            background-color: #f8f9ff;
+            background-image: 
+                radial-gradient(at 10% 20%, hsla(239, 83%, 67%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(158, 65%, 52%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, hsla(239, 83%, 67%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 100%, hsla(158, 65%, 52%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(239, 83%, 67%, 0.15) 0px, transparent 50%);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .ambient-shadow {
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-mesh text-on-surface font-body-md text-body-md antialiased min-h-screen flex">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 glass-panel shadow-sm flex justify-between items-center h-16 px-margin-desktop">
+<!-- Logo & Search -->
+<div class="flex items-center gap-xl">
+<div class="font-display text-headline-md font-extrabold text-[#6366F1] tracking-tight">SauLink</div>
+<div class="hidden md:flex relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant group-focus-within:text-[#6366F1] transition-colors">search</span>
+<input class="pl-10 pr-4 py-2 w-64 bg-white/50 backdrop-blur-sm border border-outline-variant/30 rounded-full text-body-sm font-body-sm focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition-all shadow-sm" placeholder="搜索物品..." type="text">
+</div>
+</div>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full text-on-surface-variant hover:bg-[#6366F1]/5 hover:text-[#6366F1] transition-colors duration-200 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 0;">notifications</span>
+</button>
+<button class="p-2 rounded-full text-on-surface-variant hover:bg-[#6366F1]/5 hover:text-[#6366F1] transition-colors duration-200 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 0;">mail</span>
+</button>
+<button class="p-2 rounded-full text-on-surface-variant hover:bg-[#6366F1]/5 hover:text-[#6366F1] transition-colors duration-200 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 0;">account_circle</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="hidden md:flex fixed left-0 top-16 h-[calc(100vh-64px)] w-64 glass-panel border-r border-outline-variant/30 shadow-[0_8px_32px_rgba(99,102,241,0.05)] flex-col p-md gap-base z-40" style="height: calc(-64px + 100vh);">
+<!-- Header -->
+<div class="flex items-center gap-sm p-sm mb-xs rounded-xl hover:bg-white/50 transition-colors cursor-pointer">
+<img alt="User Profile Avatar" class="w-10 h-10 rounded-full object-cover border border-outline-variant/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMvVjZMTI6UO5g9Sip9VWggBol2S8tnYvKd8p6c4qs5pm70b_8DBSiM6jElb3SI8KEH25UpxAQH2Eq6oR73sjquutePVNFdWoBefYVy6QMUAdBE8j_D9mvaETSAZ0gCmoyUKvJpW_JkcE79XG6R1syljlA2PgJFlJDO55TVOVbzKFmk15GRYAPm-Yn7UTmLtLB02Kze_uSJGBFD03ftNc405B2vopQni2P6ocLrBumAzjj6xWdakiiYPsKzmAo_l2Fxwot8TmtJj_J">
+<div>
+<div class="font-display text-label-md text-on-surface font-semibold">学生中心</div>
+<div class="font-body-sm text-body-sm text-outline">活跃社区</div>
+</div>
+</div>
+<!-- CTA -->
+<button class="w-full mb-sm py-2.5 bg-[#6366F1] hover:bg-[#4F46E5] text-white font-label-md text-label-md rounded-xl shadow-[0_4px_12px_rgba(99,102,241,0.25)] hover:shadow-[0_6px_16px_rgba(99,102,241,0.4)] transition-all duration-300 transform hover:-translate-y-[1px] flex items-center justify-center gap-2"><span class="material-symbols-outlined text-[18px]">add</span>发布帖子</button>
+<!-- Main Nav Tabs -->
+<div class="flex flex-col gap-1 flex-1">
+<a class="flex items-center gap-sm px-sm py-2.5 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined group-hover:scale-110 transition-transform">home</span>首页</a>
+<a class="flex items-center gap-sm px-sm py-2.5 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined group-hover:scale-110 transition-transform">info</span>校园资讯</a>
+<a class="flex items-center gap-sm px-sm py-2.5 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined group-hover:scale-110 transition-transform">search_check</span>失物招领</a>
+<!-- ACTIVE TAB: 二手交易 -->
+<a class="flex items-center gap-sm px-sm py-2.5 bg-[#6366F1]/10 text-[#6366F1] font-bold rounded-lg font-display text-body-md relative overflow-hidden" href="#"><span class="material-symbols-outlined transition-transform">shopping_bag</span>二手交易</a>
+<a class="flex items-center gap-sm px-sm py-2.5 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined group-hover:scale-110 transition-transform">school</span>学习互助</a>
+</div>
+<!-- Footer Tabs -->
+<div class="flex flex-col gap-1 pt-md border-t border-outline-variant/30 mt-auto">
+<a class="flex items-center gap-sm px-sm py-2 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined text-[20px] group-hover:rotate-45 transition-transform">settings</span>设置</a>
+<a class="flex items-center gap-sm px-sm py-2 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">help_outline</span>帮助</a>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-1 mt-16 md:ml-64 p-margin-mobile md:p-margin-desktop flex gap-xl max-w-[1440px] mx-auto w-full">
+<!-- Market Feed -->
+<div class="flex-1 flex flex-col min-w-0">
+<!-- Category Filters -->
+<div class="flex gap-sm overflow-x-auto pb-sm mb-md scrollbar-hide">
+<button class="whitespace-nowrap px-4 py-2 bg-[#6366F1] text-white rounded-full font-label-md text-label-md shadow-sm border-none">全部</button>
+<button class="whitespace-nowrap px-4 py-2 glass-panel text-on-surface-variant hover:text-[#6366F1] rounded-full font-label-md text-label-md hover:border-[#6366F1]/50 transition-colors">电子数码</button>
+<button class="whitespace-nowrap px-4 py-2 glass-panel text-on-surface-variant hover:text-[#6366F1] rounded-full font-label-md text-label-md hover:border-[#6366F1]/50 transition-colors">书籍教材</button>
+<button class="whitespace-nowrap px-4 py-2 glass-panel text-on-surface-variant hover:text-[#6366F1] rounded-full font-label-md text-label-md hover:border-[#6366F1]/50 transition-colors">生活杂物</button>
+<button class="whitespace-nowrap px-4 py-2 glass-panel text-on-surface-variant hover:text-[#6366F1] rounded-full font-label-md text-label-md hover:border-[#6366F1]/50 transition-colors">服饰鞋包</button>
+<button class="whitespace-nowrap px-4 py-2 glass-panel text-on-surface-variant hover:text-[#6366F1] rounded-full font-label-md text-label-md hover:border-[#6366F1]/50 transition-colors">代步工具</button>
+</div>
+<!-- Masonry Grid -->
+<div class="columns-1 sm:columns-2 lg:columns-3 gap-md space-y-md">
+<!-- Card 1 -->
+<article class="break-inside-avoid glass-panel rounded-xl overflow-hidden ambient-shadow hover:shadow-[0_8px_24px_rgba(99,102,241,0.12)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
+<div class="relative overflow-hidden">
+<img alt="Headphones" class="w-full object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJy3jsopYkV5dLoUFvNmjOm_BQO3fL8qc9znPRAWUkUJv8sqoh5urbwwHEBEYmn1KrhOxp6dDDVrgdTPkIIns1ZbnwVoQogPHLGoUwK_njXVsg_n2DALW1DCViZ5ulbdyZhU3xSMLbnQ30stiFtnvhQUXjlWIGCFaXbRDlpw8t0dPiUegVPYkL655dflLpnfr50zwnSv3N3zWVLbU0keB3E-WTHZB0AH58SOXIUV1YOFfKvY3gA49pdZWgf2fxYI2zCNh9iVhMm5gh">
+<div class="absolute top-2 right-2 bg-secondary-container/90 backdrop-blur-sm text-on-secondary-container px-2 py-1 rounded-md font-label-sm text-label-sm border border-secondary-container shadow-sm">95新</div>
+<div class="absolute top-2 left-2 bg-[#f43f5e]/90 backdrop-blur-sm text-white px-2 py-1 rounded-md font-label-sm text-label-sm border border-[#f43f5e] shadow-sm">直降 ¥200</div></div>
+<div class="p-sm">
+<h3 class="font-headline-md text-body-lg font-semibold text-on-surface line-clamp-1 mb-xs">索尼 WH-1000XM4 降噪耳机</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-sm">毕业季出，包装配件齐全，几乎没怎么用过。音质绝佳，自习室降噪神器。</p>
+<div class="flex items-center justify-between mt-auto pt-sm border-t border-outline-variant/20">
+<div class="flex items-center gap-2">
+<img alt="Seller" class="w-6 h-6 rounded-full border border-white shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJvHCr7RC_hny5bPaxVDDro5ICPD8WRZbwEK0rKPW1s_vJXqTBeXXtHtq-9WNkcPZpaBC5S4JwglZp1SRCoqUJ_zxMLnNX_I3n-5SlJbof312SggVcu5QMgvPaHkDsYjR_G152pfqnUgN4NtADYVuZK3myt0z6lFqAxJepZJQqmSlujl5zqFdWtPvPAWANb8cRzxeu2qaJzCUjnRkRZ7We_KbGZCBpoedp43L9_gEqpt14gZy0qZ_5G-x5AbjaMyBeHxZ1S3Qb7nkU">
+<span class="font-label-sm text-label-sm text-outline truncate" style="max-width: 100px;">计算机系·李同学</span>
+</div>
+<span class="font-headline-md text-[20px] font-bold text-[#6366F1]"><span class="text-outline text-label-sm line-through font-normal mr-2">¥1,400</span>¥1,200</span>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="break-inside-avoid glass-panel rounded-xl overflow-hidden ambient-shadow hover:shadow-[0_8px_24px_rgba(99,102,241,0.12)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
+<div class="relative overflow-hidden">
+<img alt="Textbooks" class="w-full object-cover aspect-[3/4] group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4yehVSm1mNd-XixPf5c5UBzcALD4-eMi6uYqB8Ga9nryPS8ZQMLHwX85Kh8LWkiZuqZe_VfPk12gQ0J0vA2secTCIIowahv3dnl1ngd9EQ8YRXDkX0ff_AH53rBFfzima8rJTWPNVmDdmmLa673lJCWYSgrB0G1ozAXv6lr1Fk6sNcW2ezaajjpqUHwm5qoKUtOs1qqnMaGafVHtjPqtTrVHrF4Mg_AC_K0j_xUevq9Bb_myFt7O4MtNRH-hs0cfiFodVqfkWloX8">
+<div class="absolute top-2 right-2 bg-tertiary-container/90 backdrop-blur-sm text-on-tertiary-container px-2 py-1 rounded-md font-label-sm text-label-sm border border-tertiary-container shadow-sm">全新</div>
+</div>
+<div class="p-sm">
+<h3 class="font-headline-md text-body-lg font-semibold text-on-surface line-clamp-1 mb-xs">高等数学（第七版）上下册</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-sm">买重了，完全没翻过，带塑封。附赠历年期末复习卷电子版。</p>
+<div class="flex items-center justify-between mt-auto pt-sm border-t border-outline-variant/20">
+<div class="flex items-center gap-2">
+<img alt="Seller" class="w-6 h-6 rounded-full border border-white shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmxD0gqC_1Al0q2qE4Rqy4eMqccGWiiEFV_Ol5rqTXlC-39kIxcAwQQ7t-vzAWrfkTlb1j8td0G4pHSd1jOV97FzJliude1nPVlFHGmDMa2yCj6JTWJlp1PM6219PR8DVxr5JQIxWkbUQf_KFRFngq1poaQ8hqX0OpFyb_iLhAQN_nGEfA0IlMGbvFPiBLqShW8CnEW6jpa8hfV-tIq2-B3_xUtE88-QJJ75KUtX2Vr1zRi7t0onXbR9JQHW4Nr8kNQX2XBfO8CAOa">
+<span class="font-label-sm text-label-sm text-outline truncate" style="max-width: 100px;">数学系·张三</span>
+</div>
+<span class="font-headline-md text-[20px] font-bold text-[#6366F1]">¥45</span>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="break-inside-avoid glass-panel rounded-xl overflow-hidden ambient-shadow hover:shadow-[0_8px_24px_rgba(99,102,241,0.12)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
+<div class="relative overflow-hidden">
+<img alt="Kettle" class="w-full object-cover aspect-square group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqcJHGF-U36dxOvJiWCuqVeN0QulxeLcroSKepoJ6PbXMVPlWkSFjK36e8YC16Ce_-cxABlJO-lq8NSwTfA-wsgCq2zRT5-B9znqIV6EGH8QIYufDMxI0IV6qe57yKdXb4J7LhgOgfkxJAH2xvUpM-2Y8elyy_tAX4011TncfpCKWTm_lBcB9nIYBUX9lOf_gQIunFJdTfT0IuLCt-uktSLRimJvToac6L5iBd-U0IVbzgoDMEMmgIN5x5_0KyQCrg5gX23l68l2j-">
+<div class="absolute top-2 right-2 bg-surface-variant/90 backdrop-blur-sm text-on-surface-variant px-2 py-1 rounded-md font-label-sm text-label-sm border border-outline-variant/50 shadow-sm">8成新</div>
+<div class="absolute top-2 left-2 bg-[#f43f5e]/90 backdrop-blur-sm text-white px-2 py-1 rounded-md font-label-sm text-label-sm border border-[#f43f5e] shadow-sm">降价</div></div>
+<div class="p-sm">
+<h3 class="font-headline-md text-body-lg font-semibold text-on-surface line-clamp-1 mb-xs">小米恒温电水壶</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-sm">用了大半年，功能完好，功率适配寝室使用。</p>
+<div class="flex items-center justify-between mt-auto pt-sm border-t border-outline-variant/20">
+<div class="flex items-center gap-2">
+<img alt="Seller" class="w-6 h-6 rounded-full border border-white shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm0vXI1z3z9mvSVBIBzrM94htKPfcZmIawQXvoB9nFCtpjGPIwA_SvHi197sKfae8OzYlOYe8JSBBl9JP5t6MqFudRkSIGScT59xhlcy8Lp-ZkSWIe49k-28oJhqdRP4cwjs1pE59d1xgSmJLGjLfK6TdsU_jlzoUGiN__MuiiADZMXvRMIgk4qftD90PGZ2fIrqIh1QmjHFiQDT2H7Rv9dO0WyUT9flECuTxARU7R-SxpBqR8tkfxGhwdMPn89eDEv7yjtpp8yKEo">
+<span class="font-label-sm text-label-sm text-outline truncate" style="max-width: 100px;">南区1栋·王五</span>
+</div>
+<span class="font-headline-md text-[20px] font-bold text-[#6366F1]"><span class="text-outline text-label-sm line-through font-normal mr-2">¥80</span>¥60</span>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="break-inside-avoid glass-panel rounded-xl overflow-hidden ambient-shadow hover:shadow-[0_8px_24px_rgba(99,102,241,0.12)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
+<div class="relative overflow-hidden">
+<img alt="Skateboard" class="w-full object-cover aspect-[4/5] group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhi8Mmu9rZ-BRMgR1yPME9G6ouWxARrX9ukJWYZz5b4P-sWVCR3F_SPW18xIxLG-hDIawCOWs5aTRQpHrJvkUavcLUGUPwKCUw181ubobSz79dQkmUe2dSdKITawbZT57T6l7Xy8r1X8NCrCZSVVtAcj8kx_J1v72Lr2rpL1OM4wGlgtbSWq5t-K2QmF2IscEp4REX3oGWsYr3UPlaUK1e7GNdPvM5gEILfVDoutm0mROLg-cq0KmBiqkGwhNPMqHGUS7tiMG4uCyz">
+<div class="absolute top-2 right-2 bg-secondary-container/90 backdrop-blur-sm text-on-secondary-container px-2 py-1 rounded-md font-label-sm text-label-sm border border-secondary-container shadow-sm">9成新</div>
+</div>
+<div class="p-sm">
+<h3 class="font-headline-md text-body-lg font-semibold text-on-surface line-clamp-1 mb-xs">沸点长板 舞板</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-sm">只在操场滑过几次，板面轻微划痕，轴承顺滑。</p>
+<div class="flex items-center justify-between mt-auto pt-sm border-t border-outline-variant/20">
+<div class="flex items-center gap-2">
+<img alt="Seller" class="w-6 h-6 rounded-full border border-white shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL-qQTIJXp8YrlBJhV-xT1BMgY8XEW2y80Q44oIud-2bLP7Z1vizC0PXE_lNaBYdYO5F4JYoNaNY2_hR9UhBSg6ecVdUaL9Ub3w76bpxhXw7j7v3VJH7fyj9udzxnlVPscpjYKKdOTGpCck4FAxEHVdcYwKU4KxI-ryYKco6PVxhAeTAooeV6icMHbWLUEjR_2pVQQPW0XTiXbZ-TEZu5bliRG1ntFaB8rhC2jLNHvxEIvWIUhwGxWynIhJ_I6Nlfcr2JvSDjGo6Hn">
+<span class="font-label-sm text-label-sm text-outline truncate" style="max-width: 100px;">滑板社·小林</span>
+</div>
+<span class="font-headline-md text-[20px] font-bold text-[#6366F1]">¥350</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- Right Sidebar -->
+<aside class="hidden xl:block w-[320px] flex-shrink-0">
+<div class="sticky top-[104px] flex flex-col gap-lg">
+<!-- Campus Ranking / Used Market Notice -->
+<div class="glass-panel rounded-2xl p-lg ambient-shadow overflow-hidden">
+<div class="flex items-center justify-between mb-md">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-[#6366F1] text-[24px]" style="font-variation-settings: &quot;FILL&quot; 1;">campaign</span>
+                        市场公告
+                    </h2>
+</div>
+<div class="flex flex-col gap-4"><!-- Notice 1: Trading Specification Regulations (Was 3rd) -->
+<div class="flex gap-3 items-start p-2 -mx-2 rounded-lg hover:bg-white/40 transition-colors">
+<div class="w-10 h-10 rounded-lg bg-[#6366F1]/10 flex items-center justify-center flex-shrink-0 text-[#6366F1]">
+<span class="material-symbols-outlined text-[20px]">gavel</span>
+</div>
+<div class="flex-1">
+<h4 class="font-label-md text-body-md font-semibold text-on-surface mb-1">交易规范条例</h4>
+<p class="text-label-sm text-outline leading-tight">
+    1. 严禁发布高功率电器及违禁物品<br>
+    2. 描述真实，须附实拍图<br>
+    3. 建议校内公共区域交易
+</p>
+</div>
+</div>
+<!-- Notice 2: Trading Safety Reminder (Was 1st) -->
+<div class="flex gap-3 items-start p-2 -mx-2 rounded-lg hover:bg-white/40 transition-colors">
+<div class="w-10 h-10 rounded-lg bg-[#6366F1]/10 flex items-center justify-center flex-shrink-0 text-[#6366F1]">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div class="flex-1">
+<h4 class="font-label-md text-body-md font-semibold text-on-surface mb-1">交易安全提醒</h4>
+<p class="text-label-sm text-outline leading-tight">建议在校内人流密集处线下交易，检查物品后再付款。</p>
+</div>
+</div>
+<!-- Notice 3: Graduation Season Luggage Shipping (Was 2nd) -->
+<div class="flex gap-3 items-start p-2 -mx-2 rounded-lg hover:bg-white/40 transition-colors">
+<div class="w-10 h-10 rounded-lg bg-[#34D399]/20 flex items-center justify-center flex-shrink-0 text-[#34D399]">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</div>
+<div class="flex-1">
+<h4 class="font-label-md text-body-md font-semibold text-on-surface mb-1">毕业季行李寄送</h4>
+<p class="text-label-sm text-outline leading-tight">校园邮局开启毕业生专项物流，大件物品可预约上门。</p>
+</div>
+</div></div>
+</div>
+<!-- Campus Ranking (Active Users) -->
+<div class="glass-panel rounded-2xl p-lg ambient-shadow overflow-hidden">
+<div class="flex items-center justify-between mb-md">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-[#6366F1] text-[24px]" style="font-variation-settings: &quot;FILL&quot; 1;">workspace_premium</span>
+                        贡献达人
+                    </h2>
+</div>
+<div class="space-y-4"><!-- Rank 1 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="Rank 1" class="w-10 h-10 rounded-full border-2 border-[#FBBF24]/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMvVjZMTI6UO5g9Sip9VWggBol2S8tnYvKd8p6c4qs5pm70b_8DBSiM6jElb3SI8KEH25UpxAQH2Eq6oR73sjquutePVNFdWoBefYVy6QMUAdBE8j_D9mvaETSAZ0gCmoyUKvJpW_JkcE79XG6R1syljlA2PgJFlJDO55TVOVbzKFmk15GRYAPm-Yn7UTmLtLB02Kze_uSJGBFD03ftNc405B2vopQni2P6ocLrBumAzjj6xWdakiiYPsKzmAo_l2Fxwot8TmtJj_J">
+<div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-[#FBBF24] text-white text-[10px] flex items-center justify-center font-bold min-w-0">1</div>
+</div>
+<div class="min-w-0">
+<div class="font-label-md text-on-surface truncate">林深见鹿</div>
+<div class="text-label-sm text-outline min-w-0 truncate">成交 28 件</div>
+</div>
+</div>
+<div class="text-[#FBBF24] font-bold text-label-sm">LV.12</div>
+</div>
+<!-- Rank 2 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="Rank 2" class="w-10 h-10 rounded-full border-2 border-[#94A3B8]/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmxD0gqC_1Al0q2qE4Rqy4eMqccGWiiEFV_Ol5rqTXlC-39kIxcAwQQ7t-vzAWrfkTlb1j8td0G4pHSd1jOV97FzJliude1nPVlFHGmDMa2yCj6JTWJlp1PM6219PR8DVxr5JQIxWkbUQf_KFRFngq1poaQ8hqX0OpFyb_iLhAQN_nGEfA0IlMGbvFPiBLqShW8CnEW6jpa8hfV-tIq2-B3_xUtE88-QJJ75KUtX2Vr1zRi7t0onXbR9JQHW4Nr8kNQX2XBfO8CAOa">
+<div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-[#94A3B8] text-white text-[10px] flex items-center justify-center font-bold min-w-0">2</div>
+</div>
+<div class="min-w-0">
+<div class="font-label-md text-on-surface truncate">代码搬运工</div>
+<div class="text-label-sm text-outline min-w-0 truncate">成交 22 件</div>
+</div>
+</div>
+<div class="text-[#94A3B8] font-bold text-label-sm">LV.10</div>
+</div>
+<!-- Rank 3 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="Rank 3" class="w-10 h-10 rounded-full border-2 border-[#D97706]/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm0vXI1z3z9mvSVBIBzrM94htKPfcZmIawQXvoB9nFCtpjGPIwA_SvHi197sKfae8OzYlOYe8JSBBl9JP5t6MqFudRkSIGScT59xhlcy8Lp-ZkSWIe49k-28oJhqdRP4cwjs1pE59d1xgSmJLGjLfK6TdsU_jlzoUGiN__MuiiADZMXvRMIgk4qftD90PGZ2fIrqIh1QmjHFiQDT2H7Rv9dO0WyUT9flECuTxARU7R-SxpBqR8tkfxGhwdMPn89eDEv7yjtpp8yKEo">
+<div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-[#D97706] text-white text-[10px] flex items-center justify-center font-bold min-w-0">3</div>
+</div>
+<div class="min-w-0">
+<div class="font-label-md text-on-surface truncate">代码裁缝</div>
+<div class="text-label-sm text-outline min-w-0 truncate">成交 18 件</div>
+</div>
+</div>
+<div class="text-[#D97706] font-bold text-label-sm">LV.09</div>
+</div></div>
+</div>
+<!-- Promo Banner -->
+<div class="relative rounded-2xl overflow-hidden group cursor-pointer border border-white/20 ambient-shadow h-64"><div class="absolute inset-0 bg-gradient-to-br from-[#6366F1]/90 via-[#6366F1]/80 to-[#34D399]/80 z-10 group-hover:opacity-100 transition-opacity"></div>
+<img alt="Promo" class="w-full object-cover h-64" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDycSHha448-G3Alp9SlRrONpcGNMCcgcckcggEdxffESD2Y-MUPIXOKTmMTU2i5e8zd8oZM3VjatgS6XfGokdwz_x0iaGpA67Ev5NXyriLVmC5pnh285ZygXZXPWm_DUWz2TEIlA1GHSL-kEP_jyu25RHVNvs3-wIj14-DrOVwXwF30JA3JTchTVy2XAdMevhPEkgmidJofg7xhh3mpPJlD8lD64D3BpP_cA9UWOMTjEgs9e2hGoGONqTdS52lWsn03O2SbAh4ExS1">
+<div class="absolute inset-0 z-20 p-md flex flex-col">
+<div class="bg-white/20 backdrop-blur-md border border-white/30 self-start px-3 py-1 rounded-full text-white font-label-sm text-[12px] mb-4 shadow-sm">
+        官方活动 · 限时开启
+    </div>
+<div class="mt-auto">
+<h3 class="text-white font-headline-md text-headline-md font-bold mb-2 drop-shadow-sm leading-tight">校园跳蚤市场：<br>毕业季大清仓</h3>
+<p class="text-white/90 font-body-sm text-body-sm leading-relaxed mb-4 line-clamp-3">
+            本周六在校区西广场，百余摊位火热招募中！考研教材、数码闲置、寝室神器应有尽有。前50名摊主可领专属奶茶券。
+        </p>
+<div class="flex items-center gap-1 text-white font-label-md text-label-md font-bold group/btn">
+<span class="hover:underline underline-offset-4">立即查看摆摊攻略</span>
+<span class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div></div>
+</div>
+</aside>
+</main>
+
+
+</body></html>

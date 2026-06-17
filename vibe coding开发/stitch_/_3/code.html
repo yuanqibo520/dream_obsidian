@@ -1,0 +1,414 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>消息中心 - SauLink</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-dim": "#d0dbed",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-container": "#fffbff",
+                      "surface-variant": "#d9e3f6",
+                      "inverse-surface": "#27313f",
+                      "on-primary-container": "#fffbff",
+                      "on-background": "#121c2a",
+                      "on-error": "#ffffff",
+                      "inverse-primary": "#c0c1ff",
+                      "on-secondary-fixed": "#002114",
+                      "background": "#f8f9ff",
+                      "secondary-fixed-dim": "#45dfa4",
+                      "error": "#ba1a1a",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-surface-variant": "#464554",
+                      "tertiary-fixed": "#ffdf9f",
+                      "on-secondary-fixed-variant": "#005137",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary": "#006c4b",
+                      "on-primary": "#ffffff",
+                      "surface-container-highest": "#d9e3f6",
+                      "on-tertiary": "#ffffff",
+                      "primary": "#4648d4",
+                      "primary-fixed": "#e1e0ff",
+                      "secondary-fixed": "#68fcbf",
+                      "surface-container": "#e6eeff",
+                      "surface": "#f8f9ff",
+                      "on-primary-fixed-variant": "#2f2ebe",
+                      "surface-tint": "#494bd6",
+                      "on-tertiary-fixed-variant": "#5c4300",
+                      "outline-variant": "#c7c4d7",
+                      "tertiary": "#765700",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed": "#261a00",
+                      "outline": "#767586",
+                      "on-surface": "#121c2a",
+                      "primary-container": "#6063ee",
+                      "secondary-container": "#64f9bc",
+                      "tertiary-fixed-dim": "#f9bd22",
+                      "surface-container-high": "#dee9fc",
+                      "surface-bright": "#f8f9ff",
+                      "surface-container-low": "#eff4ff",
+                      "tertiary-container": "#956e00",
+                      "on-secondary-container": "#00714e",
+                      "on-error-container": "#93000a",
+                      "primary-fixed-dim": "#c0c1ff",
+                      "on-primary-fixed": "#07006c",
+                      "text-primary": "#1F2937",
+                      "accent-purple": "#6366F1",
+                      "accent-mint": "#34D399"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xl": "32px",
+                      "md": "16px",
+                      "xs": "8px",
+                      "margin-desktop": "40px",
+                      "sm": "12px",
+                      "gutter": "16px",
+                      "base": "4px",
+                      "margin-mobile": "20px",
+                      "lg": "24px"
+              },
+              "fontFamily": {
+                      "display": [
+                              "Geist"
+                      ],
+                      "headline-lg": [
+                              "Geist"
+                      ],
+                      "headline-lg-mobile": [
+                              "Geist"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Geist"
+                      ],
+                      "headline-md": [
+                              "Geist"
+                      ],
+                      "label-md": [
+                              "Geist"
+                      ],
+                      "headline": [
+                              "Geist"
+                      ],
+                      "body": [
+                              "Geist"
+                      ],
+                      "label": [
+                              "Geist"
+                      ]
+              },
+              "fontSize": {
+                      "display": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "14px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(248, 249, 255, 0.2);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(99, 102, 241, 0.2);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(99, 102, 241, 0.4);
+        }
+        
+        /* Glass gradient background effect */
+        .bg-mesh {
+            background-color: #f8f9ff;
+            background-image: 
+                radial-gradient(at 10% 20%, hsla(239, 83%, 67%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(158, 65%, 52%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, hsla(239, 83%, 67%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 100%, hsla(158, 65%, 52%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(239, 83%, 67%, 0.15) 0px, transparent 50%);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-mesh text-text-primary font-body antialiased min-h-screen overflow-x-hidden relative flex flex-col">
+<!-- TopAppBar -->
+
+<!-- Main Content Area -->
+<div class="flex flex-1 pt-16 h-screen max-w-[1280px] mx-auto w-full">
+<!-- SideNavBar (Left Column) -->
+<nav class="fixed left-0 top-0 h-full glass-panel border-r border-outline-variant/30 shadow-[0_8px_32px_rgba(99,102,241,0.05)] hidden md:flex flex-col justify-between p-4 z-50 w-60">
+<div>
+<!-- Brand -->
+<div class="mb-8 px-4 py-2">
+<h1 class="text-2xl font-semibold tracking-tight text-accent-purple">SauLink</h1>
+<p class="text-sm text-on-surface-variant font-body">校园生活社区</p>
+</div>
+<!-- User Profile Snippet -->
+<div class="flex items-center gap-3 px-4 py-2 mb-6 rounded-xl hover:bg-white/50 transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-full border border-outline-variant/50 overflow-hidden object-cover">
+<img alt="User Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpxxSmgo5d4ckf2fnqEixxd2OR_PELadf3C3ez_3iFROZwQYKMydzOptzjhWCik3anu7PeCgb-t9JZ5ToFzU-kmXWEnz6jaGYXu5VOIowG_lA91u7tTitkMnGHmkmsDx-1dMhId-WN32clhNprDDO7Gjn7WQzpHBzZsVSvnDsEAHAy11kV9Qvdep7Aqc--iqOVgNCXbyjOz30je-fBok7e9mMRGqkcn1EqtmSiP2rtA53QWQLPB22TRnM7xxlzvicMnvkdQ250RvuO">
+</div>
+<div>
+<p class="text-sm font-semibold text-text-primary">学生中心</p>
+<p class="text-xs text-on-surface-variant">活跃社区</p>
+</div>
+</div>
+<!-- CTA -->
+<button class="w-full mb-6 bg-[#6366F1] hover:bg-[#4F46E5] text-white rounded-xl py-3 flex items-center justify-center gap-2 font-semibold shadow-[0_4px_12px_rgba(99,102,241,0.25)] hover:shadow-[0_6px_16px_rgba(99,102,241,0.4)] transition-all duration-300 transform hover:-translate-y-[1px]">
+<span class="material-symbols-outlined text-[18px]">add</span>发布内容</button>
+<!-- Navigation Links -->
+<div class="space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-white/50 transition-colors hover:text-text-primary transition-all duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-medium">首页</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-white/50 transition-colors hover:text-text-primary transition-all duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined">info</span>
+<span class="font-medium">校园资讯</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-white/50 transition-colors hover:text-text-primary transition-all duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined">search_check</span>
+<span class="font-medium">失物招领</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-white/50 transition-colors hover:text-text-primary transition-all duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-medium">二手市场</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-white/50 transition-colors hover:text-text-primary transition-all duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="font-medium">学习互助</span>
+</a>
+</div>
+</div>
+<!-- Footer / User Actions -->
+<div class="space-y-2 border-t border-outline-variant/30 pt-4 mt-auto">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-white/50 transition-colors hover:text-text-primary transition-all duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-medium">设置</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-white/50 transition-colors hover:text-text-primary transition-all duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+<span class="font-medium">帮助</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-60 p-margin-mobile md:p-margin-desktop overflow-y-auto">
+<div class="max-w-4xl mx-auto">
+<!-- Page Header -->
+<div class="mb-lg">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-text-primary">消息中心</h1>
+<p class="font-body-md text-on-surface-variant mt-base">查看你的最新互动与通知</p>
+</div>
+<!-- Bento Grid: Message Categories -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter mb-xl">
+<!-- Likes Tile (Macaroon Coral/Pink) -->
+<div class="bg-[#FFE5EC] rounded-xl p-md flex flex-col items-center justify-center gap-sm aspect-[4/3] shadow-sm hover:shadow-md transition-shadow cursor-pointer relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-16 h-16 bg-white/20 rounded-bl-full pointer-events-none transition-transform group-hover:scale-110"></div>
+<div class="w-12 h-12 rounded-full bg-white/50 flex items-center justify-center text-[#FF4D85] mb-xs">
+<span class="material-symbols-outlined filled text-[28px]" data-icon="favorite" data-weight="fill">favorite</span>
+</div>
+<span class="font-label-md font-semibold text-text-primary">收到的赞</span>
+<span class="absolute top-sm right-sm bg-[#FF4D85] text-white font-label-sm px-2 py-0.5 rounded-full">12</span>
+</div>
+<!-- Replies Tile (Macaroon Lavender) -->
+<div class="bg-[#E5E0FF] rounded-xl p-md flex flex-col items-center justify-center gap-sm aspect-[4/3] shadow-sm hover:shadow-md transition-shadow cursor-pointer relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-16 h-16 bg-white/20 rounded-bl-full pointer-events-none transition-transform group-hover:scale-110"></div>
+<div class="w-12 h-12 rounded-full bg-white/50 flex items-center justify-center text-[#6366F1] mb-xs">
+<span class="material-symbols-outlined text-[28px]" data-icon="forum">forum</span>
+</div>
+<span class="font-label-md font-semibold text-text-primary">回复我的</span>
+<span class="absolute top-sm right-sm bg-[#6366F1] text-white font-label-sm px-2 py-0.5 rounded-full">5</span>
+</div>
+<!-- Mentions Tile (Macaroon Mint) -->
+<div class="bg-[#D1FAE5] rounded-xl p-md flex flex-col items-center justify-center gap-sm aspect-[4/3] shadow-sm hover:shadow-md transition-shadow cursor-pointer relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-16 h-16 bg-white/20 rounded-bl-full pointer-events-none transition-transform group-hover:scale-110"></div>
+<div class="w-12 h-12 rounded-full bg-white/50 flex items-center justify-center text-[#10B981] mb-xs">
+<span class="material-symbols-outlined text-[28px]" data-icon="alternate_email">alternate_email</span>
+</div>
+<span class="font-label-md font-semibold text-text-primary">@我</span>
+</div>
+<!-- System Tile (Macaroon Yellow) -->
+<div class="bg-[#FEF3C7] rounded-xl p-md flex flex-col items-center justify-center gap-sm aspect-[4/3] shadow-sm hover:shadow-md transition-shadow cursor-pointer relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-16 h-16 bg-white/20 rounded-bl-full pointer-events-none transition-transform group-hover:scale-110"></div>
+<div class="w-12 h-12 rounded-full bg-white/50 flex items-center justify-center text-[#D97706] mb-xs">
+<span class="material-symbols-outlined text-[28px]" data-icon="campaign">campaign</span>
+</div>
+<span class="font-label-md font-semibold text-text-primary">系统通知</span>
+<div class="absolute top-sm right-sm w-2.5 h-2.5 bg-[#EF4444] rounded-full"></div>
+</div>
+</div>
+<!-- Message List -->
+<div class="glass-panel rounded-xl p-md md:p-lg shadow-[0_8px_32px_rgba(99,102,241,0.05)] flex flex-col gap-sm w-full bg-white/80">
+<h3 class="font-headline-md font-semibold mb-sm text-text-primary">最新消息</h3>
+<!-- Message Item 1 -->
+<div class="flex items-start gap-md p-sm rounded-lg hover:bg-white/50 transition-colors group cursor-pointer relative hover:bg-primary/5 hover:scale-[1.01] active:scale-95 transition-all duration-200">
+<img alt="Avatar" class="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm flex-shrink-0" data-alt="A close up portrait of a young college student with a bright, friendly smile in a sunlit modern campus setting. The lighting is soft and natural, emphasizing the vibrant, optimistic mood of the university community style design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQicVqZVFZy3nlnybHZA2-MucpAwjVPO4OuTgxDCjyM-eCCIfx2U1HIlVWQvr9AbXImFkm04NHTT-GD2Y8sqouPOVYL6eypWA7n_rhvFn2dmZOiPCikx4Mibhhd9SibZBTyzEntRtcf9KMfd4nhQ2ZKmLB5-8R59nNKaT8UoiaShvgM4rd2UwtPyKsCFaiqTH8XlY5ixPAUaX1H6WmKGQoC3jgZb983YoZ8G91pYM34pFcqzpU22QuYq4eSg8wwiueKedqFPzvUbnX">
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-base">
+<p class="font-body-md font-semibold text-text-primary truncate">李华 <span class="font-body-sm font-normal text-on-surface-variant ml-xs">赞了你的帖子</span></p>
+<span class="font-body-sm text-on-surface-variant flex-shrink-0 ml-sm">10分钟前</span>
+</div>
+<p class="font-body-sm text-on-surface-variant line-clamp-1 bg-white/50 p-sm rounded-md border border-outline-variant/30">"今天学校食堂的新菜太好吃了，强烈推荐给大家！"</p>
+</div>
+</div>
+<!-- Divider -->
+<div class="h-px w-full bg-outline-variant/30 mx-auto"></div>
+<!-- Message Item 2 -->
+<div class="flex items-start gap-md p-sm rounded-lg hover:bg-white/50 transition-colors group cursor-pointer relative hover:bg-primary/5 hover:scale-[1.01] active:scale-95 transition-all duration-200">
+<div class="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm flex-shrink-0 bg-accent-purple/20 text-accent-purple flex items-center justify-center font-display font-bold text-lg">
+                        ZH
+                    </div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-base">
+<p class="font-body-md font-semibold text-text-primary truncate">张三 <span class="font-body-sm font-normal text-on-surface-variant ml-xs">回复了你</span></p>
+<span class="font-body-sm text-on-surface-variant flex-shrink-0 ml-sm">1小时前</span>
+</div>
+<p class="font-body-sm text-text-primary line-clamp-2">"我也觉得那个教授的课很难抢，下学期组团一起选吧，可能机会大一点。"</p>
+</div>
+</div>
+<!-- Divider -->
+<div class="h-px w-full bg-outline-variant/30 mx-auto"></div>
+<!-- Message Item 3 (System) -->
+<div class="flex items-start gap-md p-sm rounded-lg hover:bg-white/50 transition-colors group cursor-pointer relative hover:bg-primary/5 hover:scale-[1.01] active:scale-95 transition-all duration-200">
+<div class="w-12 h-12 rounded-full border-2 border-white shadow-sm flex-shrink-0 bg-[#FEF3C7] text-[#D97706] flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="campaign">campaign</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-base">
+<p class="font-body-md font-semibold text-text-primary truncate">系统通知</p>
+<span class="font-body-sm text-on-surface-variant flex-shrink-0 ml-sm">昨天 14:30</span>
+</div>
+<p class="font-body-sm text-text-primary line-clamp-2">"您发布的二手交易贴『出九成新微积分课本』已通过审核，现已上线展示。"</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Mobile Bottom Nav (Visible only on small screens) -->
+<nav class="md:hidden fixed bottom-0 w-full glass-panel border-t border-white/40 shadow-[0_-4px_12px_rgba(99,102,241,0.05)] pb-safe z-50">
+<div class="flex justify-around items-center h-16 px-md">
+<a class="flex flex-col items-center gap-base p-sm text-on-surface-variant hover:text-accent-purple transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-[10px]">首页</span>
+</a>
+<a class="flex flex-col items-center gap-base p-sm text-on-surface-variant hover:text-accent-purple transition-colors" href="#">
+<span class="material-symbols-outlined">search_check</span>
+<span class="font-label-sm text-[10px]">发现</span>
+</a>
+<div class="relative -top-4">
+<button class="w-12 h-12 bg-accent-purple text-white rounded-full shadow-lg flex items-center justify-center hover:scale-105 transition-transform border-4 border-[#f8f9ff]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-base p-sm text-on-surface-variant hover:text-accent-purple transition-colors" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-sm text-[10px]">市场</span>
+</a>
+<a class="flex flex-col items-center gap-base p-sm text-accent-purple transition-colors" href="#">
+<span class="material-symbols-outlined filled">mail</span>
+<span class="font-label-sm text-[10px]">消息</span>
+</a>
+</div>
+</nav>
+
+
+
+
+</body></html>

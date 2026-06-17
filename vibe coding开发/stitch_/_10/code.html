@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SauLink - 失物招领</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-high": "#dee9fc",
+                        "inverse-surface": "#27313f",
+                        "on-surface-variant": "#4B5563",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#005137",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#45dfa4",
+                        "outline": "#9CA3AF",
+                        "inverse-primary": "#c0c1ff",
+                        "secondary": "#34D399",
+                        "on-primary-fixed": "#07006c",
+                        "surface-dim": "#d0dbed",
+                        "surface-container": "#e6eeff",
+                        "primary-fixed": "#e1e0ff",
+                        "on-tertiary-fixed-variant": "#5c4300",
+                        "tertiary-fixed": "#ffdf9f",
+                        "secondary-container": "#A7F3D0",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-surface": "#1F2937",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "surface-variant": "#d9e3f6",
+                        "error": "#EF4444",
+                        "on-secondary-fixed": "#002114",
+                        "tertiary-container": "#956e00",
+                        "outline-variant": "#D1D5DB",
+                        "on-primary-container": "#ffffff",
+                        "surface-bright": "#f8f9ff",
+                        "primary-container": "#6366F1",
+                        "on-tertiary-fixed": "#261a00",
+                        "on-background": "#1F2937",
+                        "tertiary-fixed-dim": "#f9bd22",
+                        "on-secondary-container": "#065F46",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#FEE2E2",
+                        "tertiary": "#765700",
+                        "primary": "#6366F1",
+                        "surface-container-low": "#eff4ff",
+                        "surface": "#f8f9ff",
+                        "on-error-container": "#7F1D1D",
+                        "secondary-fixed": "#68fcbf",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-tint": "#494bd6",
+                        "surface-container-highest": "#d9e3f6",
+                        "background": "#F8F9FF"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "margin-desktop": "40px",
+                        "xs": "8px",
+                        "margin-mobile": "20px",
+                        "base": "4px",
+                        "sm": "12px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "gutter": "16px",
+                        "xl": "32px"
+                    },
+                    fontFamily: {
+                        "headline-md": ["Geist"],
+                        "body-sm": ["Inter"],
+                        "label-md": ["Geist"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Geist"],
+                        "display": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "headline-lg": ["Geist"],
+                        "body-lg": ["Inter"]
+                    },
+                    fontSize: {
+                        "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                        "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+                        "label-md": ["14px", { lineHeight: "16px", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "label-sm": ["12px", { lineHeight: "14px", fontWeight: "500" }],
+                        "display": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800" }],
+                        "headline-lg-mobile": ["28px", { lineHeight: "36px", fontWeight: "700" }],
+                        "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="text-on-background h-screen flex flex-col overflow-hidden relative">
+<!-- Background fluid gradients -->
+<div class="fixed inset-0 pointer-events-none z-[-1] bg-[#F8F9FF] overflow-hidden">
+<div class="absolute top-[-15%] left-[-10%] w-[50%] h-[50%] rounded-full bg-cyan-200/40 blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-blue-200/30 blur-[120px]"></div>
+</div>
+<!-- Top App Bar / Header -->
+<header class="fixed top-0 left-0 w-full z-50 glass-panel shadow-sm flex justify-between items-center h-16 px-margin-desktop">
+<div class="flex items-center gap-xl"><div class="font-display text-headline-md font-extrabold text-[#6366F1] tracking-tight">SauLink</div><div class="hidden md:flex relative group"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant group-focus-within:text-[#6366F1] transition-colors">search</span><input class="pl-10 pr-4 py-2 w-64 bg-white/50 backdrop-blur-sm border border-outline-variant/30 rounded-full text-body-sm font-body-sm focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition-all shadow-sm" placeholder="搜索物品..." type="text"/></div></div><div class="flex items-center gap-2"><button class="p-2 rounded-full text-on-surface-variant hover:bg-[#6366F1]/5 hover:text-[#6366F1] transition-colors duration-200 active:scale-95 transition-transform duration-150"><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>notifications</span></button><button class="p-2 rounded-full text-on-surface-variant hover:bg-[#6366F1]/5 hover:text-[#6366F1] transition-colors duration-200 active:scale-95 transition-transform duration-150"><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>mail</span></button><button class="p-2 rounded-full text-on-surface-variant hover:bg-[#6366F1]/5 hover:text-[#6366F1] transition-colors duration-200 active:scale-95 transition-transform duration-150"><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>account_circle</span></button></div>
+</header>
+<!-- Left Navigation Bar -->
+<nav class="hidden md:flex fixed left-0 top-16 h-[calc(100vh-64px)] w-[240px] glass-panel border-r border-outline-variant/30 shadow-[0_8px_32px_rgba(99,102,241,0.05)] flex-col p-md gap-base z-40"><div class="flex items-center gap-sm p-sm mb-xs rounded-xl hover:bg-white/50 transition-colors cursor-pointer"><img alt="User Profile Avatar" class="w-10 h-10 rounded-full object-cover border border-outline-variant/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMvVjZMTI6UO5g9Sip9VWggBol2S8tnYvKd8p6c4qs5pm70b_8DBSiM6jElb3SI8KEH25UpxAQH2Eq6oR73sjquutePVNFdWoBefYVy6QMUAdBE8j_D9mvaETSAZ0gCmoyUKvJpW_JkcE79XG6R1syljlA2PgJFlJDO55TVOVbzKFmk15GRYAPm-Yn7UTmLtLB02Kze_uSJGBFD03ftNc405B2vopQni2P6ocLrBumAzjj6xWdakiiYPsKzmAo_l2Fxwot8TmtJj_J"/><div><div class="font-display text-label-md text-on-surface font-semibold">学生中心</div><div class="font-body-sm text-body-sm text-outline">活跃社区</div></div></div><button class="w-full mb-sm py-2.5 bg-[#6366F1] hover:bg-[#4F46E5] text-white font-label-md text-label-md rounded-xl shadow-[0_4px_12px_rgba(99,102,241,0.25)] hover:shadow-[0_6px_16px_rgba(99,102,241,0.4)] transition-all duration-300 transform hover:-translate-y-[1px] flex items-center justify-center gap-2"><span class="material-symbols-outlined text-[18px]">add</span>发布帖子</button><div class="flex flex-col gap-1 flex-1"><a class="flex items-center gap-sm px-sm py-2.5 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined group-hover:scale-110 transition-transform">home</span>首页</a><a class="flex items-center gap-sm px-sm py-2.5 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined group-hover:scale-110 transition-transform">info</span>校园资讯</a><a class="flex items-center gap-sm px-sm py-2.5 bg-[#6366F1]/10 text-[#6366F1] font-bold rounded-lg font-display text-body-md relative overflow-hidden" href="#"><span class="material-symbols-outlined transition-transform">find_in_page</span>失物招领</a><a class="flex items-center gap-sm px-sm py-2.5 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined group-hover:scale-110 transition-transform">shopping_bag</span>二手交易</a><a class="flex items-center gap-sm px-sm py-2.5 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined group-hover:scale-110 transition-transform">school</span>学习互助</a></div><div class="flex flex-col gap-1 pt-md border-t border-outline-variant/30 mt-auto"><a class="flex items-center gap-sm px-sm py-2 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined text-[20px] group-hover:rotate-45 transition-transform">settings</span>设置</a><a class="flex items-center gap-sm px-sm py-2 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">help_outline</span>帮助</a></div></nav>
+<!-- Content Area -->
+<div class="flex-1 mt-16 md:ml-[240px] flex overflow-hidden h-[calc(100vh-64px)] w-[calc(100%-240px)]">
+<!-- Middle Scrollable Feed -->
+<main class="flex-1 h-full overflow-y-auto relative flex flex-col hide-scrollbar">
+<!-- Filters -->
+<div class="px-margin-desktop py-md backdrop-blur-md bg-white/30 sticky top-0 z-30 flex gap-sm border-b border-white/40">
+<button class="px-4 py-2 rounded-full bg-primary text-on-primary text-label-md font-label-md shadow-sm">全部</button>
+<button class="px-4 py-2 rounded-full bg-white/60 text-on-surface-variant text-label-md font-label-md hover:bg-primary/10 transition-colors border border-white/50 shadow-sm">寻物 (丢失)</button>
+<button class="px-4 py-2 rounded-full bg-white/60 text-on-surface-variant text-label-md font-label-md hover:bg-primary/10 transition-colors border border-white/50 shadow-sm">招领 (拾取)</button>
+<div class="ml-auto flex items-center gap-sm text-on-surface-variant">
+<span class="text-label-sm font-label-sm font-medium">排序:</span>
+<select class="bg-transparent border-none text-label-md font-label-md focus:ring-0 cursor-pointer font-medium">
+<option>最新发布</option>
+<option>最近丢失/拾取</option>
+</select>
+</div>
+</div>
+<!-- Feed Content -->
+<div class="p-margin-mobile md:p-margin-desktop pt-4 md:pt-lg max-w-5xl mx-auto w-full pb-xl">
+<div class="columns-1 xl:columns-2 gap-lg space-y-lg">
+<!-- Card 1: Lost Item -->
+<article class="bg-white rounded-xl p-md border border-white/60 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-shadow flex flex-col gap-sm relative overflow-hidden group break-inside-avoid"><div class="absolute top-4 right-4 bg-error-container text-on-error-container px-3 py-1 rounded-full text-label-sm font-label-sm font-bold flex items-center gap-1 z-10"><span class="material-symbols-outlined text-[16px]">search</span>寻物</div><div class="flex gap-md"><div class="w-1/3 aspect-square rounded-lg overflow-hidden bg-surface-container flex-shrink-0 relative"><img alt="Lost Campus Card" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMDFIBx9WT5Xi_zSAP2DU-LCR62L9scmdmU59es_nC9r_oB8zDHwDu2hPnTmRIBmK7PoV650fqpjo-bbQtDmP78nPMpdlPROmvCU4b7nylJBPJelw5uyiS70Ms5h_pQfBCdnfvXjKOztwqcdoEEDfxC9drCwyAWavNCDvmOSPJMdd4jcOFnwng7dqj7dPH4e7EQhzqhxokmEltaoc63HmB6H97zyWb--kgnCU6A9ezdzr9AnU3FZjRYJPqRvUYfvwk27esAjfJiI9u"/></div><div class="flex-1 flex flex-col"><h3 class="text-headline-sm font-headline-md font-bold text-on-surface mb-xs pr-16 line-clamp-2">丢失校园卡 (张三)</h3><div class="flex items-center gap-1 text-on-surface-variant text-body-sm font-body-sm mb-1"><span class="material-symbols-outlined text-[16px]">location_on</span><span>第二教学楼 304教室附近</span></div><div class="flex items-center gap-1 text-on-surface-variant text-body-sm font-body-sm mb-sm"><span class="material-symbols-outlined text-[16px]">schedule</span><span>今天 10:30 左右</span></div><p class="text-body-sm font-body-sm text-on-surface-variant/80 line-clamp-2 mb-sm flex-1">蓝色卡套，上面贴有一张皮卡丘的贴纸。上完高数课后发现不见了，里面还有饭卡余额，请捡到的同学务必联系我，万分感谢！</p><div class="flex items-center justify-between mt-auto pt-sm border-t border-outline-variant/20"><div class="flex items-center gap-2"><div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-label-sm font-label-sm font-bold">张</div><span class="text-label-sm font-label-sm text-on-surface-variant">张同学</span></div><button class="text-primary text-label-sm font-label-sm font-bold hover:bg-primary/10 px-3 py-1 rounded-full transition-colors">联系TA</button></div></div></div></article>
+<!-- Card 2: Found Item -->
+<article class="bg-white rounded-xl p-md border border-white/60 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-shadow flex flex-col gap-sm relative overflow-hidden group break-inside-avoid"><div class="absolute top-4 right-4 bg-secondary/10 text-secondary px-3 py-1 rounded-full text-label-sm font-label-sm font-bold flex items-center gap-1 z-10 border border-secondary/20"><span class="material-symbols-outlined text-[16px]">volunteer_activism</span>招领</div><div class="flex gap-md"><div class="w-1/3 aspect-square rounded-lg overflow-hidden bg-surface-container flex-shrink-0 relative"><img alt="Found Earbuds" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnpRCEcsUTPyeEdNt3r2qpDLMtjiPF987t8SjrNggg_qHg1-3FWHR5LPWAJ3-5boeWxXElPGlG64Uh_3QfvYOzMGlcw7_i3tFmJWjPtBm4QznIkbKtN1OYrC2FCUZ0JMK2zyHfTT4S5Zac4QOiaijsEcvHTpLKFP2cuVKXso0j_Qh1LQi7GDk_8iinMK-Y0sKNfrtjK0sGIxhK9agA-ZrBnfW2PpGOEZCmAosJhVEJ17ehEAFOkxR9qsuSo0oeaM7E9bFF02mnH3DT"/></div><div class="flex-1 flex flex-col"><h3 class="text-headline-sm font-headline-md font-bold text-on-surface mb-xs pr-16 line-clamp-2">捡到一副白色蓝牙耳机</h3><div class="flex items-center gap-1 text-on-surface-variant text-body-sm font-body-sm mb-1"><span class="material-symbols-outlined text-[16px]">location_on</span><span>中心图书馆 二楼A区阅览室</span></div><div class="flex items-center gap-1 text-on-surface-variant text-body-sm font-body-sm mb-sm"><span class="material-symbols-outlined text-[16px]">schedule</span><span>昨天 20:15 左右</span></div><p class="text-body-sm font-body-sm text-on-surface-variant/80 line-clamp-2 mb-sm flex-1">在A区靠窗的第3个座位上发现的，带一个透明的硅胶保护壳。目前已经交给了图书馆一楼的前台管理员。</p><div class="flex items-center justify-between mt-auto pt-sm border-t border-outline-variant/20"><div class="flex items-center gap-2"><img alt="Finder Avatar" class="w-6 h-6 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwZ3Kd5JTzGQ14wfcyh0GpexedihgYTlY4y434viaRZm1w6l5tBa9v9-qAYef0tNwOmG21nQq0-kp4tjL3k7Z3M-J2_oK_vCkjfeLkmdMgIFWK3mMPUaJMjSyum_Ab3aaLj864Lvp6E0itplBwjEXWhDcBBA3p0lPJ5V_sT_7irlwgM5VfSrwVpyO4IbVS52U1vXEBjc62C-W-2y8XUQkhyvxVA2ad2b9xvOlsMHlT9JmFb9SlDmFJtsBvCEKd37XYeJjNYqLtOfMV"/><span class="text-label-sm font-label-sm text-on-surface-variant">李同学</span></div><button class="text-primary text-label-sm font-label-sm font-bold hover:bg-primary/10 px-3 py-1 rounded-full transition-colors">查看详情</button></div></div></div></article>
+<!-- Card 3: Found Item -->
+<article class="bg-white rounded-xl p-md border border-white/60 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-shadow flex flex-col gap-sm relative overflow-hidden group break-inside-avoid"><div class="absolute top-4 right-4 bg-secondary/10 text-secondary px-3 py-1 rounded-full text-label-sm font-label-sm font-bold flex items-center gap-1 z-10 border border-secondary/20"><span class="material-symbols-outlined text-[16px]">volunteer_activism</span>招领</div><div class="flex gap-md"><div class="w-1/3 aspect-square rounded-lg overflow-hidden bg-surface-container flex-shrink-0 relative bg-[url('https://images.unsplash.com/photo-1602143407151-7111542de6e8?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80')] bg-cover bg-center"></div><div class="flex-1 flex flex-col"><h3 class="text-headline-sm font-headline-md font-bold text-on-surface mb-xs pr-16 line-clamp-2">遗落在操场的水杯</h3><div class="flex items-center gap-1 text-on-surface-variant text-body-sm font-body-sm mb-1"><span class="material-symbols-outlined text-[16px]">location_on</span><span>东区田径场 篮球架旁</span></div><div class="flex items-center gap-1 text-on-surface-variant text-body-sm font-body-sm mb-sm"><span class="material-symbols-outlined text-[16px]">schedule</span><span>今天 08:00 左右</span></div><p class="text-body-sm font-body-sm text-on-surface-variant/80 line-clamp-2 mb-sm flex-1">晨跑时看到的，薄荷绿色的保温杯，表面有一点轻微的磕碰痕迹。为了防止丢失，我暂时带回了宿舍。</p><div class="flex items-center justify-between mt-auto pt-sm border-t border-outline-variant/20"><div class="flex items-center gap-2"><div class="w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center text-secondary text-label-sm font-label-sm font-bold">王</div><span class="text-label-sm font-label-sm text-on-surface-variant">王同学</span></div><button class="text-primary text-label-sm font-label-sm font-bold hover:bg-primary/10 px-3 py-1 rounded-full transition-colors">联系TA</button></div></div></div></article>
+</div>
+<div class="mt-lg flex justify-center pb-xl"><div class="w-8 h-8 border-4 border-surface-variant border-t-primary rounded-full animate-spin"></div></div>
+</div>
+</main>
+<!-- Right Auxiliary Area -->
+<aside class="hidden xl:flex flex-col w-80 gap-lg flex-shrink-0 h-full overflow-y-auto p-margin-desktop border-l border-outline-variant/20 hide-scrollbar bg-white/20 backdrop-blur-sm">
+<!-- Rules Card -->
+<section class="glass-panel rounded-xl p-md shadow-sm">
+<div class="flex items-center gap-2 mb-md">
+<span class="material-symbols-outlined text-primary">gavel</span>
+<h3 class="text-label-md font-label-md font-bold text-on-surface">发布规范</h3>
+</div>
+<ul class="flex flex-col gap-sm text-body-sm font-body-sm text-on-surface-variant">
+<li class="flex gap-2 items-start">
+<span class="material-symbols-outlined text-[16px] text-secondary mt-0.5">check_circle</span>
+<span>请真实描述物品特征、丢失/拾取的时间与地点。</span>
+</li><li class="flex gap-2 items-start">
+<span class="material-symbols-outlined text-[16px] text-secondary mt-0.5">check_circle</span>
+<span>建议上传清晰的实拍图片，提高找回概率。</span>
+</li>
+<li class="flex gap-2 items-start">
+<span class="material-symbols-outlined text-[16px] text-secondary mt-0.5">check_circle</span>
+<span>涉及个人隐私的物品（如身份证），请在图片上打码或遮挡关键信息。</span>
+</li>
+<li class="flex gap-2 items-start">
+<span class="material-symbols-outlined text-[16px] text-error mt-0.5">cancel</span>
+<span>严禁发布虚假信息或进行诈骗。</span>
+</li>
+</ul>
+</section>
+<!-- Stats Card -->
+<section class="glass-panel rounded-xl p-md shadow-sm relative overflow-hidden">
+<!-- Decorative background blob -->
+<div class="absolute -right-10 -top-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+<div class="flex items-center gap-2 mb-md relative z-10">
+<span class="material-symbols-outlined text-secondary">monitoring</span>
+<h3 class="text-label-md font-label-md font-bold text-on-surface">失物统计</h3>
+</div>
+<div class="grid grid-cols-2 gap-4 relative z-10">
+<div class="flex flex-col items-center p-sm bg-white/50 rounded-lg border border-white/60 shadow-sm">
+<span class="text-headline-md font-headline-md font-black text-primary">78%</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-1">本周找回率</span>
+</div>
+<div class="flex flex-col items-center p-sm bg-white/50 rounded-lg border border-white/60 shadow-sm">
+<span class="text-headline-md font-headline-md font-black text-secondary">1,245</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-1">累计寻回件数</span>
+</div>
+</div>
+<div class="mt-md pt-sm border-t border-white/40 relative z-10">
+<p class="text-label-sm font-label-sm text-on-surface-variant text-center">
+                            感谢每一位传递温暖的同学 🌟
+                        </p>
+</div>
+</section>
+<!-- Quick Action / Banner -->
+<div class="glass-panel bg-primary/90 text-white rounded-xl p-md shadow-md flex flex-col items-center text-center border-none">
+<span class="material-symbols-outlined text-3xl mb-2 text-white">support_agent</span>
+<h4 class="text-label-md font-label-md font-bold mb-1">需要帮助？</h4>
+<p class="text-body-sm font-body-sm opacity-90 mb-md text-white">如果遇到贵重物品丢失，建议同时联系校园保卫处。</p>
+<button class="w-full py-2 bg-white text-primary rounded-lg text-label-md font-label-md font-bold hover:bg-gray-50 transition-colors shadow-sm">
+                        一键拨打保卫处
+                    </button>
+</div>
+</aside>
+</div>
+</body></html>

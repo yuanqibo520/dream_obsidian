@@ -1,0 +1,313 @@
+<!DOCTYPE html><html lang="zh-CN" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SauLink - 详情</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed-variant": "#2f2ebe",
+                      "on-background": "#121c2a",
+                      "surface-dim": "#d0dbed",
+                      "on-primary-container": "#fffbff",
+                      "surface-variant": "#d9e3f6",
+                      "surface-bright": "#f8f9ff",
+                      "secondary": "#006c4b",
+                      "surface-container": "#e6eeff",
+                      "on-tertiary-fixed": "#261a00",
+                      "on-error": "#ffffff",
+                      "error": "#ba1a1a",
+                      "secondary-container": "#64f9bc",
+                      "inverse-surface": "#27313f",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-container": "#00714e",
+                      "secondary-fixed": "#68fcbf",
+                      "inverse-primary": "#c0c1ff",
+                      "on-surface-variant": "#464554",
+                      "surface-container-high": "#dee9fc",
+                      "tertiary-fixed": "#ffdf9f",
+                      "on-secondary-fixed": "#002114",
+                      "primary": "#6366F1",
+                      "inverse-on-surface": "#eaf1ff",
+                      "surface-tint": "#494bd6",
+                      "primary-fixed-dim": "#c0c1ff",
+                      "background": "#f8f9ff",
+                      "error-container": "#ffdad6",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed-dim": "#f9bd22",
+                      "surface-container-highest": "#d9e3f6",
+                      "tertiary-container": "#956e00",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-low": "#eff4ff",
+                      "primary-container": "#818cf8",
+                      "on-tertiary-container": "#fffbff",
+                      "on-secondary-fixed-variant": "#005137",
+                      "primary-fixed": "#e0e7ff",
+                      "surface": "#f8f9ff",
+                      "outline": "#767586",
+                      "on-error-container": "#93000a",
+                      "on-surface": "#121c2a",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#765700",
+                      "on-primary-fixed": "#312e81",
+                      "outline-variant": "#c7c4d7",
+                      "on-tertiary-fixed-variant": "#5c4300",
+                      "secondary-fixed-dim": "#45dfa4"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "12px",
+                      "xl": "32px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "40px",
+                      "xs": "8px",
+                      "lg": "24px",
+                      "gutter": "16px",
+                      "md": "16px",
+                      "base": "4px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Geist"
+                      ],
+                      "display": [
+                              "Geist"
+                      ],
+                      "label-md": [
+                              "Geist"
+                      ],
+                      "headline-lg": [
+                              "Geist"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Geist"
+                      ],
+                      "headline-md": [
+                              "Geist"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "14px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #c7c4d7;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen overflow-hidden">
+<!-- Blurred Background (Simulating the Lost & Found list underneath) -->
+<div class="fixed inset-0 z-0 bg-cover bg-center" data-alt="A simulated screen showing a grid of cards representing lost and found items on a university campus. The interface is clean, bright, and modern, with macaroon pastel colors." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDYesEM6PSVbxUsVf0tZ94L4rvbfF2MEvRvJz8miTc-mL_J12diW_zN7mPOoWnB6yYv6nv6zcjt8TRXrr4Cds0KMBKJbmS5L3tzerJtrzzlIghHAg46MOK2pNTvWE6Dj8lEwkiyJ9NTFLtl7fCG6LTROn0mpSTYyXuv81cGkTqNDl-LgnGNRiORbpA9M2noFc6maB7eSqqAH_zVmXtpSpT2OlhqU9G-RVh7piHL1bemRZlENrqAQKRXDJGaKlwB2D-nLX4tD_IHf-qL&quot;);">
+<div class="absolute inset-0 bg-surface/40 backdrop-blur-2xl"></div>
+</div>
+<!-- Modal Overlay Container -->
+<div class="fixed inset-0 z-50 bg-on-surface/20 backdrop-blur-md flex items-center justify-center p-margin-mobile md:p-margin-desktop overflow-y-auto">
+<!-- Close Button Outside -->
+<button aria-label="Close modal" class="absolute top-md right-md md:top-lg md:right-lg z-[60] bg-white/50 hover:bg-white text-on-surface p-xs rounded-full shadow-sm backdrop-blur-md transition-all duration-200"><span class="material-symbols-outlined text-[24px]">close</span></button>
+<!-- Modal Card -->
+<div class="relative w-full max-w-[800px] bg-white rounded-xl shadow-xl shadow-primary/10 flex flex-col max-h-[921px] overflow-hidden">
+<!-- Scrollable Content -->
+<div class="overflow-y-auto custom-scrollbar flex-grow p-lg md:p-xl pb-[88px]">
+<!-- Header (User Info) -->
+<div class="flex items-center justify-between mb-8"><div class="flex items-center gap-sm">
+<img alt="User Avatar" class="w-12 h-12 rounded-full object-cover border border-outline-variant" data-alt="A close-up portrait of a young asian male student smiling gently. The lighting is bright and cheerful, fitting a modern, friendly app aesthetic. The background is a soft pastel blur." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbCot47_0_Eudt0F7xdKzFdeOgPM_YHhvl2G2DV5qDz-hCwcAsP0SriB1ZzeJzuIo9WqUf99n1GNvvT5DytyBO91__bXrdhYSIFLKuLeZQlaFioViENKCwmrCBGpdzSIuld9R0zZtZ2T6T10p-irKpsobQKnBhOugkJpa5JqeppzUOK3W9taXJVrgPhcYVTPrSpinQnamdx4v9785tPNyugu2FbLM1_22ZJ42PSK8haBSwutnrcTqzWhwxObe-mzNPBbM-DL9LFMWY">
+<div>
+<div class="font-label-md text-label-md text-on-surface">张同学</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1">计算机科学与工程学院   2小时前</div>
+</div>
+</div>
+<div class="flex gap-2"><button class="border border-primary text-primary hover:bg-primary/5 font-label-md text-label-md px-md py-xs rounded-full transition-colors flex items-center gap-xs"><span class="material-symbols-outlined text-[18px]">chat_bubble</span>祑信</button><button class="bg-primary hover:bg-primary/90 text-white font-label-md text-label-md px-md py-xs rounded-full transition-colors flex items-center gap-xs"><span class="material-symbols-outlined text-[18px]">add</span>关注</button></div></div>
+<!-- Post Content -->
+<div class="mb-10">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-md">关于在二教304拾获校园卡的说明</h1>
+<!-- Tags -->
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-primary/10 text-primary font-label-sm text-label-sm py-1.5 rounded-full px-3">#失物招领</span>
+<span class="bg-primary/10 text-primary font-label-sm text-label-sm py-1.5 rounded-full px-3">#校园卡</span>
+<span class="bg-secondary-container/50 text-on-secondary-container font-label-sm text-label-sm py-1.5 rounded-full flex items-center gap-1 px-3">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span> 二教
+                        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-8 leading-relaxed">
+                        今天上午10点左右，我在第二教学楼304教室倒数第二排靠窗的位置捡到了一张校园卡。卡面显示主人是软件工程专业的李华同学（学号尾号4592）。
+                        <br><br>
+                        我已经将卡交到了二教一楼的失物招领处（保安大叔那里）。请李华同学看到后尽快去认领哦！如果认识李华同学的朋友，也请帮忙转告一下，谢谢大家！
+                    </p>
+<!-- Image -->
+<div class="overflow-hidden mb-lg border border-outline-variant/30 shadow-sm rounded-xl">
+<img alt="Lost Item Image" class="w-full h-auto object-cover max-h-[400px]" data-alt="A close-up, high-quality photograph of a university student ID card lying on a wooden desk. The card has a generic portrait and blurred text to protect privacy. Soft, natural sunlight filters in from a nearby window, creating a warm, approachable atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMum7bj3elhjYlMSLMWd1EFvk7W7zFeRf7225zEpZHskfa15_VZWSMgOC7MJFkP1eU4OdqT10Boh0ACZXD_f6jmRTjAPqPiZhXhyEQoj3Qq3obcerTogH8HLpCauQ9NI6JxD8Pjx_5viwLcrp8IzSdL5kjX3vHuLHdGrK7-8bU2wUQ8bA1Kff_emXqq85I9kBKPHgScvgyMh7mcTl491iytXlizLt-P00Xk5KpdQufNVbmOyGv-EIfNe5Sk9hNIDkspWspgyLNgzr1">
+</div>
+</div>
+<!-- Divider -->
+<hr class="border-outline-variant/20 mb-8">
+<!-- Comments Section -->
+<div>
+<h3 class="font-label-md text-on-surface mb-6 text-body-lg">共 12 条评论</h3>
+<!-- Comment Thread 1 -->
+<div class="flex gap-sm mb-6">
+<img alt="Avatar" class="w-10 h-10 rounded-full object-cover" data-alt="A portrait of a young female student with a bright smile. The lighting is soft and flattering, suitable for a friendly profile picture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_eBS_XeL4WkV3UfHvw51Ail7J6_GJBpXuRmtNKZrCKwadQy2HMpDKve9PtLuxPJQ94XJfUR_HL-UfhcvpGh9E0e_WtRuBpSS48You4sRliQoQ6cNV-Y9SAX1Z2ozTtq5_fKChmzPJhppD0egy6nl_Z6XG9kvB7nOcKavjnbQegm793oscjYdE7yIU-jsu6G0pRB-piuBnSW-3hq2sfgi2zPVvXmnOuaKOo2hwPb2z30E2a_71jS3mOPaSKBMf2JcuNirRlTz42C3h">
+<div class="flex-grow">
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-label-md text-label-md text-on-surface">王二狗</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1小时前</span>
+</div>
+<p class="font-body-md text-body-sm text-on-surface mb-3">太感谢了！我这就去告诉李华，他刚才还在到处找呢。</p>
+<div class="flex gap-4 mb-3">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors text-sm"><span class="material-symbols-outlined text-[16px]" data-icon="thumb_up">thumb_up</span> 赞</button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors text-sm"><span class="material-symbols-outlined text-[16px]" data-icon="reply">reply</span> 回复</button>
+</div>
+<!-- Nested Reply -->
+<div class="bg-surface-container/50 p-4 rounded-xl border border-outline-variant/10 ml-4 mt-2">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-md text-label-sm text-primary">张同学 (作者)</span>
+<span class="text-on-surface-variant text-xs">回复</span>
+<span class="font-label-md text-label-sm text-on-surface">王二狗</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">不客气啦，希望能快点帮他找回~</p>
+</div>
+</div>
+</div><hr class="border-outline-variant/10 mb-6">
+<!-- Comment Thread 2 -->
+<div class="flex gap-sm mb-6">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</div>
+<div class="flex-grow">
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-label-md text-label-md text-on-surface">匿名用户</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">30分钟前</span>
+</div>
+<p class="font-body-md text-body-sm text-on-surface mb-3">楼主好人一生平安！二教真的很容易掉东西，大家平时多注意。</p>
+<div class="flex gap-4">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors text-sm"><span class="material-symbols-outlined text-[16px]" data-icon="thumb_up">thumb_up</span> 赞 (5)</button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors text-sm"><span class="material-symbols-outlined text-[16px]" data-icon="reply">reply</span> 回复</button>
+</div>
+</div>
+</div><hr class="border-outline-variant/10 mb-6">
+<div class="text-center pb-md">
+<button class="font-label-sm text-label-sm text-primary hover:text-primary/80 transition-colors">查看更多评论 <span class="material-symbols-outlined text-[14px] align-middle" data-icon="expand_more">expand_more</span></button>
+</div>
+</div>
+</div>
+<!-- Sticky Footer Input Bar (Glassmorphism) -->
+<div class="absolute bottom-0 left-0 right-0 bg-white/80 backdrop-blur-md p-4 border-t border-outline-variant/20 z-20 rounded-b-xl">
+  <div class="flex items-center gap-3">
+    <div class="flex items-center gap-1">
+      <button class="text-on-surface-variant hover:text-primary transition-colors p-2 rounded-full hover:bg-primary/5 flex-shrink-0">
+        <span class="material-symbols-outlined">add_photo_alternate</span>
+      </button>
+      <button class="text-on-surface-variant hover:text-primary transition-colors p-2 rounded-full hover:bg-primary/5 flex-shrink-0">
+        <span class="material-symbols-outlined">mood</span>
+      </button>
+    </div>
+    <div class="flex-1 relative">
+      <input class="w-full bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-full py-2.5 pl-4 pr-12 font-body-md text-body-md text-on-surface transition-all" placeholder="写下你的评计..." type="text">
+      <button class="absolute right-2 top-1/2 -translate-y-1/2 text-primary hover:text-primary-fixed-variant p-2">
+        <span class="material-symbols-outlined">send</span>
+      </button>
+    </div>
+    <label class="flex items-center gap-2 cursor-pointer flex-shrink-0 ml-1">
+      <input class="rounded text-primary focus:ring-primary border-outline-variant w-4 h-4" type="checkbox">
+      <span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">匿名</span>
+    </label>
+  </div>
+</div>
+</div>
+</div>
+
+
+</body></html>

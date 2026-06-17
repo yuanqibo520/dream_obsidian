@@ -1,0 +1,424 @@
+<!DOCTYPE html><html class="light" lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>设置 - Student Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-background": "#121c2a",
+                "tertiary-container": "#956e00",
+                "on-primary-fixed-variant": "#2f2ebe",
+                "on-primary-fixed": "#07006c",
+                "surface-bright": "#f8f9ff",
+                "on-secondary": "#ffffff",
+                "surface-container-highest": "#d9e3f6",
+                "surface-container": "#e6eeff",
+                "outline": "#767586",
+                "secondary": "#006c4b",
+                "on-error": "#ffffff",
+                "surface-tint": "#494bd6",
+                "on-primary": "#ffffff",
+                "tertiary-fixed": "#ffdf9f",
+                "on-surface-variant": "#464554",
+                "on-secondary-fixed": "#002114",
+                "inverse-surface": "#27313f",
+                "outline-variant": "#c7c4d7",
+                "inverse-on-surface": "#eaf1ff",
+                "surface-container-lowest": "#ffffff",
+                "background": "#f8f9ff",
+                "error-container": "#ffdad6",
+                "secondary-fixed-dim": "#45dfa4",
+                "on-secondary-container": "#00714e",
+                "primary-fixed-dim": "#c0c1ff",
+                "on-tertiary-fixed": "#261a00",
+                "on-tertiary-fixed-variant": "#5c4300",
+                "surface-dim": "#d0dbed",
+                "inverse-primary": "#c0c1ff",
+                "on-secondary-fixed-variant": "#005137",
+                "on-primary-container": "#fffbff",
+                "surface-container-high": "#dee9fc",
+                "on-tertiary": "#ffffff",
+                "primary": "#4648d4",
+                "on-error-container": "#93000a",
+                "primary-container": "#6063ee",
+                "on-tertiary-container": "#fffbff",
+                "secondary-container": "#64f9bc",
+                "surface": "#f8f9ff",
+                "on-surface": "#121c2a",
+                "surface-container-low": "#eff4ff",
+                "secondary-fixed": "#68fcbf",
+                "primary-fixed": "#e1e0ff",
+                "surface-variant": "#d9e3f6",
+                "error": "#ba1a1a",
+                "tertiary-fixed-dim": "#f9bd22",
+                "tertiary": "#765700"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "lg": "24px",
+                "sm": "12px",
+                "margin-mobile": "20px",
+                "gutter": "16px",
+                "xs": "8px",
+                "xl": "32px",
+                "md": "16px",
+                "margin-desktop": "40px",
+                "base": "4px"
+        },
+        "fontFamily": {
+                "label-md": [
+                        "Geist"
+                ],
+                "body-lg": [
+                        "Inter"
+                ],
+                "headline-md": [
+                        "Geist"
+                ],
+                "body-sm": [
+                        "Inter"
+                ],
+                "headline-lg-mobile": [
+                        "Geist"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "display": [
+                        "Geist"
+                ],
+                "label-sm": [
+                        "Geist"
+                ],
+                "headline-lg": [
+                        "Geist"
+                ]
+        },
+        "fontSize": {
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "16px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "28px",
+                        {
+                                "lineHeight": "36px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "14px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .bg-mesh {
+            background-color: #f8f9ff;
+            background-image: 
+                radial-gradient(at 10% 20%, hsla(239, 83%, 67%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(158, 65%, 52%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, hsla(239, 83%, 67%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 100%, hsla(158, 65%, 52%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(239, 83%, 67%, 0.15) 0px, transparent 50%);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .ambient-shadow {
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.08);
+        }
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #6366F1;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #6366F1;
+        }
+        .toggle-checkbox:checked + .toggle-label:after {
+            transform: translateX(100%);
+            border-color: white;
+        }
+    </style>
+</head>
+<body class="bg-mesh text-on-surface min-h-screen font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="md:hidden glass-panel fixed top-0 w-full z-50 flex justify-between items-center h-16 px-margin-mobile border-b border-white/40 shadow-sm">
+<div class="font-display text-headline-md font-extrabold text-primary tracking-tight">SauLink</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary hover:bg-primary/5 hover:text-primary transition-colors duration-200 cursor-pointer p-2 rounded-full">search</span>
+<span class="material-symbols-outlined text-primary hover:bg-primary/5 hover:text-primary transition-colors duration-200 cursor-pointer p-2 rounded-full">notifications</span>
+</div>
+</header>
+<div class="flex max-w-[1280px] mx-auto min-h-screen pt-16 md:pt-0">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-full glass-panel border-r border-outline-variant/30 shadow-[0_8px_32px_rgba(99,102,241,0.05)] hidden md:flex flex-col justify-between p-4 z-50 w-60">
+<div>
+<!-- Brand -->
+<div class="mb-8 px-4 py-2">
+<h1 class="text-2xl font-semibold tracking-tight text-primary">SauLink</h1>
+<p class="text-sm text-on-surface-variant font-body">校园生活社区</p>
+</div>
+<!-- User Profile Snippet -->
+<div class="flex items-center gap-3 px-4 py-2 mb-6 rounded-xl hover:bg-white/50 transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-full border border-outline-variant/50 overflow-hidden object-cover">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSwbmVtbAzaUVumNy5lguaf_CX6SU3S2S1dYDwM3-MiyUhu7qSKXmHcx6YEKmAGcZ509-H0Ao-i3ao8ak5TMdDzTOsxgHt5xu5Tkgg-1uE6EZS-RI-cpQsUbLII_K-V_HiowUd3QYzfFmgN3vcCkl18QAXKGsmQJQOuwUPBa4Hi7a47X00IGxwYCXPw2uCodEmVU14D8u4Z1fDTLJfryB4IPScZy-AWYlx0VkxkyXyNHoYNaEW6E4UVtzbtJSthsf1Vi5tRmTRC8zj">
+</div>
+<div>
+<p class="text-sm font-semibold text-text-primary">学生中心</p>
+<p class="text-xs text-on-surface-variant">活跃社区</p>
+</div>
+</div>
+<!-- CTA -->
+<button class="w-full mb-6 bg-[#6366F1] hover:bg-[#4F46E5] text-white rounded-xl py-3 flex items-center justify-center gap-2 font-semibold shadow-[0_4px_12px_rgba(99,102,241,0.25)] hover:shadow-[0_6px_16px_rgba(99,102,241,0.4)] transition-all duration-300 transform hover:-translate-y-[1px]">
+<span class="material-symbols-outlined text-[18px]">add</span>发布内容
+        </button>
+<!-- Navigation Links -->
+<div class="space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-white/50 transition-colors hover:text-on-surface transition-all duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-medium">首页</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-white/50 transition-colors hover:text-on-surface transition-all duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined">info</span>
+<span class="font-medium">校园资讯</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-white/50 transition-colors hover:text-on-surface transition-all duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined">search_check</span>
+<span class="font-medium">失物招领</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-white/50 transition-colors hover:text-on-surface transition-all duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-medium">二手市场</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-white/50 transition-colors hover:text-on-surface transition-all duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="font-medium">学习互助</span>
+</a>
+</div>
+</div>
+<!-- Footer / User Actions -->
+<div class="space-y-2 border-t border-outline-variant/30 pt-4 mt-auto">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-[#6366F1]/10 text-[#6366F1] transition-all duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-medium">设置</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-white/50 transition-colors hover:text-on-surface transition-all duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+<span class="font-medium">帮助</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-60 p-margin-mobile md:p-margin-desktop overflow-y-auto min-h-screen">
+<div class="max-w-4xl mx-auto space-y-xl">
+<div class="mb-lg">
+<h2 class="font-display text-headline-lg md:text-display text-on-surface font-extrabold tracking-tight">设置</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">管理您的账号偏好与系统体验。</p>
+</div>
+<!-- Account & Security Section -->
+<section class="glass-panel rounded-xl p-lg ambient-shadow">
+<div class="flex items-center gap-sm mb-md border-b border-outline-variant/30 pb-sm">
+<span class="material-symbols-outlined text-[#6366F1]" style="font-variation-settings: 'FILL' 0;">shield_lock</span>
+<h3 class="font-headline-md text-body-lg font-bold text-on-surface">账号与安全</h3>
+</div>
+<div class="space-y-0">
+<div class="flex items-center justify-between py-md border-b border-outline-variant/20 hover:bg-white/50 px-sm rounded-lg transition-colors cursor-pointer">
+<div>
+<div class="font-label-md text-label-md text-on-surface">绑定手机号</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-base">138****5678</div>
+</div>
+<div class="flex items-center gap-xs text-[#6366F1]">
+<span class="font-label-md text-label-md">更换</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 0;">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center justify-between py-md border-b border-outline-variant/20 hover:bg-white/50 px-sm rounded-lg transition-colors cursor-pointer">
+<div>
+<div class="font-label-md text-label-md text-on-surface">学号认证</div>
+<div class="font-body-sm text-body-sm text-[#34D399] flex items-center gap-xs mt-base">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                    已认证 (2021****123)
+                                </div>
+</div>
+<div class="flex items-center gap-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 0;">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center justify-between py-md hover:bg-white/50 px-sm rounded-lg transition-colors cursor-pointer">
+<div>
+<div class="font-label-md text-label-md text-on-surface">登录密码</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-base">定期修改密码以保护账号安全</div>
+</div>
+<div class="flex items-center gap-xs text-[#6366F1]">
+<span class="font-label-md text-label-md">修改</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 0;">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- General Settings Section -->
+<section class="glass-panel rounded-xl p-lg ambient-shadow">
+<div class="flex items-center gap-sm mb-md border-b border-outline-variant/30 pb-sm">
+<span class="material-symbols-outlined text-[#6366F1]" style="font-variation-settings: 'FILL' 0;">tune</span>
+<h3 class="font-headline-md text-body-lg font-bold text-on-surface">通用设置</h3>
+</div>
+<div class="space-y-0">
+<div class="flex items-center justify-between py-md border-b border-outline-variant/20 px-sm hover:bg-white/50 rounded-lg transition-colors">
+<div>
+<div class="font-label-md text-label-md text-on-surface">消息提醒</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-base">接收新回复、私信及系统通知</div>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer z-10 transition-transform duration-200 ease-in-out" id="toggle1" name="toggle" type="checkbox">
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-outline-variant cursor-pointer transition-colors duration-200 ease-in-out" for="toggle1"></label>
+</div>
+</div>
+<div class="flex items-center justify-between py-md border-b border-outline-variant/20 px-sm hover:bg-white/50 rounded-lg transition-colors">
+<div>
+<div class="font-label-md text-label-md text-on-surface">深色模式</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-base">自动跟随系统或手动切换</div>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-outline-variant appearance-none cursor-pointer z-10 transition-transform duration-200 ease-in-out" id="toggle2" name="toggle" type="checkbox">
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-outline-variant cursor-pointer transition-colors duration-200 ease-in-out" for="toggle2"></label>
+</div>
+</div>
+<div class="flex items-center justify-between py-md px-sm hover:bg-white/50 rounded-lg transition-colors">
+<div>
+<div class="font-label-md text-label-md text-on-surface">清除缓存</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-base">释放本地存储空间 (当前 128MB)</div>
+</div>
+<button class="bg-surface-container text-on-surface-variant hover:text-[#6366F1] hover:bg-[#6366F1]/10 px-sm py-xs rounded-lg font-label-md text-label-sm transition-colors border border-outline-variant/30">
+                                清除
+                            </button>
+</div>
+</div>
+</section>
+<!-- Personalization Section -->
+<section class="glass-panel rounded-xl p-lg ambient-shadow">
+<div class="flex items-center gap-sm mb-md border-b border-outline-variant/30 pb-sm">
+<span class="material-symbols-outlined text-[#6366F1]" style="font-variation-settings: 'FILL' 0;">palette</span>
+<h3 class="font-headline-md text-body-lg font-bold text-on-surface">个性化</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div>
+<div class="font-label-md text-label-md text-on-surface mb-sm">主题色</div>
+<div class="flex gap-sm">
+<button class="w-10 h-10 rounded-full bg-[#6366F1] border-2 border-white ring-2 ring-[#6366F1] shadow-sm flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-[#34D399] border-2 border-white shadow-sm hover:scale-110 transition-transform"></button>
+<button class="w-10 h-10 rounded-full bg-[#f43f5e] border-2 border-white shadow-sm hover:scale-110 transition-transform"></button>
+<button class="w-10 h-10 rounded-full bg-[#8b5cf6] border-2 border-white shadow-sm hover:scale-110 transition-transform"></button>
+</div>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface mb-sm">布局偏好</div>
+<select class="w-full bg-white/50 border border-outline-variant/50 rounded-lg py-sm px-sm text-body-md font-body-md text-on-surface focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 outline-none transition-all">
+<option>紧凑模式</option>
+<option selected="">舒适模式 (默认)</option>
+<option>宽松模式</option>
+</select>
+</div>
+</div>
+</section>
+<div class="flex justify-center pt-md pb-xl">
+<button class="bg-error-container/20 text-error hover:bg-error-container/40 py-sm px-xl rounded-xl font-label-md text-label-md transition-colors border border-error/20 flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 0;">logout</span>
+                        退出登录
+                    </button>
+</div>
+</div>
+</main>
+</div>
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="md:hidden glass-panel fixed bottom-0 w-full z-50 flex justify-between items-center h-16 px-margin-mobile shadow-[0_-4px_12px_rgba(99,102,241,0.05)] border-t border-white/40">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm">首页</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-sm">发现</span>
+</a>
+<button class="bg-[#6366F1] text-white p-3 rounded-full -mt-6 shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined">add</span>
+</button>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-sm">市场</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-label-sm">设置</span>
+</a>
+</nav>
+</body></html>

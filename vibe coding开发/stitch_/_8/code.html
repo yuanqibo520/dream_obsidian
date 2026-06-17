@@ -1,0 +1,409 @@
+<!DOCTYPE html><html class="light" lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>学习互助 - SauLink</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-dim": "#d0dbed",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-variant": "#d9e3f6",
+                        "inverse-surface": "#27313f",
+                        "on-primary-container": "#fffbff",
+                        "on-background": "#121c2a",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#c0c1ff",
+                        "on-secondary-fixed": "#002114",
+                        "background": "#f8f9ff",
+                        "secondary-fixed-dim": "#45dfa4",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-surface-variant": "#464554",
+                        "tertiary-fixed": "#ffdf9f",
+                        "on-secondary-fixed-variant": "#005137",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#006c4b",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#d9e3f6",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#4648d4",
+                        "primary-fixed": "#e1e0ff",
+                        "secondary-fixed": "#68fcbf",
+                        "surface-container": "#e6eeff",
+                        "surface": "#f8f9ff",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "surface-tint": "#494bd6",
+                        "on-tertiary-fixed-variant": "#5c4300",
+                        "outline-variant": "#c7c4d7",
+                        "tertiary": "#765700",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#261a00",
+                        "outline": "#767586",
+                        "on-surface": "#121c2a",
+                        "primary-container": "#6063ee",
+                        "secondary-container": "#64f9bc",
+                        "tertiary-fixed-dim": "#f9bd22",
+                        "surface-container-high": "#dee9fc",
+                        "surface-bright": "#f8f9ff",
+                        "surface-container-low": "#eff4ff",
+                        "tertiary-container": "#956e00",
+                        "on-secondary-container": "#00714e",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "on-primary-fixed": "#07006c"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "xl": "32px",
+                        "md": "16px",
+                        "xs": "8px",
+                        "margin-desktop": "40px",
+                        "sm": "12px",
+                        "gutter": "16px",
+                        "base": "4px",
+                        "margin-mobile": "20px",
+                        "lg": "24px"
+                    },
+                    fontFamily: {
+                        "display": ["Geist"],
+                        "headline-lg": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "label-sm": ["Geist"],
+                        "headline-md": ["Geist"],
+                        "label-md": ["Geist"]
+                    },
+                    fontSize: {
+                        "display": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "14px", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "16px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .bg-mesh {
+            background-color: #f8f9ff;
+            background-image: 
+                radial-gradient(at 10% 20%, hsla(239, 83%, 67%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(158, 65%, 52%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, hsla(239, 83%, 67%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 100%, hsla(158, 65%, 52%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(239, 83%, 67%, 0.15) 0px, transparent 50%);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .ambient-shadow {
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.08);
+        }
+        .card-border {
+            border: 1px solid #E5E7EB;
+        }
+    </style>
+</head>
+<body class="bg-mesh text-on-surface min-h-screen font-body-md overflow-x-hidden h-screen overflow-hidden"><header class="fixed top-0 w-full z-50 glass-panel shadow-sm flex justify-between items-center h-16 px-margin-desktop shrink-0">
+<div class="flex items-center gap-xl">
+<div class="font-display text-headline-md font-extrabold text-[#6366F1] tracking-tight">SauLink</div>
+<div class="hidden md:flex relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant group-focus-within:text-[#6366F1] transition-colors">search</span>
+<input class="pl-10 pr-4 py-2 w-64 bg-white/50 backdrop-blur-sm border border-outline-variant/30 rounded-full text-body-sm font-body-sm focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition-all shadow-sm" placeholder="搜索物品..." type="text">
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full text-on-surface-variant hover:bg-[#6366F1]/5 hover:text-[#6366F1] transition-colors duration-200 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 0;">notifications</span>
+</button>
+<button class="p-2 rounded-full text-on-surface-variant hover:bg-[#6366F1]/5 hover:text-[#6366F1] transition-colors duration-200 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 0;">mail</span>
+</button>
+<button class="p-2 rounded-full text-on-surface-variant hover:bg-[#6366F1]/5 hover:text-[#6366F1] transition-colors duration-200 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 0;">account_circle</span>
+</button>
+</div>
+</header>
+<!-- TopAppBar (Mobile Only) -->
+<div class="flex w-full h-[calc(100vh-64px)] mt-16 overflow-hidden max-w-[1440px] mx-auto">
+<!-- Left Column: SideNavBar -->
+<nav class="hidden md:flex fixed left-1/2 -translate-x-[720px] top-16 h-[calc(100vh-64px)] w-64 glass-panel border-r border-outline-variant/30 shadow-[0_8px_32px_rgba(99,102,241,0.05)] flex-col p-md gap-base z-40">
+<div class="flex items-center gap-sm p-sm mb-xs rounded-xl hover:bg-white/50 transition-colors cursor-pointer">
+<img alt="User Profile Avatar" class="w-10 h-10 rounded-full object-cover border border-outline-variant/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhMvVNj5q-3lrEI8KQG0e_AG1MgVZGYNz0VAEMYFvrms8wDSqu0PEXddlVHoLKKhmivvieDRhYaxtQfrFZyY1zsMur3rcyZ8d1tLLfmNbtq2AsyJ4mJ7CLfcuz-42EQaoQ4CbKFXT8n4stcjHE13HZNl0lu9I3oY2x0ktq2X79EjEPCKJqTW0Ug_DUsvENFDSdtO05mmrfm9agY4xHqV2Z1quB26_ABBzyncbuGe6x0-ItFP23BMRXfHjHQwlD9BaS-ZqWSbGmTCur">
+<div>
+<div class="font-display text-label-md text-on-surface font-semibold">学生中心</div>
+<div class="font-body-sm text-body-sm text-outline">活跃社区</div>
+</div>
+</div>
+<button class="w-full mb-sm py-2.5 bg-[#6366F1] hover:bg-[#4F46E5] text-white font-label-md text-label-md rounded-xl shadow-[0_4px_12px_rgba(99,102,241,0.25)] hover:shadow-[0_6px_16px_rgba(99,102,241,0.4)] transition-all duration-300 transform hover:-translate-y-[1px] flex items-center justify-center gap-2"><span class="material-symbols-outlined text-[18px]">add</span>发布内容</button>
+<div class="flex flex-col gap-1 flex-1">
+<a class="flex items-center gap-sm px-sm py-2.5 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined group-hover:scale-110 transition-transform">home</span>首页</a>
+<a class="flex items-center gap-sm px-sm py-2.5 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined group-hover:scale-110 transition-transform">info</span>校园资讯</a>
+<a class="flex items-center gap-sm px-sm py-2.5 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined group-hover:scale-110 transition-transform">search_check</span>失物招领</a>
+<a class="flex items-center gap-sm px-sm py-2.5 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined group-hover:scale-110 transition-transform">shopping_bag</span>二手交易</a>
+<a class="flex items-center gap-sm px-sm py-2.5 bg-[#6366F1]/10 text-[#6366F1] font-bold rounded-lg font-display text-body-md relative overflow-hidden" href="#"><span class="material-symbols-outlined transition-transform">school</span>学习互助</a>
+</div>
+<div class="flex flex-col gap-1 pt-md border-t border-outline-variant/30 mt-auto">
+<a class="flex items-center gap-sm px-sm py-2 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined text-[20px] group-hover:rotate-45 transition-transform">settings</span>设置</a>
+<a class="flex items-center gap-sm px-sm py-2 text-on-surface-variant hover:bg-white/50 hover:text-on-surface rounded-lg transition-all font-display text-body-md group" href="#"><span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">help_outline</span>帮助</a>
+</div>
+</nav>
+<!-- Main Content Area: Feed -->
+<main class="flex-1 h-full overflow-y-auto [&amp;::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] px-margin-mobile md:px-margin-desktop py-8 md:ml-64">
+<div class="max-w-3xl mx-auto flex flex-col gap-lg pb-10">
+<!-- Page Header & Filters -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-md">
+<div>
+<h1 class="font-headline-lg text-on-surface">学习互助</h1>
+<p class="font-body-sm text-outline mt-1">探讨学术问题，悬赏求解答，共同进步。</p>
+</div>
+<div class="flex gap-sm bg-white/50 backdrop-blur-sm p-1 rounded-full border border-outline-variant/30 shadow-sm">
+<button class="px-md py-xs rounded-full font-label-md bg-white text-[#6366F1] shadow-sm transition-all">全部</button>
+<button class="px-md py-xs rounded-full font-label-md text-on-surface-variant hover:bg-white/50 transition-all">待解决</button>
+<button class="px-md py-xs rounded-full font-label-md text-on-surface-variant hover:bg-white/50 transition-all">已解决</button>
+</div>
+</div>
+<!-- Feed Posts -->
+<div class="flex flex-col gap-md">
+<!-- Post Card 1 -->
+<article class="bg-white/90 backdrop-blur-md rounded-xl p-md ambient-shadow border border-white/40">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-start gap-3">
+<img alt="User Avatar" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4dpiBhV8Mb0ofyCckDr-YdoEvqRZXNUCCPADRZhTKENtIr6cgZ7MhMMeakJNms6njbicV5G8x-zneGGLLbAWFCqiOeYFk20KHKYFwl8qN9XBH7t71HtQCYx3ldbmmd3w5PV92WVlG0rg4mCY3V8O1gB6QFslp4RZKuH5sV-eWjeqqtPFTFPhIr3H0Hhvr6aBus1Bg9iZmxiCYjT_-S_HrfLc4G6nzIj4oyY4L7Wss0bytr4GQ3q8u9qvnCPeJTsq9khD8wozeOLBv">
+<div>
+<h3 class="font-headline-md text-body-lg text-on-surface">陈思源</h3>
+<p class="font-body-sm text-on-surface-variant text-[12px]">10分钟前 发布</p>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-tertiary-fixed/20 text-tertiary px-sm py-1 rounded-full border border-tertiary-fixed/30">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">stars</span>
+<span class="font-label-md">30 积分</span>
+</div>
+</div>
+<div>
+<div class="flex gap-2 mb-3">
+<span class="bg-[#6366F1]/15 text-[#6366F1] font-label-sm px-3 py-1 rounded-full">线性代数</span>
+<span class="bg-error-container/50 text-error font-label-sm px-3 py-1 rounded-full">待解决</span>
+</div>
+<h2 class="font-headline-md text-on-surface mb-2">求助：关于矩阵特征值和特征向量的几何意义理解</h2>
+<p class="font-body-md text-on-surface mb-4">在做线性变换的题目时，很难直观理解特征向量在空间中的指向意义。有没有哪位同学能通俗易懂地解释一下？顺便求助这道练习题的解法。</p>
+</div>
+<div class="flex items-center gap-lg border-t border-outline-variant/30 pt-3">
+<button class="flex items-center gap-2 hover:text-[#6366F1] transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">chat_bubble_outline</span>
+<span class="font-label-sm">0 回答</span>
+</button>
+<button class="ml-auto bg-[#6366F1] hover:bg-[#4F46E5] text-white font-label-md px-md py-xs rounded-lg transition-colors shadow-sm">我来解答</button>
+</div>
+</article>
+<!-- Post Card 2 -->
+<article class="bg-white/90 backdrop-blur-md rounded-xl p-md ambient-shadow border border-white/40">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-start gap-3">
+<img alt="User Avatar" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9-lNllqLXN2eQnBxu8aY2P225GY7muC34JV5C66OEDcgagu9D5-hC5AJL3ANF70s6bhYpEsCZ4KNeO7FODULLum9YGkmvuoDIGLkNr9_kQn88OVDdvaJ9h9zfK8eyL_6XENLldGq-J4ymEuzrrR5Xlr_TVNnp2ZW1N6eEXQ2r0lra8980RfJN3FRb5r0KQwg9snhBLLG4ASOOnhy7gvn7aqBFrJXzFFf6Vns09BgR-0Xxdbt2M5WQuL5wTX92QR-IhuAXLVFWVi1B">
+<div>
+<h3 class="font-headline-md text-body-lg text-on-surface">林晓月</h3>
+<p class="font-body-sm text-on-surface-variant text-[12px]">2小时前 发布</p>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-tertiary-fixed/20 text-tertiary px-sm py-1 rounded-full border border-tertiary-fixed/30">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">stars</span>
+<span class="font-label-md">50 积分</span>
+</div>
+</div>
+<div>
+<div class="flex gap-2 mb-3">
+<span class="bg-[#6366F1]/15 text-[#6366F1] font-label-sm px-3 py-1 rounded-full">高等数学</span>
+<span class="bg-error-container/50 text-error font-label-sm px-3 py-1 rounded-full">待解决</span>
+</div>
+<h2 class="font-headline-md text-on-surface mb-2">求助：关于多重积分的极坐标变换问题，这道题卡住了</h2>
+<p class="font-body-md text-on-surface mb-4">在做课后习题第42页第3题时，将二重积分转换为极坐标系后，积分区域的上下限确定总是出错。附上了我的解答过程，希望能有大佬指点一下哪里想错了！感谢！</p>
+</div>
+<div class="flex items-center gap-lg border-t border-outline-variant/30 pt-3">
+<button class="flex items-center gap-2 hover:text-[#6366F1] transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">chat_bubble_outline</span>
+<span class="font-label-sm">3 回答</span>
+</button>
+<button class="flex items-center gap-2 hover:text-[#6366F1] transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">bookmark_border</span>
+<span class="font-label-sm">收藏</span>
+</button>
+<button class="ml-auto bg-[#6366F1] hover:bg-[#4F46E5] text-white font-label-md px-md py-xs rounded-lg transition-colors shadow-sm">
+                                我来解答
+                            </button>
+</div>
+</article>
+<!-- Post Card 3 -->
+<article class="bg-white/90 backdrop-blur-md rounded-xl p-md ambient-shadow border border-white/40">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-start gap-3">
+<img alt="User Avatar" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR8DtqIVKEJQ76cxyqnDapiYpFvqxh7ez8i6hmYGOKK3Yoe1QDyOv-20hy51668LOUNWz8ZeOq32svzVA0HgXWDN8fJouEkRkkFCcsXudM3TpQYqyRvq-65R06k3tnIJHJ4unMUruwmGBjbsPPpl8v_wlVmb0iS0ttdv7efJnNPYrkxBHkZSBTG5Jwfjd2XBHiobcoAEPeTEmAoiAA7v-0P7_h2Im_3_x4DrAOpVI52ejJEayrxDJ7JA2El0G_Nc9uAVJzGApiLKs0">
+<div>
+<h3 class="font-headline-md text-body-lg text-on-surface">张宇轩</h3>
+<p class="font-body-sm text-on-surface-variant text-[12px]">昨天 14:30 发布</p>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-[#34D399]/15 text-[#006c4b] px-sm py-1 rounded-full border border-[#34D399]/30">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="font-label-md">已解决</span>
+</div>
+</div>
+<div>
+<div class="flex gap-2 mb-3">
+<span class="bg-[#6366F1]/15 text-[#6366F1] font-label-sm px-3 py-1 rounded-full">Python编程</span>
+</div>
+<h2 class="font-headline-md text-on-surface mb-2">Pandas DataFrame 合并时出现 KeyError，求看代码</h2>
+<p class="font-body-md text-on-surface mb-4">尝试使用 pd.merge 连接两个包含相同列名的数据集时，总是报 KeyError。检查过列名确实没有拼写错误，不知道是不是数据类型不一致导致的？</p>
+</div>
+<div class="bg-white/40 p-sm rounded-lg border border-outline-variant/30 mb-4">
+<p class="font-label-sm text-[#006c4b] flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[16px]">verified</span> 最佳采纳回答
+                            </p>
+<p class="font-body-sm text-on-surface-variant">检查一下列名中是否包含隐藏的空格，可以使用 df.columns = df.columns.str.strip() 处理一下再合并。</p>
+</div>
+<div class="flex items-center gap-lg border-t border-outline-variant/30 pt-3">
+<button class="flex items-center gap-2 hover:text-[#6366F1] transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">chat_bubble_outline</span>
+<span class="font-label-sm">8 回答</span>
+</button>
+<button class="ml-auto text-[#6366F1] font-label-md px-md py-xs rounded-lg hover:bg-[#6366F1]/5 transition-colors border border-[#6366F1]/20">
+                                查看全部
+                            </button>
+</div>
+</article>
+<!-- Post Card 4 -->
+<article class="bg-white/90 backdrop-blur-md rounded-xl p-md ambient-shadow border border-white/40">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-start gap-3">
+<img alt="User Avatar" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKgBLb7b49fy9f5Z06TFTN7-Da6ang7tpzVfPPs7eYKxkTT_yeAbVvp2460WDyPe5YBZHWPn5lC5d2Wf4LspdAhjltQiPNR3nEob8kBC9uFbRrW3CNLx8uSmzZe6RyjkwKaLbBI1ZiDdMwlVI_DCtBVyoQXk3isQ7q1XyL1dAoqtGwDqAzuUs9-IiIwW9eQTWHwCMpM6P_VF0h7zT736dpqVAxAFq076kKleQRCV5Aelj_8H0uQIfMpNf157VGNbkIEb-vbPoBfD0N">
+<div>
+<h3 class="font-headline-md text-body-lg text-on-surface">刘星</h3>
+<p class="font-body-sm text-on-surface-variant text-[12px]">1小时前 发布</p>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-tertiary-fixed/20 text-tertiary px-sm py-1 rounded-full border border-tertiary-fixed/30">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">stars</span>
+<span class="font-label-md">100 积分</span>
+</div>
+</div>
+<div>
+<div class="flex gap-2 mb-3">
+<span class="bg-[#6366F1]/15 text-[#6366F1] font-label-sm px-3 py-1 rounded-full">Python数据分析</span>
+<span class="bg-error-container/50 text-error font-label-sm px-3 py-1 rounded-full">待解决</span>
+</div>
+<h2 class="font-headline-md text-on-surface mb-2">Matplotlib 绘图中文乱码，求解决方案</h2>
+<p class="font-body-md text-on-surface mb-4">在Jupyter Notebook里绘图，横纵坐标的中文总是显示成小方框。尝试过设置 font.sans-serif 但还是报错找不到字体，求一份完整的环境配置方案！</p>
+</div>
+<div class="flex items-center gap-lg border-t border-outline-variant/30 pt-3">
+<button class="flex items-center gap-2 hover:text-[#6366F1] transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">chat_bubble_outline</span>
+<span class="font-label-sm">5 回答</span>
+</button>
+<button class="ml-auto bg-[#6366F1] hover:bg-[#4F46E5] text-white font-label-md px-md py-xs rounded-lg transition-colors shadow-sm">我来解答</button>
+</div>
+</article>
+<!-- Post Card 5 -->
+<article class="bg-white/90 backdrop-blur-md rounded-xl p-md ambient-shadow border border-white/40">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-start gap-3">
+<img alt="User Avatar" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnh7I7uu-zljyNdrOO8eNQ-pA7M7ytF93eFBaqlyqYCrkPpmBOk0_OkRsHI8jLhphH5O6xE9bi3ab1MB3sTY1WpEpVMvLiHwSgH1UoNc0V_ph6rMjM5grkcEeckwJ7iOhUwuc04BZzEi92qyABD3YcWHr3avcMtJsj0AUurzp2LWayPqD_I8bXwrQJKfKYEfpNN-98YUsgpH7VbOyrZTj9jps5rEzJP32u60Vi5hIS7V_hHc62SD6UDloOLjVfYdDGB9wmCAJ31ljq">
+<div>
+<h3 class="font-headline-md text-body-lg text-on-surface">王明</h3>
+<p class="font-body-sm text-on-surface-variant text-[12px]">3小时前 发布</p>
+</div>
+</div>
+</div>
+<div>
+<div class="flex gap-2 mb-3">
+<span class="bg-[#6366F1]/15 text-[#6366F1] font-label-sm px-3 py-1 rounded-full">四六级</span>
+<span class="bg-error-container/50 text-error font-label-sm px-3 py-1 rounded-full">待解决</span>
+</div>
+<h2 class="font-headline-md text-on-surface mb-2">英语六级听力如何突破瓶颈？</h2>
+<p class="font-body-md text-on-surface mb-4">每次做听力模拟题总是在长对话和短文部分丢很多分。大家有没有什么好的泛听/精听素材推荐？或者有效的训练方法？</p>
+</div>
+<div class="flex items-center gap-lg border-t border-outline-variant/30 pt-3">
+<button class="flex items-center gap-2 hover:text-[#6366F1] transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">chat_bubble_outline</span>
+<span class="font-label-sm">18 回答</span>
+</button>
+<button class="ml-auto bg-[#6366F1] hover:bg-[#4F46E5] text-white font-label-md px-md py-xs rounded-lg transition-colors shadow-sm">查看详情</button>
+</div>
+</article>
+<!-- Post Card 6 -->
+<article class="bg-white/90 backdrop-blur-md rounded-xl p-md ambient-shadow border border-white/40">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-start gap-3">
+<img alt="User Avatar" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCqDwJbzf6Rz1mEh7Fhj6EnWs8naf8JzDXAH8IK0WjglpQjKGDWt8szJdr4y1UlfyI7LgF0EtyYojvblIK3z_7p7LR8cwFLE5U_0Ppc2uAfDHahJu_trQ19pRuKayvQ_g3Vd78AqPlPisT93QI_Sj5o-Ek8gvrUyDYAjfdhs3YuugxJxAfYThkltG9Kq385giok4e1KS4bpSHOPkUgX9fDanwAxbWbuqcdng6wGg5n_N0a5RVSGtBoiRwkSOU8UsatxmRjeGSFqgYM">
+<div>
+<h3 class="font-headline-md text-body-lg text-on-surface">李四</h3>
+<p class="font-body-sm text-on-surface-variant text-[12px]">5小时前 发布</p>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-[#34D399]/15 text-[#006c4b] px-sm py-1 rounded-full border border-[#34D399]/30">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="font-label-md">已解决</span>
+</div>
+</div>
+<div>
+<div class="flex gap-2 mb-3">
+<span class="bg-[#6366F1]/15 text-[#6366F1] font-label-sm px-3 py-1 rounded-full">大学物理</span>
+</div>
+<h2 class="font-headline-md text-on-surface mb-2">麦克斯韦方程组的积分形式和微分形式转换</h2>
+<p class="font-body-md text-on-surface mb-4">期末复习电磁学部分，总是搞混高斯定理和安培环路定理在不同形式下的应用条件。求一份总结笔记！</p>
+</div>
+<div class="flex items-center gap-lg border-t border-outline-variant/30 pt-3">
+<button class="flex items-center gap-2 hover:text-[#6366F1] transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">chat_bubble_outline</span>
+<span class="font-label-sm">7 回答</span>
+</button>
+<button class="ml-auto text-[#6366F1] font-label-md px-md py-xs rounded-lg hover:bg-[#6366F1]/5 transition-colors border border-[#6366F1]/20">
+                                查看全部
+                            </button>
+</div>
+</article>
+</div>
+</div>
+</main>
+<!-- Right Column: Auxiliary Area -->
+<aside class="hidden xl:block w-[320px] shrink-0 h-full p-md overflow-hidden">
+<!-- Active Leaderboard -->
+<div class="glass-panel rounded-xl p-md ambient-shadow mt-16 md:mt-0 mb-10 sticky" style="top: 104px;"><div class="flex items-center justify-between mb-4 pb-2 border-b border-outline-variant/30"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[#6366F1] text-[20px]">leaderboard</span><h3 class="font-headline-md text-body-lg font-bold text-on-surface">解答达人榜</h3></div><span class="px-2 py-0.5 bg-[#6366F1]/10 text-[#6366F1] text-[10px] font-bold rounded-full uppercase tracking-wider">本周</span></div>
+<ul class="flex flex-col gap-3">
+<li class="flex items-center gap-3 group cursor-pointer py-1.5"><div class="flex items-center justify-center w-5 shrink-0 font-display text-base font-extrabold text-[#6366F1]">1</div><div class="relative shrink-0"><img alt="Avatar" class="w-8 h-8 rounded-full object-cover border-2 border-[#6366F1]/20 shadow-sm object-[0%_0%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuC7b9yHZNeca_-AE7YA6UD3WMArWjHjFWhICbzVTExYitRz0oGlugNgVQNuXmcXsxCKslZ6IjSbLDeEsmH-yravHezqPUH9Nbn0vT77bOGOOrQ1wjYfCpfE7DYAJBUGBVgLBZLotofOoXHAV7MPRh-lNxME8PUDSOWpD_kG0zxfP6p6VJnkyJSjcfY_9Sx4s71txZjyjKD9HhFWUQwdq9axl-Sa9YoASMqEWVdbpq46ntwQH1hgwpFLD1hXuhRLDynzQWGUF4DHDe"><span class="absolute -bottom-1 -right-1 bg-tertiary text-on-tertiary text-[8px] font-bold px-1 rounded shadow-sm border border-white">专业</span></div><div class="flex-1 min-w-0"><p class="font-body-sm font-semibold text-on-surface truncate group-hover:text-[#6366F1] transition-colors text-sm">李华_Math</p><p class="text-[10px] text-on-surface-variant mt-0.5">解决 12 题</p></div><div class="text-right shrink-0"><p class="font-label-sm text-[#6366F1] font-bold">350</p></div></li>
+<li class="flex items-center gap-3 group cursor-pointer py-1.5"><div class="flex items-center justify-center w-5 shrink-0 font-display text-base font-extrabold text-outline/60">2</div><img alt="Avatar" class="w-8 h-8 rounded-full object-cover object-[33%_0%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuC7b9yHZNeca_-AE7YA6UD3WMArWjHjFWhICbzVTExYitRz0oGlugNgVQNuXmcXsxCKslZ6IjSbLDeEsmH-yravHezqPUH9Nbn0vT77bOGOOrQ1wjYfCpfE7DYAJBUGBVgLBZLotofOoXHAV7MPRh-lNxME8PUDSOWpD_kG0zxfP6p6VJnkyJSjcfY_9Sx4s71txZjyjKD9HhFWUQwdq9axl-Sa9YoASMqEWVdbpq46ntwQH1hgwpFLD1hXuhRLDynzQWGUF4DHDe"><div class="flex-1 min-w-0"><p class="font-body-sm font-semibold text-on-surface truncate text-sm">CodeMaster</p><p class="text-[10px] text-on-surface-variant">解决 8 题</p></div><div class="text-right shrink-0"><p class="font-label-sm text-[#6366F1] font-bold">210</p></div></li>
+<li class="flex items-center gap-3 group cursor-pointer py-1.5"><div class="flex items-center justify-center w-5 shrink-0 font-display text-base font-extrabold text-outline/60">3</div><img alt="Avatar" class="w-8 h-8 rounded-full object-cover object-[66%_0%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuC7b9yHZNeca_-AE7YA6UD3WMArWjHjFWhICbzVTExYitRz0oGlugNgVQNuXmcXsxCKslZ6IjSbLDeEsmH-yravHezqPUH9Nbn0vT77bOGOOrQ1wjYfCpfE7DYAJBUGBVgLBZLotofOoXHAV7MPRh-lNxME8PUDSOWpD_kG0zxfP6p6VJnkyJSjcfY_9Sx4s71txZjyjKD9HhFWUQwdq9axl-Sa9YoASMqEWVdbpq46ntwQH1hgwpFLD1hXuhRLDynzQWGUF4DHDe"><div class="flex-1 min-w-0"><p class="font-body-sm font-semibold text-on-surface truncate text-sm">英语角小助手</p><p class="text-[10px] text-on-surface-variant">解决 5 题</p></div><div class="text-right shrink-0"><p class="font-label-sm text-[#6366F1] font-bold">150</p></div></li>
+<li class="flex items-center gap-3 group cursor-pointer py-1.5"><div class="flex items-center justify-center w-5 shrink-0 font-display text-base font-extrabold text-outline/60">4</div><img alt="Avatar" class="w-8 h-8 rounded-full object-cover object-[100%_0%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuC7b9yHZNeca_-AE7YA6UD3WMArWjHjFWhICbzVTExYitRz0oGlugNgVQNuXmcXsxCKslZ6IjSbLDeEsmH-yravHezqPUH9Nbn0vT77bOGOOrQ1wjYfCpfE7DYAJBUGBVgLBZLotofOoXHAV7MPRh-lNxME8PUDSOWpD_kG0zxfP6p6VJnkyJSjcfY_9Sx4s71txZjyjKD9HhFWUQwdq9axl-Sa9YoASMqEWVdbpq46ntwQH1hgwpFLD1hXuhRLDynzQWGUF4DHDe"><div class="flex-1 min-w-0"><p class="font-body-sm font-semibold text-on-surface truncate text-sm">王小明</p><p class="text-[10px] text-on-surface-variant">解决 4 题</p></div><div class="text-right shrink-0"><p class="font-label-sm text-[#6366F1] font-bold">120</p></div></li>
+<li class="flex items-center gap-3 group cursor-pointer py-1.5"><div class="flex items-center justify-center w-5 shrink-0 font-display text-base font-extrabold text-outline/60">5</div><img alt="Avatar" class="w-8 h-8 rounded-full object-cover object-[0%_50%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuC7b9yHZNeca_-AE7YA6UD3WMArWjHjFWhICbzVTExYitRz0oGlugNgVQNuXmcXsxCKslZ6IjSbLDeEsmH-yravHezqPUH9Nbn0vT77bOGOOrQ1wjYfCpfE7DYAJBUGBVgLBZLotofOoXHAV7MPRh-lNxME8PUDSOWpD_kG0zxfP6p6VJnkyJSjcfY_9Sx4s71txZjyjKD9HhFWUQwdq9axl-Sa9YoASMqEWVdbpq46ntwQH1hgwpFLD1hXuhRLDynzQWGUF4DHDe"><div class="flex-1 min-w-0"><p class="font-body-sm font-semibold text-on-surface truncate text-sm">赵六_Physics</p><p class="text-[10px] text-on-surface-variant">解决 4 题</p></div><div class="text-right shrink-0"><p class="font-label-sm text-[#6366F1] font-bold">110</p></div></li>
+<li class="flex items-center gap-3 group cursor-pointer py-1.5"><div class="flex items-center justify-center w-5 shrink-0 font-display text-base font-extrabold text-outline/60">6</div><img alt="Avatar" class="w-8 h-8 rounded-full object-cover object-[33%_50%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuC7b9yHZNeca_-AE7YA6UD3WMArWjHjFWhICbzVTExYitRz0oGlugNgVQNuXmcXsxCKslZ6IjSbLDeEsmH-yravHezqPUH9Nbn0vT77bOGOOrQ1wjYfCpfE7DYAJBUGBVgLBZLotofOoXHAV7MPRh-lNxME8PUDSOWpD_kG0zxfP6p6VJnkyJSjcfY_9Sx4s71txZjyjKD9HhFWUQwdq9axl-Sa9YoASMqEWVdbpq46ntwQH1hgwpFLD1hXuhRLDynzQWGUF4DHDe"><div class="flex-1 min-w-0"><p class="font-body-sm font-semibold text-on-surface truncate text-sm">Anna</p><p class="text-[10px] text-on-surface-variant">解决 3 题</p></div><div class="text-right shrink-0"><p class="font-label-sm text-[#6366F1] font-bold">95</p></div></li>
+<li class="flex items-center gap-3 group cursor-pointer py-1.5"><div class="flex items-center justify-center w-5 shrink-0 font-display text-base font-extrabold text-outline/60">7</div><img alt="Avatar" class="w-8 h-8 rounded-full object-cover object-[66%_50%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuC7b9yHZNeca_-AE7YA6UD3WMArWjHjFWhICbzVTExYitRz0oGlugNgVQNuXmcXsxCKslZ6IjSbLDeEsmH-yravHezqPUH9Nbn0vT77bOGOOrQ1wjYfCpfE7DYAJBUGBVgLBZLotofOoXHAV7MPRh-lNxME8PUDSOWpD_kG0zxfP6p6VJnkyJSjcfY_9Sx4s71txZjyjKD9HhFWUQwdq9axl-Sa9YoASMqEWVdbpq46ntwQH1hgwpFLD1hXuhRLDynzQWGUF4DHDe"><div class="flex-1 min-w-0"><p class="font-body-sm font-semibold text-on-surface truncate text-sm">编程爱好者</p><p class="text-[10px] text-on-surface-variant">解决 3 题</p></div><div class="text-right shrink-0"><p class="font-label-sm text-[#6366F1] font-bold">80</p></div></li>
+<li class="flex items-center gap-3 group cursor-pointer py-1.5"><div class="flex items-center justify-center w-5 shrink-0 font-display text-base font-extrabold text-outline/60">8</div><img alt="Avatar" class="w-8 h-8 rounded-full object-cover object-[100%_50%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuC7b9yHZNeca_-AE7YA6UD3WMArWjHjFWhICbzVTExYitRz0oGlugNgVQNuXmcXsxCKslZ6IjSbLDeEsmH-yravHezqPUH9Nbn0vT77bOGOOrQ1wjYfCpfE7DYAJBUGBVgLBZLotofOoXHAV7MPRh-lNxME8PUDSOWpD_kG0zxfP6p6VJnkyJSjcfY_9Sx4s71txZjyjKD9HhFWUQwdq9axl-Sa9YoASMqEWVdbpq46ntwQH1hgwpFLD1hXuhRLDynzQWGUF4DHDe"><div class="flex-1 min-w-0"><p class="font-body-sm font-semibold text-on-surface truncate text-sm">学霸猫</p><p class="text-[10px] text-on-surface-variant">解决 2 题</p></div><div class="text-right shrink-0"><p class="font-label-sm text-[#6366F1] font-bold">60</p></div></li>
+<li class="flex items-center gap-3 group cursor-pointer py-1.5"><div class="flex items-center justify-center w-5 shrink-0 font-display text-base font-extrabold text-outline/60">9</div><img alt="Avatar" class="w-8 h-8 rounded-full object-cover object-[0%_100%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuC7b9yHZNeca_-AE7YA6UD3WMArWjHjFWhICbzVTExYitRz0oGlugNgVQNuXmcXsxCKslZ6IjSbLDeEsmH-yravHezqPUH9Nbn0vT77bOGOOrQ1wjYfCpfE7DYAJBUGBVgLBZLotofOoXHAV7MPRh-lNxME8PUDSOWpD_kG0zxfP6p6VJnkyJSjcfY_9Sx4s71txZjyjKD9HhFWUQwdq9axl-Sa9YoASMqEWVdbpq46ntwQH1hgwpFLD1hXuhRLDynzQWGUF4DHDe"><div class="flex-1 min-w-0"><p class="font-body-sm font-semibold text-on-surface truncate text-sm">考研路上</p><p class="text-[10px] text-on-surface-variant">解决 2 题</p></div><div class="text-right shrink-0"><p class="font-label-sm text-[#6366F1] font-bold">50</p></div></li>
+<li class="flex items-center gap-3 group cursor-pointer py-1.5"><div class="flex items-center justify-center w-5 shrink-0 font-display text-base font-extrabold text-outline/60">10</div><img alt="Avatar" class="w-8 h-8 rounded-full object-cover object-[33%_100%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuC7b9yHZNeca_-AE7YA6UD3WMArWjHjFWhICbzVTExYitRz0oGlugNgVQNuXmcXsxCKslZ6IjSbLDeEsmH-yravHezqPUH9Nbn0vT77bOGOOrQ1wjYfCpfE7DYAJBUGBVgLBZLotofOoXHAV7MPRh-lNxME8PUDSOWpD_kG0zxfP6p6VJnkyJSjcfY_9Sx4s71txZjyjKD9HhFWUQwdq9axl-Sa9YoASMqEWVdbpq46ntwQH1hgwpFLD1hXuhRLDynzQWGUF4DHDe"><div class="flex-1 min-w-0"><p class="font-body-sm font-semibold text-on-surface truncate text-sm">张同学</p><p class="text-[10px] text-on-surface-variant">解决 1 题</p></div><div class="text-right shrink-0"><p class="font-label-sm text-[#6366F1] font-bold">30</p></div></li>
+</ul><button class="w-full mt-4 py-2 text-[#6366F1] font-label-md hover:bg-[#6366F1] hover:text-white rounded-xl transition-all duration-300 border border-[#6366F1]/30 flex items-center justify-center gap-2 active:scale-95 text-sm">查看完整榜单<span class="material-symbols-outlined text-[16px]">chevron_right</span></button></div>
+</aside>
+</div>
+
+
+</body></html>

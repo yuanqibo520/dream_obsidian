@@ -1,0 +1,322 @@
+<!DOCTYPE html><html class="light" lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SauLink - 帖子详情</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Geist:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#f9bd22",
+                    "primary-fixed": "#e1e0ff",
+                    "primary-container": "#6063ee",
+                    "secondary": "#006c4b",
+                    "on-surface": "#121c2a",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#64f9bc",
+                    "on-secondary-fixed-variant": "#005137",
+                    "surface-container": "#e6eeff",
+                    "error": "#ba1a1a",
+                    "on-tertiary-container": "#fffbff",
+                    "on-tertiary-fixed": "#261a00",
+                    "surface-variant": "#d9e3f6",
+                    "background": "#f8f9ff",
+                    "primary-fixed-dim": "#c0c1ff",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed": "#07006c",
+                    "on-primary-fixed-variant": "#2f2ebe",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#00714e",
+                    "tertiary-fixed": "#ffdf9f",
+                    "surface-bright": "#f8f9ff",
+                    "tertiary": "#765700",
+                    "on-secondary-fixed": "#002114",
+                    "inverse-surface": "#27313f",
+                    "on-tertiary-fixed-variant": "#5c4300",
+                    "on-surface-variant": "#464554",
+                    "surface": "#f8f9ff",
+                    "surface-tint": "#494bd6",
+                    "secondary-fixed-dim": "#45dfa4",
+                    "on-primary-container": "#fffbff",
+                    "tertiary-container": "#956e00",
+                    "surface-container-highest": "#d9e3f6",
+                    "on-background": "#121c2a",
+                    "inverse-on-surface": "#eaf1ff",
+                    "secondary-fixed": "#68fcbf",
+                    "primary": "#4648d4",
+                    "surface-dim": "#d0dbed",
+                    "surface-container-low": "#eff4ff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#c0c1ff",
+                    "surface-container-high": "#dee9fc",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#c7c4d7",
+                    "outline": "#767586",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "4px",
+                    "margin-desktop": "40px",
+                    "xl": "32px",
+                    "xs": "8px",
+                    "sm": "12px",
+                    "md": "16px",
+                    "margin-mobile": "20px",
+                    "lg": "24px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "label-md": [
+                            "Geist"
+                    ],
+                    "display": [
+                            "Geist"
+                    ],
+                    "body-sm": [
+                            "Inter"
+                    ],
+                    "headline-lg-mobile": [
+                            "Geist"
+                    ],
+                    "headline-lg": [
+                            "Geist"
+                    ],
+                    "label-sm": [
+                            "Geist"
+                    ],
+                    "headline-md": [
+                            "Geist"
+                    ]
+            },
+            "fontSize": {
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "16px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "body-sm": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "28px",
+                            {
+                                    "lineHeight": "36px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "14px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "600"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        /* Custom styles for Webkit scrollbar to maintain clean aesthetics */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #d9e3f6;
+            border-radius: 9999px;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased overflow-hidden">
+<!-- Background Layer (Simulated Screen) -->
+<div class="fixed inset-0 z-0">
+<img alt="Campus Info Screen Background" class="w-full h-full object-cover opacity-30" data-alt="A modern university campus scene with students walking across a sunny quad. The architecture is a mix of contemporary glass buildings and classic brick structures. The scene is brightly lit with a cheerful, optimistic atmosphere, perfectly suited for an educational or student community application background. The colors are vibrant yet slightly desaturated to serve as a backdrop, featuring lush green lawns and clear blue skies." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJoixj-0tPBkTjwh851kwjEL1KYiHK586WY8hD5My3nPUnM0FE7_47HVq5uLZ_g8Zcaz25LXgAeATFgqT8zALcZ4le7VwnkH5iIdd3i0CcULxz8qcBcoSWh6WqfCYbczyoMg3wFILaw_YKqgtiR9uRzoNgN3ImHCWg2plr-tQOOOZBv3TdbklacnlOuiXI-XK8MiT4sKhe8ROAnSoOjR0wo29YGOAk_PX9ql2VtnZEuv1XmEYDCF2xO8g6t6En-BMANZbLnAkPk28L">
+</div>
+<!-- Modal Overlay Backdrop -->
+<div class="fixed inset-0 z-50 bg-on-surface/20 backdrop-blur-md flex items-center justify-center p-margin-mobile md:p-margin-desktop overflow-y-auto">
+<!-- Close Button (Outside for Desktop, Inside for Mobile via responsive classes) -->
+<button aria-label="Close modal" class="absolute top-md right-md md:top-lg md:right-lg z-[60] bg-white/50 hover:bg-white text-on-surface p-xs rounded-full shadow-sm backdrop-blur-md transition-all duration-200">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+<!-- Modal Card Container -->
+<div class="relative w-full max-w-[800px] bg-white rounded-xl shadow-xl shadow-primary/10 flex flex-col max-h-[921px] overflow-hidden">
+<!-- Scrollable Content Area -->
+<div class="flex-1 overflow-y-auto p-lg md:p-xl pb-32"> <!-- pb-32 to account for fixed footer -->
+<!-- Header: Author Info -->
+<div class="flex items-center justify-between mb-lg"><div class="flex items-center gap-md">
+<img alt="Author Avatar" class="w-12 h-12 rounded-full object-cover border border-outline-variant" data-alt="A close-up portrait of a young female university student looking friendly and approachable. She has a bright smile, wearing a casual light-colored sweater. The background is a softly blurred outdoor campus setting on a sunny day. The lighting is natural and flattering, embodying a positive, modern student identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUDpyruBU5-JxDHeNpdgNvOvhdTgu9CWvJiWrV_I5OcC3iJRml93h7d5_Eqf_O_6t2sAhgpJq27oCKeacDj6ko0FZPjd9sCxrwCmfyDmNba8frDiHHO1aCb2WQGoIU9hCiR9AJHOxMpV0VriCdijNPMHFJUvJtRq3CuVJkjGTsfL98T0oUsRGoWIdRkz2ey5eWJNKpzEhStYRiZWi-LrF3zE1E5YfTZt8xSMzM7xCU7TW7qrTzo6pKUtxMb8BSfeZUAeF3OfMdeO-h">
+<div>
+<h3 class="font-label-md text-label-md text-on-surface">林晓雅</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">数字媒体艺术 · 2小时前</p>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<button class="border border-primary text-primary hover:bg-primary/5 font-label-md text-label-md px-md py-xs rounded-full transition-colors flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+                        私信
+                    </button>
+<button class="bg-primary hover:bg-primary/90 text-white font-label-md text-label-md px-md py-xs rounded-full transition-colors flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                        关注
+                    </button>
+</div></div>
+<!-- Body: Title & Content -->
+<div class="mb-xl">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-md">关于人工智能在未来设计中的美学碰撞</h1>
+<div class="prose prose-p:font-body-md prose-p:text-body-md prose-p:text-on-surface-variant space-y-md mb-lg">
+<p class="">
+                            最近在参与一个关于生成式AI的跨学科研讨会，产生了很多感触。当算法能够在一秒钟内生成出极其精美的视觉元素时，作为设计专业的学生，我们该如何重新定位自己的核心竞争力？
+                        </p>
+<p class="">
+                            我认为，未来的设计不再仅仅是“创造形体”，更是“定义规则”和“赋予情感”。AI是一个极其强大的执行者，但它缺乏人类特有的直觉和对特定文化语境的深刻共情。
+                        </p>
+</div>
+<!-- Featured Image -->
+<div class="rounded-xl overflow-hidden mb-lg border border-outline-variant/30">
+<img alt="Featured AI Design Image" class="w-full h-auto object-cover" data-alt="A vibrant, abstract digital art piece illustrating the concept of artificial intelligence in design. The image features fluid, glowing geometric shapes interacting with complex, algorithmic grid patterns. The color palette is dominated by futuristic purples, neon blues, and crisp whites against a dark, deep space-like background. It conveys a sense of high-tech innovation and aesthetic beauty, perfectly complementing an article about AI and future design trends." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9nHCAvZjZ3FwbGatKfiAPiTTXD7gaubyLfcI9Qyp9gf0y2RETAhQnY_qhDLQaIBQWWX3aGKqBdJmWsjKeieIY1y9uOOVIrfmrkPilJ-a6fjjr1JF-93Jt3z5D_hmJEZz5DfNLnovK3_xZ24PNwDoO4y7ITfgyr_GDT4Ko76moyb-WYOLMvaiQpSJMmM3hnlnU6dVZKTc8zJsSBs_YjiGyrDv10UED6147dezL7BwEgyYiVeWtUayHiggxpBGhy4VF-ImQVhl3baG1">
+</div>
+<!-- Interaction Bar -->
+<div class="flex items-center gap-lg border-b border-outline-variant/30 pb-md">
+<button class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform">thumb_up</span>
+<span class="font-label-md text-label-md">342</span>
+</button>
+<button class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform">chat_bubble_outline</span>
+<span class="font-label-md text-label-md">58</span>
+</button>
+<button class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform">share</span>
+<span class="font-label-md text-label-md">分享</span>
+</button>
+</div>
+</div>
+<!-- Comments Section -->
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-lg">全部评论 (58)</h4>
+<div class="space-y-lg">
+<!-- Comment Item -->
+<div class="flex gap-md">
+<img alt="Commenter Avatar" class="w-10 h-10 rounded-full object-cover flex-shrink-0" data-alt="A portrait of a male university student looking thoughtful. He has short dark hair and is wearing glasses and a casual grey t-shirt. The background is a brightly lit indoor environment, possibly a library or a modern classroom. The lighting is soft and natural, emphasizing a realistic and relatable student persona." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEgF66Gc5ERiCWnYaVWz4B5VTLI8kgbqcstlFNj4QH5HSNHDY0TjmUwUoqnAjodRJuidYuyi4hPHvIPypuM41p7Ao8SR8raMtPyNXgO9aM0W7ObywsrPPFpVqpIY3bxs9duryJ77O9IbvRbsX0fSiDncOHdsq9GImDmf3EFMFSTV9XmOOZlUdSpgnISDT7uLcvHjoIAo1oDImGKhHVQWK0NPJ0bqTRwMNoruL0ic9nA_QoqihFQhgvYcnql5qAymth-DOIa8ISjhc8">
+<div class="flex-1">
+<div class="flex items-center justify-between mb-base">
+<span class="font-label-md text-label-md text-on-surface">陈子轩</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1小时前</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-sm">
+                                    非常赞同！我觉得现在的设计教育应该更多地转向培养“策展人”思维，而不是单纯的“绘图员”技能。
+                                </p>
+<div class="flex items-center gap-md text-on-surface-variant font-label-md text-label-md mb-sm">
+<button class="flex items-center gap-xs hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span> 12
+                                    </button>
+<button class="hover:text-primary transition-colors">回复</button>
+</div>
+<!-- Nested Replies (楼中楼) -->
+<div class="bg-surface p-sm rounded-lg border border-outline-variant/20 space-y-sm">
+<div>
+<span class="font-label-md text-label-md text-on-surface">林晓雅</span>
+<span class="text-primary mx-xs text-label-sm">回复</span>
+<span class="font-label-md text-label-md text-on-surface">陈子轩:</span>
+<span class="font-body-md text-body-md text-on-surface-variant ml-xs">对的，“策展人”这个词很精准。我们需要在海量生成的可能性中挑选并赋予意义。</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer: Fixed Input Bar -->
+<div class="absolute bottom-0 left-0 right-0 glass-panel p-md border-t border-outline-variant/20 z-10 rounded-b-xl">
+<div class="flex items-center gap-sm">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-xs rounded-full hover:bg-primary/5 flex-shrink-0">
+<span class="material-symbols-outlined">add_photo_alternate</span>
+</button>
+<div class="flex-1 relative">
+<input class="w-full bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-full py-sm pl-md pr-xl font-body-md text-body-md text-on-surface transition-all" placeholder="写下你的评论..." type="text">
+<button class="absolute right-sm top-1/2 -translate-y-1/2 text-primary hover:text-primary-fixed-variant p-xs">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+<label class="flex items-center gap-xs cursor-pointer flex-shrink-0">
+<input class="rounded text-primary focus:ring-primary border-outline-variant w-4 h-4" type="checkbox">
+<span class="font-label-sm text-label-sm text-on-surface-variant">匿名</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+
+
+</body></html>

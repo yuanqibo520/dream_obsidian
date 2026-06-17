@@ -1,0 +1,376 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SauLink - 帖子详情 - 二手市场</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "inverse-on-surface": "#eaf1ff",
+                "tertiary-container": "#956e00",
+                "secondary-fixed": "#68fcbf",
+                "on-primary-fixed": "#07006c",
+                "on-primary-container": "#fffbff",
+                "on-primary-fixed-variant": "#2f2ebe",
+                "surface-tint": "#494bd6",
+                "on-tertiary-fixed": "#261a00",
+                "background": "#f8f9ff",
+                "surface-container-high": "#dee9fc",
+                "error-container": "#ffdad6",
+                "surface-container-lowest": "#ffffff",
+                "on-secondary": "#ffffff",
+                "on-tertiary": "#ffffff",
+                "on-secondary-container": "#00714e",
+                "surface-variant": "#d9e3f6",
+                "surface": "#f8f9ff",
+                "primary-container": "#6063ee",
+                "on-secondary-fixed-variant": "#005137",
+                "error": "#ba1a1a",
+                "on-error-container": "#93000a",
+                "surface-dim": "#d0dbed",
+                "secondary": "#006c4b",
+                "on-surface": "#121c2a",
+                "on-secondary-fixed": "#002114",
+                "on-tertiary-container": "#fffbff",
+                "on-background": "#121c2a",
+                "secondary-fixed-dim": "#45dfa4",
+                "on-surface-variant": "#464554",
+                "inverse-primary": "#c0c1ff",
+                "tertiary": "#765700",
+                "on-error": "#ffffff",
+                "primary-fixed-dim": "#c0c1ff",
+                "outline-variant": "#c7c4d7",
+                "surface-container-highest": "#d9e3f6",
+                "primary-fixed": "#e1e0ff",
+                "outline": "#767586",
+                "tertiary-fixed": "#ffdf9f",
+                "primary": "#4648d4",
+                "tertiary-fixed-dim": "#f9bd22",
+                "surface-bright": "#f8f9ff",
+                "surface-container-low": "#eff4ff",
+                "on-tertiary-fixed-variant": "#5c4300",
+                "inverse-surface": "#27313f",
+                "on-primary": "#ffffff",
+                "surface-container": "#e6eeff",
+                "secondary-container": "#64f9bc"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "lg": "24px",
+                "xl": "32px",
+                "margin-mobile": "20px",
+                "sm": "12px",
+                "margin-desktop": "40px",
+                "gutter": "16px",
+                "xs": "8px",
+                "md": "16px",
+                "base": "4px"
+        },
+        "fontFamily": {
+                "label-md": [
+                        "Geist"
+                ],
+                "body-sm": [
+                        "Inter"
+                ],
+                "headline-md": [
+                        "Geist"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "headline-lg-mobile": [
+                        "Geist"
+                ],
+                "display": [
+                        "Geist"
+                ],
+                "headline-lg": [
+                        "Geist"
+                ],
+                "label-sm": [
+                        "Geist"
+                ],
+                "body-lg": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "16px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "28px",
+                        {
+                                "lineHeight": "36px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "display": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "14px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Modal Scrollbar Styling */
+        .modal-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .modal-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .modal-scroll::-webkit-scrollbar-thumb {
+            background-color: #d0dbed; /* surface-dim */
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background h-screen w-screen overflow-hidden font-body-md antialiased relative">
+<!-- 
+        Background Layer: Immersive overlay on top of screen content 
+        Simulating a blurred background of the main campus hub screen.
+    -->
+<div class="absolute inset-0 z-0 bg-cover bg-center transition-all" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB01OFK0Ug7eg5M_0H9pB_G6GnL93ZpDnUuvxGLNSAwTrtsubjTY48dDcwAtB_75ICBkJCUvCv-WsDqy40KcSmmPV3jqKL3KKtJ0CkfeHCR3KIIp4uBFbfXIozKwvFYN1rHAGD5zMTlj2vUesPi03dRq6Idqy8R5UkEKGTJwanWDJlAT83X_mU91vX3kg_ovWqpqIxfKOxSojhxbhcfPfchL1v2UYrKjUEQYL8AUm_ZZokHKsiD8E4S7NaBNgpA5UgCUXdr_l5N67F6'); filter: blur(20px) brightness(0.4);"></div>
+<!-- Modal Container -->
+<div class="relative z-10 w-full h-full flex items-center justify-center p-md lg:p-margin-desktop">
+<!-- Close Button (Floating) -->
+<button class="absolute top-4 right-4 lg:top-8 lg:right-8 w-14 h-14 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-lg flex items-center justify-center text-white border border-white/30 transition-all z-50 group">
+<span class="material-symbols-outlined group-hover:rotate-90 transition-transform duration-300">close</span>
+</button>
+<!-- Main Card -->
+<div class="w-full max-w-[800px] h-[90vh] bg-surface rounded-[24px] shadow-2xl shadow-primary/20 flex flex-col overflow-hidden border border-outline-variant/30 relative">
+<!-- Scrollable Content Area -->
+<div class="flex-1 overflow-y-auto modal-scroll p-md lg:p-xl">
+<!-- Header: User Info -->
+<div class="flex items-center justify-between mb-lg mr-12 lg:mr-0">
+<div class="flex items-center gap-sm">
+<img alt="User Avatar" class="w-12 h-12 rounded-full border-2 border-surface-container-high object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjRDGOB9ELJkWMAafyl_M1qoYjNmC9i70XdK1atN51LnanXxIuGL1mSP01XuIeFn5WODKmWrCdf39rr7ZClYJkLoBonZSw-bcKFRYqJeV8ZSOeA_pupQzp7Rg6b4I31u5eMr9vumpu3rCIzF8-cZJJlvzDX0Y9sHRWhI4v2XNRHvwfwapLzbSY0UOYFHSwdaqEy2bdCAl1iGcpn0KcAUDXjIw_6Xc3iR4zb-NuGluLViu27fwNNSRpgrboeT5tpCz_mrfgopdTVZp6">
+<div>
+<div class="flex items-center gap-xs">
+<h3 class="font-label-md text-label-md text-on-surface">王同学</h3>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] px-2 py-0.5 rounded-full">信息工程学院</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">2小时前 发布于 二手市场</p>
+</div>
+</div>
+<div class="flex items-center gap-sm"><button class="px-md py-2.5 bg-primary/10 border border-primary/20 text-[#6366F1] backdrop-blur-sm rounded-xl font-label-md text-label-md flex items-center gap-xs transition-all hover:bg-primary/20">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>私聊
+</button>
+<button class="px-md py-2.5 bg-primary text-on-primary hover:bg-primary/90 transition-all rounded-xl font-label-md text-label-md flex items-center gap-xs shadow-md shadow-primary/20">
+<span class="material-symbols-outlined text-[20px]">add</span>关注
+</button></div>
+</div>
+<!-- Price Banner -->
+<div class="bg-gradient-to-r from-primary-container/20 to-surface-container-highest rounded-xl p-md mb-lg flex items-center justify-between border border-primary-fixed mr-12 lg:mr-0">
+<div>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through block">原价: ¥2,299</span>
+<div class="flex items-baseline gap-xs">
+<span class="font-headline-lg text-headline-lg text-primary">¥1,200</span>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-1 rounded-md">95新</span>
+</div>
+</div>
+<div class="text-right flex flex-col gap-xs items-end">
+<span class="bg-primary text-on-primary font-label-md text-label-md px-md py-xs rounded-full shadow-sm shadow-primary/20">购买</span>
+</div>
+</div>
+<!-- Post Content -->
+<div class="mb-xl">
+<h1 class="font-headline-lg-mobile lg:font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-on-background mb-sm leading-tight">关于索尼 WH-1000XM4 降噪耳机的详细情况</h1>
+<!-- Tags -->
+<div class="flex flex-wrap gap-xs mb-md">
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-sm py-1 rounded-full">#数码产品</span>
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-sm py-1 rounded-full">#考研必备</span>
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-sm py-1 rounded-full">#二手交易</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant whitespace-pre-line leading-relaxed mb-md mt-lg mb-lg">
+                        大三考研时期买的，平时主要在图书馆戴着用来隔音。现在考研结束了，平时不怎么用头戴式耳机，一直吃灰，所以决定出掉回血。
+                        
+                        **成色说明：**
+                        自用非常爱惜，没有任何磕碰和划痕，耳罩的海绵也很完整没有塌陷。平时用完都会放进收纳盒里。可以说是有95新以上。
+                        
+                        **配件情况：**
+                        箱说全。原装的充电线、音频线、航空转接头都在，那个硬壳收纳盒也在。
+                        
+                        **电池情况：**
+                        降噪模式下听个两三天完全没问题（每天用大概4-5小时），电池没有明显衰减。
+                        
+                        支持校园内当面交易（最好在东区食堂或者图书馆附近），可以现场试听试用。不讲价了，已经是最低价了，爽快的同学直接送个耳机支架。
+                    </p>
+<!-- Main Image Gallery -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm mb-lg">
+<img alt="Sony Headphones Full" class="w-full h-auto max-h-[500px] object-cover rounded-xl border border-outline-variant/30 shadow-md col-span-1 md:col-span-2" data-alt="A high-quality, brightly lit photograph of black Sony WH-1000XM4 headphones resting on a clean white desk next to a modern laptop. The lighting is soft and studio-like, fitting a high-end campus marketplace listing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDec7s7ou7u5TB66MBA6CZGJ4ByZoPAXHsSgYON0UAMtnA5macm4RtwE_gnWz13r2ahEPXHVEw50yy-_7SWO3pKiFJ8JKig_Vx_WQJRx1fisUhFpE8CzoLDpvCoAs3AhsOT4Fvk0Wh91xAllTfom_Fq7lekAwTqGRFQwa3I1bfTAZJ9Cga4DBFhwchUJsz9O45R-rTPU3qbBH5v-7F2mqt7WKhvjOcBzD_UXymW6YXHT0Khqq9BpahEZDopaXdhMaDEFaRB8sjEvXDi">
+</div>
+</div>
+<!-- Engagement Bar -->
+<div class="flex items-center justify-between py-sm border-t border-b border-surface-container-high mb-xl">
+<div class="flex gap-lg">
+<button class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">favorite</span>
+<span class="font-label-md text-label-md">128</span>
+</button>
+<button class="flex items-center gap-xs text-on-surface-variant hover:text-tertiary transition-colors group">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">star</span>
+<span class="font-label-md text-label-md">45</span>
+</button>
+<button class="flex items-center gap-xs text-on-surface-variant hover:text-secondary transition-colors group">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">chat_bubble</span>
+<span class="font-label-md text-label-md">12</span>
+</button>
+</div>
+<button class="flex items-center gap-xs text-on-surface-variant hover:text-on-surface transition-colors group bg-surface-container p-2 rounded-lg">
+<span class="material-symbols-outlined text-[20px] group-hover:-translate-y-0.5 transition-transform">share</span>
+<span class="font-label-sm text-label-sm">分享</span>
+</button>
+</div>
+<!-- Comments Section -->
+<div>
+<h4 class="font-headline-md text-headline-md text-on-background mb-md">评论 (12)</h4>
+<div class="flex flex-col gap-lg pb-[100px]"> <!-- Padding bottom for fixed input -->
+<!-- Comment Thread 1 -->
+<div class="flex gap-sm">
+<img alt="Commenter 1" class="w-10 h-10 rounded-full bg-surface-container-high" data-alt="Small profile picture of a female student with glasses smiling brightly in a sunny campus setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnKgkdDuTVE94LbY-eyksiF4qmKAubmnQKxEMpo1wpakFHqsdedrqqD-zDkHgI_lKG_Tbv-DXDZm9ETOXx9U1wLUWGlkfvC_55q58f8R2cQ7ABcszJQFgemXkhmCU-e_FCLt9jLRuINFJdtAP5Z3IPnmmwYBs1fWbgesKT2Nv-ouAxtEnIz-aVnDv39RwT_op8-zd4Aj_jXI75fyhSi12nB7mkFKHjEFRbkS6roELDyQQWkPr21FOYhS0yWXI30ZxPyEPAYcXGBPHt">
+<div class="flex-1">
+<div class="bg-surface-container-lowest p-sm rounded-xl rounded-tl-none border border-surface-container-high shadow-sm shadow-primary/5">
+<div class="flex justify-between items-start mb-xs">
+<span class="font-label-md text-label-md text-on-surface">李同学</span>
+<span class="font-body-sm text-body-sm text-outline">1小时前</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">成色真的很不错呀！还可以小刀吗？或者拿个二手的 iPad 补差价换可以吗？</p>
+</div>
+<div class="flex gap-md mt-xs ml-2">
+<button class="text-outline hover:text-primary font-label-sm text-label-sm flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">thumb_up</span> 2</button>
+<button class="text-outline hover:text-primary font-label-sm text-label-sm">回复</button>
+</div>
+<!-- Nested Reply -->
+<div class="flex gap-sm mt-sm">
+<img alt="Post Author" class="w-8 h-8 rounded-full border-2 border-primary-container" data-alt="Small profile picture of a young university student, brightly lit, smiling, set against a vibrant modern macaroon campus background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD82uLsEl5RFZ4S3gMIsXyW4TbyBlcLLswvP6LqFiQ6VWmwVQvZeIbOiTeU1DIXVlGEfvdVmrvunDma_7JvK1onzD23CL0xxw3M4Q2xeqFUPL_6uwRfF_bFc9vUjx-PIWrZ7rVpaRSfaZqK-Evh1-ptpJ-ZJl1AjF1vcwhwmjomfPBAnidb1IkH-oN3oB9OXDalDOZMMsDG-wk5RaUkfRBOJKCJA3NBa5s-ssjjQiqediRmFlwzfPo8zgcMiFNk_0AK5MuqnLQ3rCtj">
+<div class="flex-1">
+<div class="bg-surface-container-low p-sm rounded-xl rounded-tl-none">
+<div class="flex items-center gap-xs mb-xs">
+<span class="font-label-md text-label-md text-primary">王同学 (作者)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">不好意思哈，已经降到底价了不接受小刀了，而且主要是为了换现金回血，暂时不考虑换物呢~</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Comment Thread 2 -->
+<div class="flex gap-sm">
+<img alt="Commenter 2" class="w-10 h-10 rounded-full bg-surface-container-high" data-alt="Small profile picture of a male student in a graphic tee looking slightly off camera, casual campus style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWotgFpi9B7iil4XkdXOa4r6f9aomBC5Rr0-AcgxybrhqEi7dyhTildjTWhe5Gi3P5BTbPORllU1G0reppdtFzAebFozggMgEb1w_LH-0ktmmhyyJhCMAVJfTBv4Rui5pn0ok8s4GIBGv57gmPQIw9ZphSbrXR9y7PU6w3wmhW8F6hCSOERHEg6zw-HgrdrZWNMWYL4_Y79NqWU-Tx3tDbjZcYDLvQhCszNg-sc9KmiPpKrvzlnSuOHOBKS1JvE2lI4_N8JcbXHuuN">
+<div class="flex-1">
+<div class="bg-surface-container-lowest p-sm rounded-xl rounded-tl-none border border-surface-container-high shadow-sm shadow-primary/5">
+<div class="flex justify-between items-start mb-xs">
+<span class="font-label-md text-label-md text-on-surface">张同学</span>
+<span class="font-body-sm text-body-sm text-outline">半小时前</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">你好，明天中午在东区食堂一楼可以面交吗？想要了。</p>
+</div>
+<div class="flex gap-md mt-xs ml-2">
+<button class="text-outline hover:text-primary font-label-sm text-label-sm flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">thumb_up</span> 0</button>
+<button class="text-outline hover:text-primary font-label-sm text-label-sm">回复</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Fixed Bottom Comment Bar -->
+<div class="absolute bottom-0 left-0 w-full bg-surface/90 backdrop-blur-md border-t border-outline-variant/30 p-sm z-20 flex items-center gap-sm shadow-[0_-4px_15px_rgba(0,0,0,0.05)]">
+<!-- Avatar -->
+<img alt="My Profile" class="w-10 h-10 rounded-full hidden sm:block" data-alt="Small profile picture of the current logged-in user, simple modern avatar style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxN0Kort2gaAKbwnU8JZNI0kJ8DeAUzEmEvDFArHYUIf-QHG5j4A08fLZnfrwGq7jOlQxkPmWUCSmyZlywyNOaJlOY6nRyK70SSEHXvdyB5h-0aGGBv-xyertsVrnXmFkfnpfi839SiYQOWse48zYiY6r27vIgH60NMbRy_jjsanCR8jyDr-g7RCc4yY3ElvwsrKb75zKoHPVtO43BxJhc41mFeVwmh-_ISM5x2xL97wZEm2ngjcLmU0gU8z_NI3Z5va3rysycrkkU">
+<!-- Input Area -->
+<div class="flex-1 relative bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20 transition-all flex items-center pr-2">
+<input class="w-full bg-transparent border-none focus:ring-0 font-body-sm text-body-sm text-on-surface placeholder:text-outline py-sm px-md" placeholder="说点什么吧..." type="text">
+<!-- Anonymous Toggle -->
+<label class="flex items-center gap-1 cursor-pointer mr-sm select-none shrink-0 group">
+<div class="relative">
+<input class="sr-only peer" type="checkbox">
+<div class="w-8 h-4 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline group-hover:text-on-surface-variant">匿名</span>
+</label>
+</div>
+<!-- Send Button -->
+<button class="bg-[#6366F1] hover:bg-[#4F46E5] text-white rounded-xl px-md py-sm font-label-md text-label-md transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 shrink-0">
+                    发送
+                </button>
+</div>
+</div>
+</div>
+
+
+</body></html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SauLink - 登录 / 注册</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        /* Custom Font Placeholder for 'Geist' if needed, falling back to sans */
+        @font-face {
+            font-family: 'Geist';
+            src: local('system-ui'), local('-apple-system'), local('BlinkMacSystemFont'), local('Segoe UI'), local('Roboto'), local('Helvetica Neue'), local('Arial'), local('sans-serif');
+            font-weight: 400 800;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .bg-mesh {
+            background-image: 
+                radial-gradient(at 10% 20%, hsla(239, 83%, 67%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(158, 65%, 52%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, hsla(239, 83%, 67%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 100%, hsla(158, 65%, 52%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(239, 83%, 67%, 0.15) 0px, transparent 50%);
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#002114",
+                    "background": "#f8f9ff",
+                    "inverse-primary": "#c0c1ff",
+                    "secondary-fixed-dim": "#45dfa4",
+                    "on-tertiary-container": "#fffbff",
+                    "surface-dim": "#d0dbed",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-background": "#121c2a",
+                    "surface-variant": "#d9e3f6",
+                    "on-primary-container": "#fffbff",
+                    "inverse-surface": "#27313f",
+                    "primary": "#4648d4",
+                    "primary-fixed": "#e1e0ff",
+                    "surface-container-highest": "#d9e3f6",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#2f2ebe",
+                    "secondary-fixed": "#68fcbf",
+                    "surface-container": "#e6eeff",
+                    "surface": "#f8f9ff",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#464554",
+                    "inverse-on-surface": "#eaf1ff",
+                    "tertiary-fixed": "#ffdf9f",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#006c4b",
+                    "on-secondary-fixed-variant": "#005137",
+                    "on-surface": "#121c2a",
+                    "primary-container": "#6063ee",
+                    "on-tertiary-fixed": "#261a00",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#494bd6",
+                    "on-tertiary-fixed-variant": "#5c4300",
+                    "tertiary": "#765700",
+                    "outline-variant": "#c7c4d7",
+                    "outline": "#767586",
+                    "on-secondary-container": "#00714e",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#07006c",
+                    "primary-fixed-dim": "#c0c1ff",
+                    "tertiary-fixed-dim": "#f9bd22",
+                    "surface-container-high": "#dee9fc",
+                    "surface-bright": "#f8f9ff",
+                    "secondary-container": "#64f9bc",
+                    "tertiary-container": "#956e00",
+                    "surface-container-low": "#eff4ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "lg": "24px",
+                    "margin-mobile": "20px",
+                    "base": "4px",
+                    "gutter": "16px",
+                    "sm": "12px",
+                    "xs": "8px",
+                    "margin-desktop": "40px",
+                    "md": "16px",
+                    "xl": "32px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Geist"],
+                    "headline-lg": ["Geist"],
+                    "display": ["Geist"],
+                    "body-sm": ["Inter"],
+                    "label-sm": ["Geist"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Geist"],
+                    "label-md": ["Geist"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "16px", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-background min-h-screen flex justify-center p-md md:p-margin-desktop bg-mesh text-on-surface font-body-md relative overflow-hidden pt-[15vh] pb-[5vh] items-start">
+<!-- Decorative Macaron Shapes -->
+<div class="absolute top-[-10%] left-[-5%] w-[40vw] h-[40vw] rounded-full bg-primary/10 blur-[100px] animate-float" style="animation-delay: 0s;"></div>
+<div class="absolute bottom-[-10%] right-[-5%] w-[50vw] h-[50vw] rounded-full bg-secondary-container/20 blur-[120px] animate-float" style="animation-delay: 2s;"></div>
+<!-- Abstract Geometric elements -->
+<div class="hidden lg:block absolute top-[20%] left-[10%] w-32 h-32 rounded-full border-[12px] border-primary/20 animate-float" style="animation-delay: 1s;"></div>
+<div class="hidden lg:block absolute bottom-[20%] left-[20%] w-16 h-16 rounded-lg bg-secondary-container/40 rotate-45 animate-float" style="animation-delay: 3s;"></div>
+<main class="w-full max-w-[1200px] grid grid-cols-1 lg:grid-cols-2 gap-xl items-center relative z-10 self-start">
+<!-- Left Side: Brand Marketing -->
+<section class="hidden lg:flex flex-col justify-center gap-lg pr-xl">
+<h1 class="font-display text-display text-primary tracking-tight">SauLink</h1>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">连接你的校园生活</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">加入活力四射的大学社区。寻找学习伙伴，探索校园二手市场，不错过任何精彩瞬间。</p>
+<div class="mt-xl relative rounded-3xl overflow-hidden shadow-sm border border-outline-variant/30 h-[300px] w-full" data-alt="A vibrant, modern 3D illustration representing a lively university campus hub. The scene features abstract students interacting around a glowing digital noticeboard. The color palette is bright and energetic, using pastel lavender purple and mint green set against a clean, light-mode background. The lighting is soft, high-key, and creates a welcoming, optimistic mood. Soft glassmorphism elements float in the foreground.">
+<img alt="Campus Life" class="w-full h-full object-cover opacity-90 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhlG8KggXHRx_jr0nMAsgn2-P_WI4DCoAo2X3v8LYXxtbEjsK_qPh52SYcQJNNZlabWda10qbTWqXOVuyoMdDiOiI5mpGeAIxevKvKK4R8T-ZVSI1j_a_4oibcWBvOZ6IrrG0nEKQMFLbT3yj34eHQVPy67N-XoCxz-q7hC9zv1OwBcSsS4JFl1Ri6gBtE1mJpW0XansYresHyzxr9eYqG7Lzg9Hdkhh1OUKg8OtNweQPGJzBDl6gKidPL3AS5OLcfReNCOHGMNCqq">
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+</div>
+</section>
+<!-- Right Side: Login Card -->
+<section class="flex justify-center w-full">
+<div class="glass-panel w-full max-w-md rounded-2xl p-lg md:p-xl shadow-[0_8px_32px_rgba(99,102,241,0.1)] flex flex-col gap-lg">
+<!-- Mobile Header (Hidden on Desktop) -->
+<div class="lg:hidden text-center mb-md">
+<h1 class="font-display text-headline-lg-mobile text-primary font-extrabold tracking-tight">SauLink</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-base">连接你的校园生活</p>
+</div>
+<div class="text-center">
+<h2 class="font-headline-md text-headline-md text-on-surface">欢迎回来</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-base">请登录您的账号</p>
+</div>
+<!-- Tabs -->
+<div class="flex p-base bg-surface-variant/50 rounded-xl relative">
+<!-- Active Indicator (JS moves this) -->
+<div class="absolute top-base left-base bottom-base w-[calc(50%-4px)] bg-white rounded-lg shadow-sm transition-all duration-300 ease-in-out" id="tab-indicator"></div>
+<button class="relative z-10 flex-1 py-xs font-label-md text-label-md text-primary font-bold text-center transition-colors" id="tab-mobile" onclick="switchTab('mobile')">
+                        手机号登录
+                    </button>
+<button class="relative z-10 flex-1 py-xs font-label-md text-label-md text-on-surface-variant text-center transition-colors" id="tab-wechat" onclick="switchTab('wechat')">
+                        微信扫码
+                    </button>
+</div>
+<!-- Mobile Login Form -->
+<form class="flex flex-col gap-md transition-opacity duration-300" id="form-mobile">
+<div class="flex flex-col gap-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant ml-xs" for="phone">手机号码</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-sm text-outline">smartphone</span>
+<input class="w-full bg-white border border-outline-variant text-on-surface rounded-xl pl-[44px] pr-sm py-sm font-body-md focus:border-primary focus:ring-4 focus:ring-primary/20 transition-all outline-none" id="phone" placeholder="请输入手机号码" type="tel">
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant ml-xs" for="code">验证码</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-sm text-outline">dialpad</span>
+<input class="w-full bg-white border border-outline-variant text-on-surface rounded-xl pl-[44px] pr-[110px] py-sm font-body-md focus:border-primary focus:ring-4 focus:ring-primary/20 transition-all outline-none" id="code" placeholder="请输入验证码" type="text">
+<button class="absolute right-sm font-label-sm text-label-sm text-primary hover:text-primary-container transition-colors" type="button">
+                                获取验证码
+                            </button>
+</div>
+</div>
+<button class="mt-sm w-full bg-[#6366F1] hover:bg-[#4F46E5] text-white rounded-xl py-sm font-label-md text-label-md font-bold shadow-[0_4px_12px_rgba(99,102,241,0.2)] hover:shadow-[0_6px_16px_rgba(99,102,241,0.3)] transition-all transform hover:-translate-y-[2px]" type="button">
+                        登录 / 注册
+                    </button>
+</form>
+<!-- WeChat Login Area (Hidden by default) -->
+<div class="hidden flex-col items-center justify-center gap-md py-md transition-opacity duration-300 opacity-0" id="form-wechat">
+<div class="w-48 h-48 bg-white border border-outline-variant rounded-xl p-sm shadow-sm flex items-center justify-center">
+<div class="w-full h-full bg-surface-variant rounded-lg flex items-center justify-center text-outline flex-col gap-sm">
+<span class="material-symbols-outlined text-[48px]">qr_code_2</span>
+<span class="font-label-sm text-label-sm">加载中...</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-center">请使用微信扫描二维码登录<br>SauLink 校园社区</p>
+</div>
+<!-- Footer Links -->
+<div class="mt-md text-center pt-md border-t border-outline-variant/30">
+<p class="font-body-sm text-body-sm text-outline leading-[2]">
+                        登录即代表您同意我们的<br>
+<a class="text-primary hover:underline" href="#">服务条款</a> 和 <a class="text-primary hover:underline" href="#">隐私政策</a>
+</p>
+</div>
+</div>
+</section>
+</main>
+<script>
+        function switchTab(tab) {
+            const indicator = document.getElementById('tab-indicator');
+            const btnMobile = document.getElementById('tab-mobile');
+            const btnWechat = document.getElementById('tab-wechat');
+            const formMobile = document.getElementById('form-mobile');
+            const formWechat = document.getElementById('form-wechat');
+
+            if (tab === 'mobile') {
+                indicator.style.transform = 'translateX(0)';
+                btnMobile.classList.add('text-primary', 'font-bold');
+                btnMobile.classList.remove('text-on-surface-variant');
+                btnWechat.classList.remove('text-primary', 'font-bold');
+                btnWechat.classList.add('text-on-surface-variant');
+
+                formWechat.classList.add('opacity-0');
+                setTimeout(() => {
+                    formWechat.classList.add('hidden');
+                    formWechat.classList.remove('flex');
+                    formMobile.classList.remove('hidden');
+                    formMobile.classList.add('flex');
+                    // slight delay for fade in
+                    setTimeout(() => formMobile.classList.remove('opacity-0'), 10);
+                }, 300);
+
+            } else {
+                indicator.style.transform = 'translateX(100%)';
+                btnWechat.classList.add('text-primary', 'font-bold');
+                btnWechat.classList.remove('text-on-surface-variant');
+                btnMobile.classList.remove('text-primary', 'font-bold');
+                btnMobile.classList.add('text-on-surface-variant');
+
+                formMobile.classList.add('opacity-0');
+                setTimeout(() => {
+                    formMobile.classList.add('hidden');
+                    formMobile.classList.remove('flex');
+                    formWechat.classList.remove('hidden');
+                    formWechat.classList.add('flex');
+                    setTimeout(() => formWechat.classList.remove('opacity-0'), 10);
+                }, 300);
+            }
+        }
+    </script>
+
+
+</body></html>
